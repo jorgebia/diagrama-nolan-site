@@ -1,0 +1,27 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fontes e ajustes gerais */
+body {
+  @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+  font-family: system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
+}
+
+strong {
+  @apply font-bold;
+}
+
+button {
+  @apply transition duration-150 ease-in-out;
+}
+
+/* Estilo para modo escuro controlado via classe 'dark' */
+:root {
+  color-scheme: light dark;
+}
