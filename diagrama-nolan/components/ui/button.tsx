@@ -14,7 +14,6 @@ export function Button({ className, variant = "default", ...props }) {
 }
 
 // components/ui/card.jsx
-"use client";
 
 export function Card({ className = "", ...props }) {
   return <div className={`rounded-2xl border bg-white dark:bg-gray-800 ${className}`} {...props} />;
@@ -25,7 +24,6 @@ export function CardContent({ className = "", ...props }) {
 }
 
 // components/ui/slider.jsx
-"use client";
 
 import * as React from "react";
 
