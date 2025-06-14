@@ -189,4 +189,3 @@ export default function NolanTest() {
     </div>
   );
 }
-<código do canvas será inserido aqui no próximo passo>
