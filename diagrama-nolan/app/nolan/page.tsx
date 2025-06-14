@@ -88,6 +88,7 @@ export default function NolanTest() {
   const mapY = (val) => 200 + Number(val) * 10;
 
   return (
+    <>
     <div className={`min-h-screen transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-100 to-white text-gray-800"} p-4 sm:p-6`}>
       <div className="max-w-3xl mx-auto">
         <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
@@ -96,7 +97,6 @@ export default function NolanTest() {
             {darkMode ? "Modo Claro" : "Modo Escuro"}
           </Button>
         </div>
-
         <p className="mb-8 leading-relaxed">
           O <strong>Diagrama de Nolan</strong> representa posições políticas em dois eixos: o econômico (esquerda ↔ direita) e o eixo de autoridade (libertário ↔ autoritário). Responda ao questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.
         </p>
