@@ -6,6 +6,7 @@ import { Button, Card, CardContent, Slider } from "../../components/ui/button";
 //import { Card, CardContent } from "../../components/ui/card";
 //import { Slider } from "../../components/ui/slider";
 import { motion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 
 const questions = [
   { question: "O SUS deve continuar sendo totalmente gratuito.", axis: ["mercado", -1] },
