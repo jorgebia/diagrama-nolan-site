@@ -116,7 +116,13 @@ export default function NolanTest() {
         )}
 
         {!submitted ? (
-          <motion.div className="..." initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+          <motion.div
+  className="..."
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.5 }}
+  {...({} as HTMLMotionProps<"div">)}
+>
             {questions.map((q, i) => (
               <Card key={i} className="shadow-md dark:bg-gray-800">
                 <CardContent className="p-4">
