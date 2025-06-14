@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Button } from "../../components/ui/button";
+import { Button, Card, CardContent, Slider } from "../../components/ui/button";
 //import { Card, CardContent } from "../../components/ui/card";
 //import { Slider } from "../../components/ui/slider";
 import { motion } from "framer-motion";
@@ -88,7 +88,6 @@ export default function NolanTest() {
   const mapY = (val) => 200 + Number(val) * 10;
 
   return (
-    <>
     <div className={`min-h-screen transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-100 to-white text-gray-800"} p-4 sm:p-6`}>
       <div className="max-w-3xl mx-auto">
         <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
@@ -116,7 +115,7 @@ export default function NolanTest() {
         )}
 
         {!submitted ? (
-          <motion.div className="..." initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} />
+          <motion.div className="..." initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
             {questions.map((q, i) => (
               <Card key={i} className="shadow-md dark:bg-gray-800">
                 <CardContent className="p-4">
