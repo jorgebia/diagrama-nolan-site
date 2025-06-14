@@ -54,7 +54,7 @@ export default function NolanTest() {
     let authority = 0;
     let market = 0;
     questions.forEach((q, i) => {
-      const val = answers[i];
+      const val = Number(answers[i]);
       const [axis, direction] = q.axis;
       if (axis === "autoridade") authority += val * direction;
       if (axis === "mercado") market += val * direction;
@@ -83,8 +83,8 @@ export default function NolanTest() {
     }
   }, [submitted]);
 
-  const mapX = (val) => 200 + val * 10;
-  const mapY = (val) => 200 + val * 10;
+  const mapX = (val) => 200 + Number(val) * 10;
+  const mapY = (val) => 200 + Number(val) * 10;
 
   return (
     <div className={`min-h-screen transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-100 to-white text-gray-800"} p-4 sm:p-6`}>
