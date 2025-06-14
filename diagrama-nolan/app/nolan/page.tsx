@@ -54,8 +54,9 @@ export default function NolanTest() {
     let authority = 0;
     let market = 0;
     questions.forEach((q, i) => {
-      const val = Number(answers[i]);
-      const [axis, direction] = q.axis;
+      const val = typeof answers[i] === 'number' ? answers[i] : Number(answers[i]);
+      const [axis, dir] = q.axis;
+      const direction = typeof dir === 'number' ? dir : Number(dir);
       if (axis === "autoridade") authority += val * direction;
       if (axis === "mercado") market += val * direction;
     });
