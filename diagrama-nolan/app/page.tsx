@@ -3,8 +3,8 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "../components/ui/button";
-//import { Card, CardContent } from "../../components/ui/card";
-//import { Slider } from "../../components/ui/slider";
+import Card from "../components/ui/card";
+import { Slider } from "../components/ui/slider";
 import { motion } from "framer-motion";
 import type { HTMLMotionProps } from "framer-motion";
 
@@ -119,7 +119,7 @@ export default function NolanTest() {
           <motion.div className="space-y-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
             {questions.map((q, i) => (
               <Card key={i} className="shadow-md dark:bg-gray-800">
-                <CardContent className="p-4">
+                <div className="p-4">
                   <p className="mb-2 font-medium">{q.question}</p>
                   <Slider
                     min={-2}
@@ -129,7 +129,7 @@ export default function NolanTest() {
                     onValueChange={([val]) => handleAnswer(i, val)}
                   />
                   <div className="text-sm mt-1">{scaleLabels[answers[i] + 2]}</div>
-                </CardContent>
+                </div>
               </Card>
             ))}
             <Button className="w-full bg-indigo-600 text-white hover:bg-indigo-700" onClick={() => setSubmitted(true)}>
