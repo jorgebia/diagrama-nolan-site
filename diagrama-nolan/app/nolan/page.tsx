@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Button, Card, CardContent, Slider } from "../../components/ui/button";
+import { Button, Card, CardContent, Slider } from "@/components/ui/button";
 //import { Card, CardContent } from "../../components/ui/card";
 //import { Slider } from "../../components/ui/slider";
 import { motion } from "framer-motion";
