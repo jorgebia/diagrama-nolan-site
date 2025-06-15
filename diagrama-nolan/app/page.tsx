@@ -1,10 +1,12 @@
 // Website interativo do Diagrama de Nolan com perguntas políticas atuais do Brasil, adaptado para mobile com melhorias visuais
 "use client";
+
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Slider } from "@/components/ui/slider";
+import { Button, Card, CardContent, Slider } from "../../components/ui/button";
+//import { Card, CardContent } from "../../components/ui/card";
+//import { Slider } from "../../components/ui/slider";
 import { motion } from "framer-motion";
+import type { HTMLMotionProps } from "framer-motion";
 
 const questions = [
   { question: "O SUS deve continuar sendo totalmente gratuito.", axis: ["mercado", -1] },
@@ -53,8 +55,9 @@ export default function NolanTest() {
     let authority = 0;
     let market = 0;
     questions.forEach((q, i) => {
-      const val = answers[i];
-      const [axis, direction] = q.axis;
+      const val = typeof answers[i] === 'number' ? answers[i] : Number(answers[i]);
+      const [axis, dir] = q.axis;
+      const direction = typeof dir === 'number' ? dir : Number(dir);
       if (axis === "autoridade") authority += val * direction;
       if (axis === "mercado") market += val * direction;
     });
@@ -82,8 +85,8 @@ export default function NolanTest() {
     }
   }, [submitted]);
 
-  const mapX = (val) => 200 + val * 10;
-  const mapY = (val) => 200 + val * 10;
+  const mapX = (val) => 200 + Number(val) * 10;
+  const mapY = (val) => 200 + Number(val) * 10;
 
   return (
     <div className={`min-h-screen transition-all duration-500 ${darkMode ? "bg-gray-900 text-white" : "bg-gradient-to-br from-indigo-100 to-white text-gray-800"} p-4 sm:p-6`}>
@@ -94,7 +97,6 @@ export default function NolanTest() {
             {darkMode ? "Modo Claro" : "Modo Escuro"}
           </Button>
         </div>
-
         <p className="mb-8 leading-relaxed">
           O <strong>Diagrama de Nolan</strong> representa posições políticas em dois eixos: o econômico (esquerda ↔ direita) e o eixo de autoridade (libertário ↔ autoritário). Responda ao questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.
         </p>
@@ -189,4 +191,3 @@ export default function NolanTest() {
     </div>
   );
 }
-<código do canvas será inserido aqui no próximo passo>
