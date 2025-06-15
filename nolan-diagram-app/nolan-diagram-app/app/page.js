@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+"use client";
+
 const questions = [
   {
     text: 'O governo deve ter controle total sobre o sistema de saúde?',
