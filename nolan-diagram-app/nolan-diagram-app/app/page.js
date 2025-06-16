@@ -18,15 +18,15 @@ const questions = [
     text: 'A privatização de estatais (ex.: Correios, Petrobrás) é benéfica para o Brasil.',
     axis: 'economic',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
-    text: 'O estado deve desburocratizar a economia brasileira para estimular o crescimento (ex.: simplificação de processos e redução de impostos).',
+    text: 'O estado deve planejar a economia brasileira para estimular o crescimento (ex.: através de planos como o PAC).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -40,15 +40,15 @@ const questions = [
     text: 'A legalização das drogas (produção e consumo) deve ser implementada.',
     axis: 'social',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
-    text: 'Novas formas de fornecer educação devem ser flexibilizadas pelo MEC (ex.: legalização do homeschooling).',
+    text: 'O estado deve ditar as regras da educação através do MEC (ex.: legalização do homeschooling).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -62,22 +62,22 @@ const questions = [
     text: 'A posse de armas deve ser facilitada para todos (ex.: menos burocracia para compra e posse).',
     axis: 'social',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
-    text: 'A privatização das universidades públicas é benéfica para o Brasil (redução de custos e aumento da eficiência).',
+    text: 'A privatização das universidades públicas é maléfica para o Brasil.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
       { text: 'Concordo', value: -1 },
       { text: 'Neutro', value: 0 },
       { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
@@ -95,11 +95,11 @@ const questions = [
     text: 'O governo deve cortar gastos e reduzir despesas para evitar o déficit (através de reformas fiscais, administrativas, etc.).',
     axis: 'economic',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
@@ -117,26 +117,26 @@ const questions = [
     text: 'Empresas devem ter liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
     axis: 'economic',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
     text: 'A liberdade de expressão absoluta deve ser garantida (seja para opiniões impopulares, arte e humor).',
     axis: 'social',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
-    text: 'O Estado deve subsidiar a cultura e o cinema nacional (através da lei Rouanet).',
+    text: 'O Estado deve subsidiar a cultura e o cinema nacional (ex.: através da lei Rouanet).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -150,44 +150,44 @@ const questions = [
     text: 'O aborto deve ser permitido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
     text: 'Qualquer religião (cristianismo, candomblé, etc.) deve ter liberdade para praticar seus rituais.',
     axis: 'social',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
     text: 'O casamento entre pessoas do mesmo sexo deve ter os mesmos direitos legais.',
     axis: 'social',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
     text: 'O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros.',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
@@ -205,22 +205,22 @@ const questions = [
     text: 'O Brasil deve aumentar seu orçamento militar.',
     axis: 'economic',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
-      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
     text: 'A iniciativa privada deve ter a liberdade de fornecer todos os serviços públicos (saúde, justiça, educação, segurança, etc.).',
     axis: 'economic',
     options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
       { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
 ];
