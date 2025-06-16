@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const questions = [
   {
-    text: 'O governo deve ter controle total sobre o sistema de saúde?',
+    text: 'O governo deve ter controle total sobre o sistema de saúde brasileiro (SUS, planos de saúde privados e etc.)',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -15,7 +15,7 @@ const questions = [
     ],
   },
   {
-    text: 'A privatização de estatais é benéfica para o Brasil?',
+    text: 'A privatização de estatais (ex.: Correios, Petrobrás) é benéfica para o Brasil.',
     axis: 'economic',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -26,7 +26,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Estado deve intervir para garantir igualdade social?',
+    text: 'O estado deve desburocratizar a economia brasileira para estimular o crescimento (ex.: simplificação de processos e redução de impostos).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -37,7 +37,7 @@ const questions = [
     ],
   },
   {
-    text: 'A legalização das drogas deve ser implementada?',
+    text: 'A legalização das drogas (produção e consumo) deve ser implementada.',
     axis: 'social',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -48,7 +48,29 @@ const questions = [
     ],
   },
   {
-    text: 'A educação deve ser 100% pública e gratuita?',
+    text: 'Novas formas de fornecer educação devem ser flexibilizadas pelo MEC (ex.: legalização do homeschooling).',
+    axis: 'social',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
+    ],
+  },
+  {
+    text: 'A posse de armas deve ser facilitada para todos (ex.: menos burocracia para compra e posse).',
+    axis: 'social',
+    options: [
+      { text: 'Discordo totalmente', value: -2 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Concordo totalmente', value: 2 },
+    ],
+  },
+  {
+    text: 'A privatização das universidades públicas é benéfica para o Brasil (redução de custos e aumento da eficiência).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -59,18 +81,7 @@ const questions = [
     ],
   },
   {
-    text: 'O porte de armas deve ser legalizado para todos?',
-    axis: 'social',
-    options: [
-      { text: 'Discordo totalmente', value: -2 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Concordo', value: 1 },
-      { text: 'Concordo totalmente', value: 2 },
-    ],
-  },
-  {
-    text: 'O SUS deve continuar sendo o principal sistema de saúde?',
+    text: 'O BNDES deve ser utilizado para financiar projetos sociais e infraestrutura.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -81,18 +92,7 @@ const questions = [
     ],
   },
   {
-    text: 'O ensino religioso deve ser obrigatório nas escolas públicas?',
-    axis: 'social',
-    options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
-    ],
-  },
-  {
-    text: 'A carga tributária deve ser reduzida?',
+    text: 'O governo deve cortar gastos e reduzir despesas para evitar o déficit (através de reformas fiscais, administrativas, etc.).',
     axis: 'economic',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -103,7 +103,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Estado deve regular as redes sociais?',
+    text: 'O Estado deve regular as redes sociais (além do marco regulatório já existente).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -114,7 +114,7 @@ const questions = [
     ],
   },
   {
-    text: 'Empresas devem ter liberdade para contratar e demitir sem restrições?',
+    text: 'Empresas devem ter liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
     axis: 'economic',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -125,7 +125,7 @@ const questions = [
     ],
   },
   {
-    text: 'Pessoas do mesmo sexo devem poder adotar crianças?',
+    text: 'A liberdade de expressão absoluta deve ser garantida (seja para opiniões impopulares, arte e humor).',
     axis: 'social',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -136,7 +136,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Estado deve subsidiar a cultura e o cinema nacional?',
+    text: 'O Estado deve subsidiar a cultura e o cinema nacional (através da lei Rouanet).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -147,7 +147,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Brasil deve ter uma política externa independente dos EUA?',
+    text: 'O aborto deve ser permitido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -158,7 +158,7 @@ const questions = [
     ],
   },
   {
-    text: 'O serviço militar obrigatório deve ser extinto?',
+    text: 'Qualquer religião (cristianismo, candomblé, etc.) deve ter liberdade para praticar seus rituais.',
     axis: 'social',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -169,7 +169,7 @@ const questions = [
     ],
   },
   {
-    text: 'O aborto deve ser legalizado?',
+    text: 'O casamento entre pessoas do mesmo sexo deve ter os mesmos direitos legais.',
     axis: 'social',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -180,7 +180,7 @@ const questions = [
     ],
   },
   {
-    text: 'A reforma agrária deve ser prioridade do governo?',
+    text: 'O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -191,7 +191,7 @@ const questions = [
     ],
   },
   {
-    text: 'O governo deve financiar igrejas ou instituições religiosas?',
+    text: 'Deve haver cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -202,7 +202,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Brasil deve investir em tecnologia militar?',
+    text: 'O Brasil deve aumentar seu orçamento militar.',
     axis: 'economic',
     options: [
       { text: 'Discordo totalmente', value: -2 },
@@ -213,8 +213,8 @@ const questions = [
     ],
   },
   {
-    text: 'A liberdade de expressão deve ser absoluta, mesmo para discursos controversos?',
-    axis: 'social',
+    text: 'A iniciativa privada deve ter a liberdade de fornecer todos os serviços públicos (saúde, justiça, educação, segurança, etc.).',
+    axis: 'economic',
     options: [
       { text: 'Discordo totalmente', value: -2 },
       { text: 'Discordo', value: -1 },
