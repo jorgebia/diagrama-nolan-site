@@ -1,5 +1,5 @@
 // Website interativo do Diagrama de Nolan com perguntas políticas atuais do Brasil, adaptado para mobile com melhorias visuais
-
+"use client";
 import React, { useState, useEffect } from "react";
 //import { Button } from "@/components/ui/button";
 //import { Card, CardContent } from "@/components/ui/card";
