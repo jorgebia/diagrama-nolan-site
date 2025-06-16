@@ -252,7 +252,7 @@ export default function Home() {
   return (
     <main className="p-8 font-sans">
       <section className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">O Diagrama de Nolan</h1>
+        <h1 className="text-4xl font-bold mb-4">Espectro Político Brasil</h1>
         <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
         <p>David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
       </section>
