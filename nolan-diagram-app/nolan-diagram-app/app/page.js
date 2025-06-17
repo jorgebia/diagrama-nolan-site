@@ -26,7 +26,7 @@ const questions = [
     ],
   },
   {
-    text: '03 - O estado deve planejar a economia brasileira para estimular o crescimento (ex.: através de planos como o PAC).',
+    text: '03 - O estado deve planejar a economia brasileira para estimular o crescimento do Brasil (ex.: através do Plano de Crescimento e Aceleração).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -48,7 +48,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - O estado deve ditar as regras da educação através do MEC (ex.: legalização do homeschooling).',
+    text: '05 - O estado deve ditar as regras da educação através do Ministério da Educação (ex.: legalização do homeschooling).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -70,7 +70,7 @@ const questions = [
     ],
   },
   {
-    text: '07 - A privatização das universidades públicas é maléfica para o Brasil.',
+    text: '07 - A privatização das universidades públicas não deve ser uma realidade no Brasil.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -92,7 +92,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - O governo deve cortar gastos e reduzir despesas para evitar o déficit (através de reformas fiscais, administrativas, etc.).',
+    text: '09 - O governo deve buscar cortar gastos e reduzir despesas (através de reformas fiscais, administrativas, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -103,7 +103,7 @@ const questions = [
     ],
   },
   {
-    text: '10 - O Estado deve regular as redes sociais (além do marco regulatório já existente).',
+    text: '10 - O Estado deve regular ainda mais as redes sociais (além do marco civíl da internet já existente).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -246,7 +246,7 @@ const questions = [
     ],
   },
   {
-    text: '23 - O Brasil deve liberar o investimento no setor de energia como um todo (ex.: solar, eólica, nuclear, etc.).',
+    text: '23 - O Brasil deve desburocratizar o investimento privado no setor de energia (ex.: solar, eólica, nuclear, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -403,18 +403,18 @@ export default function Home() {
 
       {submitted && (
         <section>
-          <h2 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">Seu Resultado</h2>
-          <div className="relative h-[500px] w-[500px] border border-gray-300 mx-auto">
+          <h2 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-4">Seu Resultado</h2>
+          <div className="relative h-[500px] w-[500px] border border-gray-400 mx-auto">
             {/* Grid colorido */}
-            <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
+            <div className="absolute inset-0 grid grid-cols-15 grid-rows-15">
               {[...Array(100)].map((_, i) => {
-                const row = Math.floor(i / 10);
-                const col = i % 10;
+                const row = Math.floor(i / 15);
+                const col = i % 15;
                 let bg = 'bg-white';
                 if (row < 5 && col < 5) bg = 'bg-green-100';
-                if (row < 5 && col >= 5) bg = 'bg-blue-100';
+                if (row < 5 && col >= 5) bg = 'bg-yellow-100';
                 if (row >= 5 && col < 5) bg = 'bg-red-100';
-                if (row >= 5 && col >= 5) bg = 'bg-yellow-100';
+                if (row >= 5 && col >= 5) bg = 'bg-blue-100';
                 return <div key={i} className={`border border-gray-100 ${bg}`} />;
               })}
             </div>
@@ -427,8 +427,8 @@ export default function Home() {
             <motion.div
               className="absolute w-4 h-4 bg-red-600 rounded-full"
               animate={{
-                left: `calc(50% + ${economic * 10}px)`,
-                top: `calc(50% - ${social * 10}px)`
+                left: `calc(50% + ${economic * 15}px)`,
+                top: `calc(50% - ${social * 15}px)`
               }}
             />
             {/* Legendas principais fora do quadrante */}
