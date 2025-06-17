@@ -442,8 +442,8 @@ const calculatePosition = () => {
             <motion.div
               className="absolute w-4 h-4 bg-red-600 rounded-full"
               animate={{
-                left: `calc(50% + ${economic * 15}px)`,
-                top: `calc(50% - ${social * 15}px)`
+                left: `calc(50% + ${economic * 10}px)`,
+                top: `calc(50% - ${social * 10}px)`
               }}
             />
           {/* Legendas principais dos eixos */}
