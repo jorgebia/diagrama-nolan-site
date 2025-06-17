@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const questions = [
   {
-    text: 'O governo deve ter controle total sobre o sistema de saúde brasileiro (SUS, planos de saúde privados e etc.)',
+    text: '01 - O governo deve ter controle total sobre o sistema de saúde brasileiro (SUS, planos de saúde privados e etc.)',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -15,7 +15,7 @@ const questions = [
     ],
   },
   {
-    text: 'A privatização de estatais (ex.: Correios, Petrobrás) é benéfica para o Brasil.',
+    text: '02 - A privatização de estatais (ex.: Correios, Petrobrás) é benéfica para o Brasil.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -26,7 +26,7 @@ const questions = [
     ],
   },
   {
-    text: 'O estado deve planejar a economia brasileira para estimular o crescimento (ex.: através de planos como o PAC).',
+    text: '03 - O estado deve planejar a economia brasileira para estimular o crescimento (ex.: através de planos como o PAC).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -37,7 +37,7 @@ const questions = [
     ],
   },
   {
-    text: 'A legalização das drogas (produção e consumo) deve ser implementada.',
+    text: '04 - A legalização das drogas (produção e consumo) deve ser implementada.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -48,7 +48,7 @@ const questions = [
     ],
   },
   {
-    text: 'O estado deve ditar as regras da educação através do MEC (ex.: legalização do homeschooling).',
+    text: '05 - O estado deve ditar as regras da educação através do MEC (ex.: legalização do homeschooling).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -59,7 +59,7 @@ const questions = [
     ],
   },
   {
-    text: 'A posse de armas deve ser facilitada para todos (ex.: menos burocracia para compra e posse).',
+    text: '06 - A posse de armas deve ser facilitada para todos (ex.: menos burocracia para compra e posse).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -70,7 +70,7 @@ const questions = [
     ],
   },
   {
-    text: 'A privatização das universidades públicas é maléfica para o Brasil.',
+    text: '07 - A privatização das universidades públicas é maléfica para o Brasil.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -81,7 +81,7 @@ const questions = [
     ],
   },
   {
-    text: 'Bancos estatais (ex.: Caixa, BB e BNDES) devem ser utilizados para financiar projetos sociais e infraestrutura.',
+    text: '08 - Bancos estatais (ex.: Caixa, BB e BNDES) devem ser utilizados para financiar projetos sociais e infraestrutura.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -92,7 +92,7 @@ const questions = [
     ],
   },
   {
-    text: 'O governo deve cortar gastos e reduzir despesas para evitar o déficit (através de reformas fiscais, administrativas, etc.).',
+    text: '09 - O governo deve cortar gastos e reduzir despesas para evitar o déficit (através de reformas fiscais, administrativas, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -103,7 +103,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Estado deve regular as redes sociais (além do marco regulatório já existente).',
+    text: '10 - O Estado deve regular as redes sociais (além do marco regulatório já existente).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -114,7 +114,7 @@ const questions = [
     ],
   },
   {
-    text: 'Empresas devem ter liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
+    text: '11 - Empresas devem ter liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -125,7 +125,7 @@ const questions = [
     ],
   },
   {
-    text: 'A liberdade de expressão absoluta deve ser garantida (seja para opiniões impopulares, arte e humor).',
+    text: '12 - A liberdade de expressão absoluta deve ser garantida (seja para opiniões impopulares, arte e humor).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -136,7 +136,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Estado deve subsidiar a cultura e o cinema nacional (ex.: através da lei Rouanet).',
+    text: '13 - O Estado deve subsidiar a cultura e o cinema nacional (ex.: através da lei Rouanet).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -147,7 +147,7 @@ const questions = [
     ],
   },
   {
-    text: 'O aborto deve ser permitido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
+    text: '14 - O aborto deve ser permitido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -158,7 +158,7 @@ const questions = [
     ],
   },
   {
-    text: 'Qualquer religião (cristianismo, candomblé, etc.) deve ter liberdade para praticar seus rituais.',
+    text: '15 - Qualquer religião (cristianismo, candomblé, etc.) deve ter liberdade para praticar seus rituais.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -169,7 +169,7 @@ const questions = [
     ],
   },
   {
-    text: 'O casamento entre pessoas do mesmo sexo deve ter os mesmos direitos legais.',
+    text: '16 - O casamento entre pessoas do mesmo sexo deve ter os mesmos direitos legais.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -180,7 +180,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros.',
+    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -191,7 +191,7 @@ const questions = [
     ],
   },
   {
-    text: 'Deve haver cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
+    text: '18 - Deve haver cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -202,7 +202,7 @@ const questions = [
     ],
   },
   {
-    text: 'O Brasil deve aumentar seu orçamento militar.',
+    text: '19 - O Brasil deve aumentar seu orçamento militar.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -213,8 +213,118 @@ const questions = [
     ],
   },
   {
-    text: 'A iniciativa privada deve ter a liberdade de fornecer todos os serviços públicos (saúde, justiça, educação, segurança, etc.).',
+    text: '20 - A iniciativa privada deve ter a liberdade de fornecer todos os serviços públicos (saúde, justiça, educação, segurança, etc.).',
     axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
+    ],
+  },
+  {
+    text: '21 - O Brasil deve ser o líder militar na América Latina.',
+    axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '22 - Não vejo problema nas pessoas se relacionarem de formas diferentes do tradicional. (relacionamento aberto, poliamor, etc).',
+    axis: 'social',
+    options: [
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
+    ],
+  },
+  {
+    text: '23 - O Brasil deve liberar o investimento no setor de energia como um todo (ex.: solar, eólica, nuclear, etc.).',
+    axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
+    ],
+  },
+  {
+    text: '24 - O estado brasileiro deve ter total controle da infraestrutura de transporte (rodovias, ferrovias, etc.).',
+    axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '25 - O setor agropecuário do Brasil deveria ser estatizado (ex.: terras, produção, distribuição, etc.).',
+    axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '26 - O cristianismo deve influenciar mais na política brasileira (ex.: valores cristãos, ética, etc.).',
+    axis: 'social',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '27 - As terras indígenas devem ser controladas pelo estado brasileiro (ex.: demarcação, proteção, etc.).',
+    axis: 'economic',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '28 - Os brasileiros devem se tornar vegetarianos (ex.: por questões éticas, compaixão, etc.).',
+    axis: 'social',
+    options: [
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo', value: -1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
+    ],
+  },
+  {
+    text: '29 - Meu corpo, minhas regras.',
+    axis: 'social',
+    options: [
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo', value: 1 },
+      { text: 'Neutro', value: 0 },
+      { text: 'Discordo', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
+    ],
+  },
+  {
+    text: '30 - A imigração deve ser livre e aberta (ex.: sem restrições de entrada e saída).',
+    axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
       { text: 'Concordo', value: 1 },
