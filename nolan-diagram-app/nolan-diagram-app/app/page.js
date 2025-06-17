@@ -418,8 +418,8 @@ const calculatePosition = () => {
 
       {submitted && (
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
-          <div className="relative w-full max-w-[500px] aspect-square border border-gray-300 mx-auto">
+          <p className="text-2xl font-bold mb-4 text-center">Seu Resultado</p>
+          <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full">
               {[...Array(100)].map((_, i) => {
@@ -453,10 +453,10 @@ const calculatePosition = () => {
           <div className="absolute top-1/2 -right-12 transform -translate-y-1/2 text-xs sm:text-sm font-semibold">Direita</div>
 
           {/* Rótulos ideológicos externos */}
-          <div className="absolute -top-14 left-0 text-[10px] sm:text-xs text-left leading-tight">Progressista<br />Socialista</div>
-          <div className="absolute -top-14 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário<br />Progressista Liberal</div>
-          <div className="absolute -bottom-14 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário<br />Totalitário</div>
-          <div className="absolute -bottom-14 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal<br />Conservador</div>
+          <div className="absolute -top-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Progressista<br />Socialista</div>
+          <div className="absolute -top-8 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário<br />Progressista Liberal</div>
+          <div className="absolute -bottom-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário<br />Totalitário</div>
+          <div className="absolute -bottom-8 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal<br />Conservador</div>
     </div>
         </section>
       )}
