@@ -342,9 +342,8 @@ const calculatePosition = () => {
     }
   });
 
-  // Normaliza os valores entre -10 e 10
-  const normEconomic = (economic / (economicCount * 2)) * 24; // [-10, 10]
-  const normSocial = (social / (socialCount * 2)) * 24; // [-10, 10]
+  const normEconomic = economicCount ? economic / (economicCount * 2) : 0; // -1 a +1
+  const normSocial = socialCount ? social / (socialCount * 2) : 0; // -1 a +1
 
   return { economic: normEconomic, social: normSocial };
 };
@@ -419,10 +418,11 @@ const calculatePosition = () => {
             {/* Marcador do usuário */}
             <motion.div
               className="absolute w-4 h-4 bg-red-600 rounded-full"
-              animate={{
-                left: `calc(50% + ${economic * 10}px)`,
-                top: `calc(50% - ${social * 10}px)`
-              }}
+             style={{
+              left: `calc(50% + ${economic * 50}%)`,
+              top: `calc(50% - ${social * 50}%)`,
+              transform: 'translate(-50%, -50%)',
+            }}
             />
           {/* Legendas principais dos eixos */}
           <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold">Libertário</div>
