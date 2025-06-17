@@ -8,9 +8,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -19,9 +19,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 },
     ],
   },
@@ -30,9 +30,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -41,9 +41,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -52,9 +52,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -63,21 +63,21 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
-    text: '07 - A privatização das universidades públicas não deve ser uma realidade no Brasil.',
+    text: '07 - A privatização das universidades públicas deve ser uma realidade no Brasil. (ex.: universidades federais e estaduais).',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
@@ -85,9 +85,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -96,9 +96,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -107,9 +107,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -118,9 +118,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -129,9 +129,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -140,21 +140,21 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
-    text: '14 - O aborto deve ser permitido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
+    text: '14 - O aborto deve ser proibido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Discordo totalmente', value: -2 },
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
@@ -162,9 +162,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -173,20 +173,20 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
-    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros.',
+    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros. (ex.: eletrônicos, roupas, etc.)',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 },
     ],
   },
@@ -195,9 +195,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 },
     ],
   },
@@ -206,10 +206,10 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
@@ -217,9 +217,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -228,9 +228,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 }
     ],
   },
@@ -239,9 +239,9 @@ const questions = [
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -250,9 +250,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
@@ -261,9 +261,9 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 }
     ],
   },
@@ -272,64 +272,42 @@ const questions = [
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
-    text: '26 - O cristianismo deve influenciar mais na política brasileira (ex.: valores cristãos, ética, etc.).',
+    text: '26 - O cristianismo deve influenciar na política brasileira. (ex.: leis, decisões, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
-    text: '27 - As terras indígenas devem ser controladas pelo estado brasileiro (ex.: demarcação, proteção, etc.).',
-    axis: 'economic',
-    options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
-    ],
-  },
-  {
-    text: '28 - Os brasileiros devem se tornar vegetarianos (ex.: por questões éticas, compaixão, etc.).',
+    text: '27 - Os brasileiros devem se tornar vegetarianos (ex.: por questões éticas, compaixão, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo', value: -1 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: 1 },
+      { text: 'Discordo parcialmente', value: 1 },
       { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
-    text: '29 - Meu corpo, minhas regras.',
+    text: '28 - Meu corpo, minhas regras.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
-    ],
-  },
-  {
-    text: '30 - A imigração deve ser livre e aberta (ex.: sem restrições de entrada e saída).',
-    axis: 'social',
-    options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo', value: 1 },
-      { text: 'Neutro', value: 0 },
-      { text: 'Discordo', value: -1 },
+      { text: 'Discordo parcialmente', value: -1 },
       { text: 'Discordo totalmente', value: -2 }
     ],
   },
