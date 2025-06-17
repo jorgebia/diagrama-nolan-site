@@ -408,14 +408,14 @@ export default function Home() {
           <div className="relative w-full max-w-[500px] aspect-square border border-gray-300 mx-auto">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-15 grid-rows-15">
-              {[...Array(100)].map((_, i) => {
+              {[...Array(225)].map((_, i) => {
                 const row = Math.floor(i / 15);
                 const col = i % 15;
                 let bg = 'bg-white';
                 if (row < 5 && col < 5) bg = 'bg-green-100';
-                if (row < 5 && col >= 5) bg = 'bg-blue-100';
+                if (row < 5 && col >= 5) bg = 'bg-yellow-100';
                 if (row >= 5 && col < 5) bg = 'bg-red-100';
-                if (row >= 5 && col >= 5) bg = 'bg-yellow-100';
+                if (row >= 5 && col >= 5) bg = 'bg-blue-100';
                 return <div key={i} className={`border border-gray-100 ${bg}`} />;
               })}
             </div>
