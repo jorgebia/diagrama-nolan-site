@@ -26,7 +26,7 @@ const questions = [
     ],
   },
   {
-    text: '03 - O estado deve planejar a economia brasileira para estimular o crescimento do Brasil (ex.: através do Plano de Crescimento e Aceleração).',
+    text: '03 - O Banco Central deve imprimir mais dinheiro em caso de emergência (ex.: para estimular a economia).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
