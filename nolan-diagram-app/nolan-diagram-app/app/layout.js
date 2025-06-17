@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Diagrama de Nolan",
-  description: "Teste político brasileiro baseado no Diagrama de Nolan.",
+  title: "Teste de Espectro Político",
+  description: "Teste de espectro político baseado no Diagrama de Nolan.",
 };
 
 export default function RootLayout({ children }) {

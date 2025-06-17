@@ -250,19 +250,24 @@ export default function Home() {
   const { economic, social } = calculatePosition();
 
   return (
-    <main className="p-8 font-sans">
-      <section className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Espectro Político Brasil</h1>
+    <main className="p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
+      <section className="mb-8 text-center">
+        <h1 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
+        Teste de Espectro Político Brasileiro
+        </h1>
+      </section>
+
+      <section className="mb-8 bg-white/70 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
         <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
         <p>David Nolan (1943–2010) foi um ativista político norte-americano mais conhecido por ser o fundador do Partido Libertário dos Estados Unidos, criado em 1971. Ele também é o criador do Gráfico de Nolan, uma representação política em dois eixos — liberdade econômica e liberdade pessoal — usada para classificar ideologias políticas de forma mais precisa do que o tradicional espectro esquerda-direita.</p>
         <p>David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
         <p>Responda ao questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
-      </section>
+      </section> 
 
       <section className="mb-8">
         {questions.map((q, idx) => (
-          <div key={idx} className="mb-4">
-            <p className="font-semibold">{q.text}</p>
+          <div key={idx} className="mb-4 bg-white/80 p-4 rounded-md shadow-sm">
+            <p className="font-semibold mb-2">{q.text}</p>
             <div className="flex flex-col gap-1">
               {q.options.map((opt, oIdx) => (
                 <label key={oIdx} className="flex items-center gap-2">
@@ -280,7 +285,7 @@ export default function Home() {
         ))}
         <button
           onClick={() => setSubmitted(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded mt-4"
+          className="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700"
         >
           Ver resultado
         </button>
@@ -288,16 +293,20 @@ export default function Home() {
 
       {submitted && (
         <section>
-          <h2 className="text-2xl font-bold mb-2">Seu Resultado</h2>
-          <div className="relative h-96 w-96 border border-gray-300">
-            {/* Grid */}
+          <h2 className="text-2xl font-bold mb-4">Seu Resultado</h2>
+          <div className="relative h-96 w-96 border border-gray-300 mx-auto">
+            {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
-              {[...Array(100)].map((_, i) => (
-                <div
-                  key={i}
-                  className="border border-gray-100"
-                />
-              ))}
+              {[...Array(100)].map((_, i) => {
+                const row = Math.floor(i / 10);
+                const col = i % 10;
+                let bg = 'bg-white';
+                if (row < 5 && col < 5) bg = 'bg-green-100';
+                if (row < 5 && col >= 5) bg = 'bg-blue-100';
+                if (row >= 5 && col < 5) bg = 'bg-red-100';
+                if (row >= 5 && col >= 5) bg = 'bg-yellow-100';
+                return <div key={i} className={`border border-gray-100 ${bg}`} />;
+              })}
             </div>
             {/* Eixos */}
             <div className="absolute inset-0 flex justify-center items-center">
@@ -309,7 +318,7 @@ export default function Home() {
               className="absolute w-4 h-4 bg-red-600 rounded-full"
               animate={{
                 left: `calc(50% + ${economic * 10}px)`,
-                top: `calc(50% - ${social * 10}px)`,
+                top: `calc(50% - ${social * 10}px)`
               }}
             />
             {/* Legendas */}
