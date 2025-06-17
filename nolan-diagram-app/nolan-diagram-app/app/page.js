@@ -344,7 +344,7 @@ const calculatePosition = () => {
 
   // Normaliza os valores entre -10 e 10
   const normEconomic = (economic / (economicCount * 2)) * 24; // [-10, 10]
-  const normSocial = (social / (socialCount * 2)) * 24; // [-10, 10]
+  const normSocial = (social / (socialCount * 2)) * 26; // [-10, 10]
 
   return { economic: normEconomic, social: normSocial };
 };
