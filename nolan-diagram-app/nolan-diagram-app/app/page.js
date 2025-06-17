@@ -360,9 +360,9 @@ export default function Home() {
   const { economic, social } = calculatePosition();
 
   return (
-    <main className="p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
+    <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
         Teste de Espectro Político Brasileiro
         </h1>
       </section>
@@ -386,6 +386,7 @@ export default function Home() {
                     name={`question-${idx}`}
                     value={opt.value}
                     onChange={() => handleAnswerChange(idx, opt.value)}
+                    className="w-5 h-5"
                   />
                   {opt.text}
                 </label>
@@ -395,7 +396,7 @@ export default function Home() {
         ))}
         <button
           onClick={() => setSubmitted(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700 items-center justify-center transition-colors"
+          className="bg-blue-600 text-white px-6 py-3 rounded mt-4 hover:bg-blue-700 text-base sm:text-lg"
         >
           Ver resultado
         </button>
@@ -404,7 +405,7 @@ export default function Home() {
       {submitted && (
         <section>
           <h2 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-4">Seu Resultado</h2>
-          <div className="relative h-[500px] w-[500px] border border-gray-400 mx-auto">
+          <div className="relative w-full max-w-[500px] aspect-square border border-gray-300 mx-auto">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-15 grid-rows-15">
               {[...Array(100)].map((_, i) => {
