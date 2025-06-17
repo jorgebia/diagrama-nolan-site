@@ -418,8 +418,8 @@ const calculatePosition = () => {
 
       {submitted && (
         <section>
-          <p className="text-2xl font-bold mb-4 text-center">Seu Resultado</p>
-          <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto">
+          <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
+          <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto mt-6 sm:mt-10">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full">
               {[...Array(100)].map((_, i) => {
