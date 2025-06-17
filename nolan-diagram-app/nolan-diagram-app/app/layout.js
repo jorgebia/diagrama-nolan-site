@@ -13,7 +13,7 @@
   //)
 //}
 
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from '@/package.json';
  
 export default function RootLayout({ children }) {
   return (
