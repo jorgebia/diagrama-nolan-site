@@ -412,10 +412,10 @@ export default function Home() {
                 const row = Math.floor(i / 15);
                 const col = i % 15;
                 let bg = 'bg-white';
-                if (row < 5 && col < 5) bg = 'bg-green-100';
-                if (row < 5 && col >= 5) bg = 'bg-yellow-100';
-                if (row >= 5 && col < 5) bg = 'bg-red-100';
-                if (row >= 5 && col >= 5) bg = 'bg-blue-100';
+                if (row < 7.5 && col < 7.5) bg = 'bg-green-100';
+                if (row < 7.5 && col >= 7.5) bg = 'bg-yellow-100';
+                if (row >= 7.5 && col < 7.5) bg = 'bg-red-100';
+                if (row >= 7.5 && col >= 7.5) bg = 'bg-blue-100';
                 return <div key={i} className={`border border-gray-100 ${bg}`} />;
               })}
             </div>
