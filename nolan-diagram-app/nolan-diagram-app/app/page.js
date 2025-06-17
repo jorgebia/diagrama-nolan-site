@@ -404,7 +404,7 @@ export default function Home() {
       {submitted && (
         <section>
           <h2 className="text-2xl font-bold mb-4">Seu Resultado</h2>
-          <div className="relative h-96 w-96 border border-gray-300 mx-auto">
+          <div className="relative h-[500px] w-[500px] border border-gray-300 mx-auto">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
               {[...Array(100)].map((_, i) => {
