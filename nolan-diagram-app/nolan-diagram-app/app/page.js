@@ -347,15 +347,29 @@ export default function Home() {
     setAnswers(newAnswers);
   };
 
-  const calculatePosition = () => {
-    let economic = 0;
-    let social = 0;
-    questions.forEach((q, idx) => {
-      if (q.axis === 'economic') economic += answers[idx];
-      if (q.axis === 'social') social += answers[idx];
-    });
-    return { economic, social };
-  };
+const calculatePosition = () => {
+  let economic = 0;
+  let social = 0;
+  let economicCount = 0;
+  let socialCount = 0;
+
+  questions.forEach((q, idx) => {
+    if (q.axis === 'economic') {
+      economic += answers[idx];
+      economicCount++;
+    }
+    if (q.axis === 'social') {
+      social += answers[idx];
+      socialCount++;
+    }
+  });
+
+  // Normaliza os valores entre -10 e 10
+  const normEconomic = (economic / (economicCount * 2)) * 20; // [-10, 10]
+  const normSocial = (social / (socialCount * 2)) * 20; // [-10, 10]
+
+  return { economic: normEconomic, social: normSocial };
+};
 
   const { economic, social } = calculatePosition();
 
@@ -404,23 +418,23 @@ export default function Home() {
 
       {submitted && (
         <section>
-          <h2 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-4">Seu Resultado</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
           <div className="relative w-full max-w-[500px] aspect-square border border-gray-300 mx-auto">
             {/* Grid colorido */}
-            <div className="absolute inset-0 grid grid-cols-15 grid-rows-15">
-              {[...Array(225)].map((_, i) => {
-                const row = Math.floor(i / 15);
-                const col = i % 15;
+            <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full">
+              {[...Array(100)].map((_, i) => {
+                const row = Math.floor(i / 10);
+                const col = i % 10;
                 let bg = 'bg-white';
-                if (row < 7.5 && col < 7.5) bg = 'bg-green-100';
-                if (row < 7.5 && col >= 7.5) bg = 'bg-yellow-100';
-                if (row >= 7.5 && col < 7.5) bg = 'bg-red-100';
-                if (row >= 7.5 && col >= 7.5) bg = 'bg-blue-100';
-                return <div key={i} className={`border border-gray-100 ${bg}`} />;
+                if (row < 5 && col < 5) bg = 'bg-green-100';
+                if (row < 5 && col >= 5) bg = 'bg-yellow-100';
+                if (row >= 5 && col < 5) bg = 'bg-red-100';
+                if (row >= 5 && col >= 5) bg = 'bg-blue-100';
+                return <div key={i} className={`border border-gray-200 ${bg}`} />;
               })}
             </div>
             {/* Eixos */}
-            <div className="absolute inset-0 flex justify-center items-center">
+            <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
               <div className="absolute w-full h-0.5 bg-black top-1/2" />
               <div className="absolute h-full w-0.5 bg-black left-1/2" />
             </div>
@@ -432,17 +446,18 @@ export default function Home() {
                 top: `calc(50% - ${social * 15}px)`
               }}
             />
-            {/* Legendas principais fora do quadrante */}
-            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Libertário</div>
-            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Autoritário</div>
-            <div className="absolute top-1/2 -left-24 transform -translate-y-1/2 text-sm font-semibold">Esquerda</div>
-            <div className="absolute top-1/2 -right-20 transform -translate-y-1/2 text-sm font-semibold">Direita</div>
-            {/* Descrições ideológicas */}
-            <div className="absolute -top-12 left-0 text-xs text-left">Progressista<br/>Socialista</div>
-            <div className="absolute -top-12 right-0 text-xs text-right">Libertário<br/>Progressista Liberal</div>
-            <div className="absolute -bottom-12 left-0 text-xs text-left">Autoritário<br/>Totalitário</div>
-            <div className="absolute -bottom-12 right-0 text-xs text-right">Liberal<br/>Conservador</div>
-          </div>
+          {/* Legendas principais dos eixos */}
+          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold">Libertário</div>
+          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold">Autoritário</div>
+          <div className="absolute top-1/2 -left-16 transform -translate-y-1/2 text-xs sm:text-sm font-semibold">Esquerda</div>
+          <div className="absolute top-1/2 -right-12 transform -translate-y-1/2 text-xs sm:text-sm font-semibold">Direita</div>
+
+          {/* Rótulos ideológicos externos */}
+          <div className="absolute -top-14 left-0 text-[10px] sm:text-xs text-left leading-tight">Progressista<br />Socialista</div>
+          <div className="absolute -top-14 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário<br />Progressista Liberal</div>
+          <div className="absolute -bottom-14 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário<br />Totalitário</div>
+          <div className="absolute -bottom-14 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal<br />Conservador</div>
+    </div>
         </section>
       )}
     </main>
