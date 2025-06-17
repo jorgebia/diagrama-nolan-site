@@ -395,7 +395,7 @@ export default function Home() {
         ))}
         <button
           onClick={() => setSubmitted(true)}
-          className="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700"
+          className="bg-blue-600 text-white px-4 py-2 rounded mt-4 hover:bg-blue-700 items-center justify-center transition-colors"
         >
           Ver resultado
         </button>
@@ -403,7 +403,7 @@ export default function Home() {
 
       {submitted && (
         <section>
-          <h2 className="text-2xl font-bold mb-4">Seu Resultado</h2>
+          <h2 className="text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">Seu Resultado</h2>
           <div className="relative h-[500px] w-[500px] border border-gray-300 mx-auto">
             {/* Grid colorido */}
             <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
