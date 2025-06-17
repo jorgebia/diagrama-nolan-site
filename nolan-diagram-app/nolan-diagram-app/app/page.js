@@ -431,11 +431,16 @@ export default function Home() {
                 top: `calc(50% - ${social * 10}px)`
               }}
             />
-            {/* Legendas */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-0">Libertário</div>
-            <div className="absolute left-1/2 transform -translate-x-1/2 bottom-0">Autoritário</div>
-            <div className="absolute top-1/2 transform -translate-y-1/2 left-0">Esquerda</div>
-            <div className="absolute top-1/2 transform -translate-y-1/2 right-0">Direita</div>
+            {/* Legendas principais fora do quadrante */}
+            <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Libertário</div>
+            <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 text-sm font-semibold">Autoritário</div>
+            <div className="absolute top-1/2 -left-24 transform -translate-y-1/2 text-sm font-semibold">Esquerda</div>
+            <div className="absolute top-1/2 -right-20 transform -translate-y-1/2 text-sm font-semibold">Direita</div>
+            {/* Descrições ideológicas */}
+            <div className="absolute -top-12 left-0 text-xs text-left">Progressista<br/>Socialista</div>
+            <div className="absolute -top-12 right-0 text-xs text-right">Libertário<br/>Progressista Liberal</div>
+            <div className="absolute -bottom-12 left-0 text-xs text-left">Autoritário<br/>Totalitário</div>
+            <div className="absolute -bottom-12 right-0 text-xs text-right">Liberal<br/>Conservador</div>
           </div>
         </section>
       )}
