@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const questions = [
   {
-    text: '01 - O governo deve ter controle total sobre o sistema de saúde brasileiro (SUS, planos de saúde privados e etc.)',
+    text: '01 - O estado deve controlar totalmente o sistema de saúde no Brasil, incluindo o SUS, os planos de saúde e hospitais privados.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -15,7 +15,7 @@ const questions = [
     ],
   },
   {
-    text: '02 - A privatização de estatais é benéfica para o Brasil (ex.: Correios, Petrobrás).',
+    text: '02 - A privatização de empresas estatais, como os Correios e a Petrobrás, traz benefícios para o Brasil.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -26,7 +26,7 @@ const questions = [
     ],
   },
   {
-    text: '03 - O Banco Central deve imprimir mais dinheiro em caso de emergência (ex.: para estimular a economia).',
+    text: '03 - O Banco Central deve emitir mais dinheiro em situações de crise econômica.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -37,7 +37,7 @@ const questions = [
     ],
   },
   {
-    text: '04 - A legalização das drogas deve ser implementada (ex.: produção e consumo).',
+    text: '04 - A produção, comercialização e consumo de drogas devem ser legalizados.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -48,7 +48,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - O estado deve ditar as regras da educação através do Ministério da Educação (ex.: currículo nacional unificado).',
+    text: '05 - O Ministério da Educação deve definir um currículo nacional obrigatório para todas as escolas públicas e privadas.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -59,7 +59,7 @@ const questions = [
     ],
   },
   {
-    text: '06 - A posse de armas deve ser facilitada para todos (ex.: menos burocracia para compra e posse).',
+    text: '06 - A aquisição e posse de armas de fogo deve ser menos burocrática para os cidadãos.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -70,7 +70,7 @@ const questions = [
     ],
   },
   {
-    text: '07 - A privatização das universidades públicas deve ser uma realidade no Brasil. (ex.: universidades federais e estaduais).',
+    text: '07 - As universidades públicas (federais e estaduais) devem ser privatizadas.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -81,7 +81,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - Bancos estatais devem ser utilizados para financiar projetos sociais e infraestrutura (ex.: Caixa, BB e BNDES).',
+    text: '08 - Bancos públicos, como a Caixa e o BNDES, devem ser usados para financiar programas sociais e infraestrutura.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -92,7 +92,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - O governo deve buscar cortar gastos e reduzir despesas (através de reformas fiscais, administrativas, etc.).',
+    text: '09 - O governo deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate ao desperdício orçamentário.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -103,7 +103,7 @@ const questions = [
     ],
   },
   {
-    text: '10 - O Estado deve regular ainda mais as redes sociais (além do marco civíl da internet já existente).',
+    text: '10 - O Estado deve ampliar sua regulação sobre a Internet e redes sociais, além do que já prevê o Marco Civil da Internet.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -125,7 +125,7 @@ const questions = [
     ],
   },
   {
-    text: '12 - A liberdade de expressão absoluta deve ser garantida (seja para opiniões impopulares, arte e humor).',
+    text: '12 - A liberdade de expressão deve ser absoluta, mesmo para opiniões impopulares, ofensivas, expressões artísticas e humor.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -136,7 +136,7 @@ const questions = [
     ],
   },
   {
-    text: '13 - O Estado deve subsidiar a cultura e o cinema nacional (ex.: através da lei Rouanet).',
+    text: '13 - O Estado deve continuar financiando projetos culturais por meio de incentivos como a Lei Rouanet.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -213,7 +213,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter a liberdade de fornecer todos os serviços públicos (saúde, justiça, educação, segurança, etc.).',
+    text: '20 - A iniciativa privada deve ter mais liberdade de fornecer serviços públicos (saúde, justiça, educação, segurança, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -235,7 +235,7 @@ const questions = [
     ],
   },
   {
-    text: '22 - Não vejo problema nas pessoas se relacionarem de formas diferentes do tradicional. (relacionamento aberto, poliamor, etc).',
+    text: '22 - Formas não convencionais de relacionamento, como poliamor ou relacionamentos abertos, devem ser respeitadas e legalmente reconhecidas.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -257,7 +257,7 @@ const questions = [
     ],
   },
   {
-    text: '24 - O estado brasileiro deve ter total controle da infraestrutura de transporte (rodovias, ferrovias, etc.).',
+    text: '24 - A infraestrutura de transporte (rodovias, ferrovias, portos, etc.) deve ser de controle exclusivo do Estado.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -279,7 +279,7 @@ const questions = [
     ],
   },
   {
-    text: '26 - O cristianismo deve influenciar na política brasileira. (ex.: leis, decisões, etc.).',
+    text: '26 - Valores cristãos devem orientar decisões políticas e a elaboração de leis no Brasil.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -290,7 +290,7 @@ const questions = [
     ],
   },
   {
-    text: '27 - O MST deve ter o direito de invadir terras improdutivas (ex.: para reforma agrária, combate à fome, etc.).',
+    text: '27 - Movimentos sociais, como o MST, devem ter o direito de ocupar terras improdutivas para fins de reforma agrária.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -301,7 +301,7 @@ const questions = [
     ],
   },
   {
-    text: '28 - Homeschooling deve ser liberado no Brasil (ex.: para educação domiciliar, flexibilidade curricular, etc.).',
+    text: '28 - A educação domiciliar (homeschooling) deve ser permitida legalmente no Brasil.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
