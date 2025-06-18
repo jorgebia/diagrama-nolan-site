@@ -180,7 +180,7 @@ const questions = [
     ],
   },
   {
-    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros. (ex.: eletrônicos, roupas, etc.)',
+    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros (ex.: eletrônicos, roupas, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
