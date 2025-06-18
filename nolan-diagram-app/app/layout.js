@@ -7,7 +7,7 @@ export const metadata = {
     url: "https://testepoliticobr.vercel.app/",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://testepoliticobr.vercel.app/og-image.jpg",
         width: 800,
         height: 800,
         alt: "Diagrama de Nolan"
