@@ -290,7 +290,7 @@ const questions = [
     ],
   },
   {
-    text: '27 - Os brasileiros devem se tornar vegetarianos (ex.: por questões éticas, compaixão, etc.).',
+    text: '27 - O MST deve ter o direito de invadir terras improdutivas (ex.: para reforma agrária, combate à fome, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -354,7 +354,7 @@ const calculatePosition = () => {
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
-        Teste de Espectro Político Brasileiro
+        Teste de Espectro Político Brasileiro (beta)
         </h1>
       </section>
 
