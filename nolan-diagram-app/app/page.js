@@ -15,7 +15,7 @@ const questions = [
     ],
   },
   {
-    text: '02 - A privatização de estatais (ex.: Correios, Petrobrás) é benéfica para o Brasil.',
+    text: '02 - A privatização de estatais é benéfica para o Brasil (ex.: Correios, Petrobrás).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -37,7 +37,7 @@ const questions = [
     ],
   },
   {
-    text: '04 - A legalização das drogas (produção e consumo) deve ser implementada.',
+    text: '04 - A legalização das drogas deve ser implementada (ex.: produção e consumo).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -48,7 +48,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - O estado deve ditar as regras da educação através do Ministério da Educação (ex.: legalização do homeschooling).',
+    text: '05 - O estado deve ditar as regras da educação através do Ministério da Educação (ex.: currículo nacional unificado).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -81,7 +81,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - Bancos estatais (ex.: Caixa, BB e BNDES) devem ser utilizados para financiar projetos sociais e infraestrutura.',
+    text: '08 - Bancos estatais devem ser utilizados para financiar projetos sociais e infraestrutura (ex.: Caixa, BB e BNDES).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -114,7 +114,7 @@ const questions = [
     ],
   },
   {
-    text: '11 - Empresas devem ter liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
+    text: '11 - Empresas devem ter a liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -158,7 +158,7 @@ const questions = [
     ],
   },
   {
-    text: '15 - Qualquer religião (cristianismo, candomblé, etc.) deve ter liberdade para praticar seus rituais.',
+    text: '15 - Qualquer religião deve ter liberdade para praticar seus rituais (cristianismo, candomblé, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -268,7 +268,7 @@ const questions = [
     ],
   },
   {
-    text: '25 - O setor agropecuário do Brasil deveria ser estatizado (ex.: terras, produção, distribuição, etc.).',
+    text: '25 - O setor agropecuário do Brasil deve ser estatizado (ex.: terras, produção, distribuição, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -301,7 +301,7 @@ const questions = [
     ],
   },
   {
-    text: '28 - Meu corpo, minhas regras.',
+    text: '28 - Homeschooling deve ser liberado no Brasil (ex.: para educação domiciliar, flexibilidade curricular, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
