@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const questions = [
   {
     text: '01 - O estado deve controlar totalmente o sistema de saúde no Brasil, incluindo o SUS, os planos de saúde e hospitais privados.',
-    axis: 'social',
+    axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
       { text: 'Concordo parcialmente', value: -1 },
@@ -202,7 +202,7 @@ const questions = [
     ],
   },
   {
-    text: '19 - O Brasil deve aumentar seu orçamento militar.',
+    text: '19 - O Estado deve intervir diretamente no controle de preços em setores essenciais como alimentos e combustíveis.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -213,7 +213,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter mais liberdade de fornecer serviços públicos (saúde, justiça, educação, segurança, etc.).',
+    text: '20 - A iniciativa privada deve ter a liberdade de fornecer serviços públicos (saúde, justiça, educação, segurança, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -225,7 +225,7 @@ const questions = [
   },
   {
     text: '21 - O Brasil deve ser o líder militar na América Latina.',
-    axis: 'economic',
+    axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
       { text: 'Concordo parcialmente', value: -1 },
@@ -360,9 +360,9 @@ const calculatePosition = () => {
 
       <section className="mb-8 bg-white/70 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
         <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
-        <p className="mb-2">David Nolan (1943–2010) foi um ativista político norte-americano. Ele é o criador do Gráfico de Nolan, uma representação política em dois eixos — liberdade econômica e liberdade pessoal — usada para classificar ideologias políticas de forma mais precisa do que o tradicional espectro esquerda-direita.</p>
+        <p className="mb-2">David Nolan (1943-2010) foi um ativista político norte-americano. Ele é o criador do Gráfico de Nolan, uma representação política em dois eixos - liberdade econômica e liberdade pessoal - usada para classificar ideologias políticas de forma mais precisa do que o tradicional espectro esquerda-direita.</p>
         <p className="mb-2">David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
-        <p>Responda ao questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
+        <p>Responda o questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
       </section> 
 
       <section className="mb-8">
