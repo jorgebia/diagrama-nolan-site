@@ -6,6 +6,15 @@ import questions from './data/Questions';
 
 const initialAnswers = Array(questions.length).fill(0);
 
+function getIdeologyLabel(economic, social) {
+  if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
+  if (economic > 0 && social > 0) return '🟡 Libertário / Progressista Liberal';
+  if (economic > 0 && social < 0) return '🔵 Liberal / Conservador';
+  if (economic < 0 && social < 0) return '🔴 Autoritário / Totalitário';
+  return 'Centro';
+}
+
+$1
 export default function Home() {
   const [answers, setAnswers] = useState(initialAnswers);
   const [submitted, setSubmitted] = useState(false);
