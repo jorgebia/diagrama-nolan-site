@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useCallback, useMemo } from 'react';
-import QuestionCard from '@/components/QuestionCard';
-import ResultDiagram from '@/components/ResultDiagram';
-import questions from '@/data/questions';
+import QuestionCard from './components/QuestionCard';
+import ResultDiagram from './components/ResultDiagram';
+import questions from './data/Questions';
 
 const initialAnswers = Array(questions.length).fill(0);
 
