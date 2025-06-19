@@ -74,8 +74,42 @@ export default function Home() {
 
       {submitted && (
         <section>
-          <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
-          <ResultDiagram economic={economic} social={social} />
+          $1
+          <p className="text-center text-base mb-6 text-gray-800">
+            Você está posicionado como: <strong>{getIdeologyLabel(economic, social)}</strong>
+          </p>
+          $1
+
+          <div className="mt-8 max-w-3xl mx-auto space-y-4 text-sm sm:text-base bg-white/70 p-4 rounded shadow">
+            <div>
+              <h3 className="font-semibold text-lg">🔴 Autoritário / Totalitário</h3>
+              <p>Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">🟢 Progressista / Socialista</h3>
+              <p>Busca igualdade social por meio de políticas públicas e maior controle estatal da economia. É aberto a mudanças culturais e sociais em prol da justiça e inclusão.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">🔵 Liberal / Conservador</h3>
+              <p>Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.</p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-lg">🟡 Libertário / Progressista Liberal</h3>
+              <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-6">
+            <a
+              href={`https://wa.me/?text=${encodeURIComponent(`Fiz o Teste de Espectro Político Brasileiro e meu resultado foi: ${getIdeologyLabel(economic, social)}.`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mt-4 text-sm"
+            >
+              Compartilhar no WhatsApp
+            </a>
+          </div>
+
         </section>
       )}
     </main>
