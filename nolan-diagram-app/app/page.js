@@ -107,18 +107,6 @@ export default function Home() {
               <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
             </div>
           </div>
-
-          <div className="text-center mt-6">
-            <a
-              href={`https://wa.me/?text=${encodeURIComponent(`Fiz o Teste de Espectro Político Brasileiro e meu resultado foi: ${getIdeologyLabel(economic, social)}.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded mt-4 text-sm"
-            >
-              Compartilhar no WhatsApp
-            </a>
-          </div>
-
         </section>
       )}
     </main>
