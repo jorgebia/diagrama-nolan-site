@@ -15,7 +15,7 @@ const questions = [
     ],
   },
   {
-    text: '02 - A privatização de empresas estatais, como os Correios e a Petrobrás, traz benefícios para o Brasil.).',
+    text: '02 - A privatização de empresas estatais, como os Correios e a Petrobrás, traz benefícios para o Brasil.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
