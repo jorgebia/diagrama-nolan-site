@@ -6,13 +6,14 @@ import questions from './data/Questions';
 
 const initialAnswers = Array(questions.length).fill(0);
 
+export default function Home() {
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
   if (economic > 0 && social > 0) return '🟡 Libertário / Progressista Liberal';
   if (economic > 0 && social < 0) return '🔵 Liberal / Conservador';
   if (economic < 0 && social < 0) return '🔴 Autoritário / Totalitário';
   return 'Centro';
-}
+};
 
   const [answers, setAnswers] = useState(initialAnswers);
   const [submitted, setSubmitted] = useState(false);
@@ -24,7 +25,7 @@ function getIdeologyLabel(economic, social) {
       return newAnswers;
     });
   }, []);
-
+  
   const { economic, social } = useMemo(() => {
     let economic = 0, social = 0, economicCount = 0, socialCount = 0;
 
@@ -109,3 +110,4 @@ function getIdeologyLabel(economic, social) {
       )}
     </main>
   );
+}
