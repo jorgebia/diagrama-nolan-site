@@ -15,7 +15,6 @@ function getIdeologyLabel(economic, social) {
 }
 
 $1
-export default function Home() {
   const [answers, setAnswers] = useState(initialAnswers);
   const [submitted, setSubmitted] = useState(false);
 
@@ -111,4 +110,3 @@ export default function Home() {
       )}
     </main>
   );
-}
