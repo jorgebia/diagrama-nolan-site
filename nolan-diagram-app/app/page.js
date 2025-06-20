@@ -45,7 +45,7 @@ $1
       social: socialCount ? social / (socialCount * 2) : 0,
     };
   }, [answers]);
-
+{
   return (
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
@@ -110,3 +110,4 @@ $1
       )}
     </main>
   );
+}
