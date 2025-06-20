@@ -23,8 +23,8 @@ const questions = [
     ],
   },
   {
-    text: '03 - O Banco Central deve emitir mais dinheiro em situações de crise econômica.',
-    axis: 'economic',
+    text: '03 - O estado deve flexibilizar as regras de imigração.',
+    axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
       { text: 'Concordo parcialmente', value: -1 },
@@ -188,7 +188,7 @@ const questions = [
     ],
   },
   {
-    text: '18 - Deve haver cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
+    text: '18 - O estado deve impor cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -288,7 +288,7 @@ const questions = [
   },
   {
     text: '27 - Movimentos sociais, como o MST, devem ter o direito de ocupar terras improdutivas para fins de reforma agrária.',
-    axis: 'social',
+    axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
       { text: 'Concordo parcialmente', value: -1 },
