@@ -14,7 +14,6 @@ function getIdeologyLabel(economic, social) {
   return 'Centro';
 }
 
-$1
   const [answers, setAnswers] = useState(initialAnswers);
   const [submitted, setSubmitted] = useState(false);
 
@@ -45,7 +44,7 @@ $1
       social: socialCount ? social / (socialCount * 2) : 0,
     };
   }, [answers]);
-{
+
   return (
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
@@ -110,4 +109,3 @@ $1
       )}
     </main>
   );
-}
