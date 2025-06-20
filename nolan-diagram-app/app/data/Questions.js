@@ -26,11 +26,11 @@ const questions = [
     text: '03 - O estado deve flexibilizar as regras de imigração.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
