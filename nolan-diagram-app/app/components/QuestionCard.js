@@ -15,7 +15,7 @@ export default function QuestionCard({ question, index, value, onChange }) {
                 type="radio"
                 name={`question-${index}`}
                 value={opt.value}
-                checked={value === opt.value}
+                //checked={value === opt.value}
                 onChange={() => onChange(index, opt.value)}
                 className="w-5 h-5"
               />

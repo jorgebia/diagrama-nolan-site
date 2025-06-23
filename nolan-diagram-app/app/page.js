@@ -106,6 +106,10 @@ function getIdeologyLabel(economic, social) {
               <h3 className="font-semibold text-lg">🟡 Libertário / Progressista Liberal</h3>
               <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
             </div>
+            <div>
+              <h3 className="font-semibold text-lg">⚪ Centro</h3>
+              <p>Sua posição está equilibrada entre os extremos dos dois eixos. Isso indica uma visão política moderada, que pode variar conforme o tema, buscando equilíbrio entre liberdade individual, controle estatal, progresso social e valores tradicionais.</p>
+            </div>
           </div>
         </section>
       )}
