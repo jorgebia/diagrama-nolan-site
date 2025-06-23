@@ -108,7 +108,7 @@ function getIdeologyLabel(economic, social) {
             </div>
             <div>
               <h3 className="font-semibold text-lg">⚪ Centro</h3>
-              <p>Sua posição está equilibrada entre os extremos dos dois eixos. Isso indica uma visão política moderada, que pode variar conforme o tema, buscando equilíbrio entre liberdade individual, controle estatal, progresso social e valores tradicionais.</p>
+              <p>Sua posição política está equilibrada e moderada. Ela pode variar conforme o tema, buscando equilíbrio e moderação entre liberdade individual, controle estatal, progresso social e valores tradicionais.</p>
             </div>
           </div>
         </section>
