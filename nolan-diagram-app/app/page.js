@@ -50,7 +50,7 @@ function getIdeologyLabel(economic, social) {
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
-          Teste de Espectro Político Brasileiro (beta)
+          Quiz de Espectro Político Brasileiro (beta)
         </h1>
       </section>
 
