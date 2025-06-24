@@ -9,7 +9,7 @@ const initialAnswers = Array(questions.length).fill(0);
 export default function Home() {
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
-  if (economic > 0 && social > 0) return '🟡 Libertário / Progressista Liberal';
+  if (economic > 0 && social > 0) return '🟡 Libertário';
   if (economic > 0 && social < 0) return '🔵 Liberal / Conservador';
   if (economic < 0 && social < 0) return '🔴 Autoritário / Totalitário';
   return '⚪ Centro';
@@ -103,7 +103,7 @@ function getIdeologyLabel(economic, social) {
               <p>Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">🟡 Libertário / Progressista Liberal</h3>
+              <h3 className="font-semibold text-lg">🟡 Libertário</h3>
               <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
             </div>
             <div>
