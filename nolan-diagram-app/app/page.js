@@ -13,6 +13,12 @@ function getIdeologyLabel(economic, social) {
   if (economic > 0 && social < 0) return '🔵 Liberal / Conservador';
   if (economic < 0 && social < 0) return '🔴 Autoritário / Totalitário';
   return '⚪ Centro';
+  }
+  
+// Função para enviar o contador ao servidor
+    const handleSubmit = async () => {
+    setSubmitted(true);
+    await fetch("/api/contador", { method: "POST" });
 };
 
   const [answers, setAnswers] = useState(initialAnswers);
@@ -85,7 +91,7 @@ function getIdeologyLabel(economic, social) {
           />
         ))}
         <button
-          onClick={() => setSubmitted(true)}
+          onClick={handleSubmit}
           //disabled={!answers.some(a => a !== 0)}
           className={`bg-blue-600 text-white px-6 py-3 rounded mt-4 text-base sm:text-lg ${answers.some(a => a !== 0) ? 'hover:bg-blue-700' : 'opacity-50 cursor-not-allowed'}`}
         >
