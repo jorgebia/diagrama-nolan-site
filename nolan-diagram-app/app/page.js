@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import QuestionCard from './components/QuestionCard';
 import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
