@@ -5,6 +5,7 @@ import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
 
 const initialAnswers = Array(questions.length).fill(0);
+const [totalRespostas, setTotalRespostas] = useState(null);
 
 export default function Home() {
 function getIdeologyLabel(economic, social) {
@@ -46,12 +47,24 @@ function getIdeologyLabel(economic, social) {
     };
   }, [answers]);
 
+  useEffect(() => {
+  fetch("/api/contador")
+    .then(res => res.json())
+    .then(data => setTotalRespostas(data.total));
+}, []);
+
   return (
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 inline-flex items-center justify-center gap-2">
           Quiz de Espectro Político Brasileiro (beta)
         </h1>
+
+          {totalRespostas !== null && (
+        <p className="text-sm text-gray-600">
+          Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
+         </p>
+          )}
       </section>
 
       <section className="mb-8 bg-white/70 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
