@@ -5,7 +5,6 @@ import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
 
 const initialAnswers = Array(questions.length).fill(0);
-const [totalRespostas, setTotalRespostas] = useState(null);
 
 export default function Home() {
 function getIdeologyLabel(economic, social) {
@@ -18,6 +17,7 @@ function getIdeologyLabel(economic, social) {
 
   const [answers, setAnswers] = useState(initialAnswers);
   const [submitted, setSubmitted] = useState(false);
+  const [totalRespostas, setTotalRespostas] = useState(null);
 
   const handleAnswerChange = useCallback((index, value) => {
     setAnswers(prev => {
