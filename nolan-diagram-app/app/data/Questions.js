@@ -12,7 +12,7 @@ const questions = [
     ],
   },
   {
-    text: '02 - A privatização de empresas estatais, como os Correios e a Petrobrás, traz benefícios para o Brasil.',
+    text: '02 - As empresas estatais (ex.: Correios, Petrobrás, Banco do Brasil) devem ser privatizadas.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -45,7 +45,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - O Ministério da Educação deve definir um currículo nacional obrigatório para todas as escolas públicas e privadas.',
+    text: '05 - As escolas privadas devem continuar sendo obrigadas a seguir o currículo nacional definido pelo Ministério da Educação.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -188,7 +188,7 @@ const questions = [
     ],
   },
   {
-    text: '18 - O estado deve impor cotas raciais em qualquer setor da sociedade brasileira (ex.: educação, emprego, etc.).',
+    text: '18 - O estado deve impor cotas raciais em qualquer setor da sociedade brasileira.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -254,7 +254,7 @@ const questions = [
     ],
   },
   {
-    text: '24 - A infraestrutura de transporte (rodovias, ferrovias, portos, etc.) deve ser de controle exclusivo do Estado.',
+    text: '24 - A infraestrutura de transporte (rodovias, ferrovias, portos, etc.) deve ser de responsabilidade exclusiva do Estado.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -287,7 +287,7 @@ const questions = [
     ],
   },
   {
-    text: '27 - Movimentos sociais, como o MST, devem ter o direito de ocupar terras improdutivas para fins de reforma agrária.',
+    text: '27 - Movimentos sociais, como o MST, devem ter o direito de ocupar terras improdutivas.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
