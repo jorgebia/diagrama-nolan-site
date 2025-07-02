@@ -96,7 +96,7 @@ function getIdeologyLabel(economic, social) {
         <div className="flex justify-center">
           <button
             onClick={handleSubmit}
-            className={`bg-blue-600 text-white px-6 py-3 rounded mt-4 text-base sm:text-lg ${answers.some(a => a !== 0) ? 'hover:bg-blue-700' : 'opacity-50 cursor-not-allowed'}`}
+            className={`bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md mt-4 text-base sm:text-lg ${answers.some(a => a !== 0) ? 'hover:bg-blue-700' : 'opacity-50 cursor-not-allowed'}`}
           >
             Ver resultado
           </button>
