@@ -111,7 +111,7 @@ function getIdeologyLabel(economic, social) {
             Você está posicionado(a) como: <strong>{getIdeologyLabel(economic, social)}</strong>
           </p>
 
-          <div className="mt-8 max-w-3xl mx-auto space-y-4 text-sm sm:text-base bg-white/70 p-4 rounded shadow">
+          <div className="mt-8 max-w-3xl mx-auto space-y-4 text-sm sm:text-base bg-white/70 p-4 rounded-xl shadow-md">
             <div>
               <h3 className="font-semibold text-lg">🔴 Autoritário(a) / Totalitário(a)</h3>
               <p>Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.</p>
