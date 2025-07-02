@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function QuestionCard({ question, index, value, onChange }) {
   return (
-    <div className="mb-4 bg-white/80 p-4 rounded-md shadow-sm">
+    <div className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
       <p className="font-semibold mb-2">{question.text}</p>
       <div className="flex flex-col gap-1">
         {question.options.map((opt, oIdx) => {
