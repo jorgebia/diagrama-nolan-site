@@ -108,12 +108,12 @@ function getIdeologyLabel(economic, social) {
           <ResultDiagram economic={economic} social={social} />
           <div className="h-16" />
           <p className="text-center text-base mb-6 text-gray-800">
-            Você está posicionado como: <strong>{getIdeologyLabel(economic, social)}</strong>
+            Você está posicionado(a) como: <strong>{getIdeologyLabel(economic, social)}</strong>
           </p>
 
           <div className="mt-8 max-w-3xl mx-auto space-y-4 text-sm sm:text-base bg-white/70 p-4 rounded shadow">
             <div>
-              <h3 className="font-semibold text-lg">🔴 Autoritário / Totalitário</h3>
+              <h3 className="font-semibold text-lg">🔴 Autoritário(a) / Totalitário(a)</h3>
               <p>Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.</p>
             </div>
             <div>
@@ -121,11 +121,11 @@ function getIdeologyLabel(economic, social) {
               <p>Busca igualdade social por meio de políticas públicas e maior controle estatal da economia. É aberto a mudanças culturais e sociais em prol da justiça e inclusão.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">🔵 Liberal / Conservador</h3>
+              <h3 className="font-semibold text-lg">🔵 Liberal / Conservador(a)</h3>
               <p>Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.</p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg">🟡 Libertário</h3>
+              <h3 className="font-semibold text-lg">🟡 Libertário(a)</h3>
               <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
             </div>
             <div>
