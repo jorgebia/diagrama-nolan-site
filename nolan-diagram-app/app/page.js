@@ -83,7 +83,7 @@ function getIdeologyLabel(economic, social) {
         <p className="mb-2">Responda o questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
       </section>
 
-      <section className="mb-8">
+      <section className="mb-8 bg-white/70 p-6 rounded-xl shadow-md max-w-3xl mx-auto">
         {questions.map((q, idx) => (
           <QuestionCard
             key={idx}
