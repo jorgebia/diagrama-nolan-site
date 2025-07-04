@@ -12,7 +12,7 @@ const questions = [
     ],
   },
   {
-    text: '02 - As empresas estatais (ex.: Correios, Petrobrás, Banco do Brasil) devem ser privatizadas.',
+    text: '02 - As empresas estatais (ex.: Correios, Petrobrás, etc.) devem ser privatizadas.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
