@@ -265,7 +265,7 @@ const questions = [
     ],
   },
   {
-    text: '25 - O setor agropecuário do Brasil deve ser estatizado (ex.: terras, produção, distribuição, etc.).',
+    text: '25 - Estado brasileiro deve promover uma reforma agrária, redistribuindo terras (privadas) improdutivas para pequenos agricultores.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -287,14 +287,14 @@ const questions = [
     ],
   },
   {
-    text: '27 - Movimentos sociais, como o MST, devem ter o direito de ocupar terras improdutivas.',
+    text: '27 - Pequenos empreendedores e startups devem receber incentivos fiscais e desburocratização.',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
