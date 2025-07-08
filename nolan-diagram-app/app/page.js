@@ -63,7 +63,7 @@ function getIdeologyLabel(economic, social) {
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 inline-flex items-center justify-center">
-          Quiz de Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
+          Quiz de Espectro Político Brasileiro<span className="italic text-sm ml-1 whitespace-nowrap">(beta)</span>
         </h1>
 
           {totalRespostas !== null && (
