@@ -45,14 +45,14 @@ const questions = [
     ],
   },
   {
-    text: '05 - As escolas privadas devem continuar sendo obrigadas a seguir o currículo nacional definido pelo Ministério da Educação.',
+    text: '05 - As escolas privadas devem ter a liberdade de criar sua própria grade curricular, sem a necessidade de seguir o currículo nacional definido pelo Ministério da Educação.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
