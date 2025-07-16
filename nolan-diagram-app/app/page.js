@@ -9,9 +9,9 @@ const initialAnswers = Array(questions.length).fill(0);
 export default function Home() {
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
-  if (economic > 0 && social > 0) return '🟡 Libertário';
-  if (economic > 0 && social < 0) return '🔵 Liberal / Conservador';
-  if (economic < 0 && social < 0) return '🔴 Autoritário / Totalitário';
+  if (economic > 0 && social > 0) return '🟡 Libertário(a)';
+  if (economic > 0 && social < 0) return '🔵 Liberal / Conservador(a)';
+  if (economic < 0 && social < 0) return '🔴 Autoritário(a) / Totalitário(a)';
   return '⚪ Centro';
   }
   
