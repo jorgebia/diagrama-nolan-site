@@ -33,15 +33,15 @@ export default function ResultDiagram({ economic, social }) {
         }}
       />
       {/* Legendas principais dos eixos */}
-      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Libertário</div>
-      <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Autoritário</div>
+      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Libertário(a)</div>
+      <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Autoritário(a)</div>
       <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1 text-sm font-semibold bg-white/80 px-1 z-10">Esquerda</div>
       <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1 text-sm font-semibold bg-white/80 px-1 z-10">Direita</div>
       {/* Rótulos ideológicos externos */}
       <div className="absolute -top-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Progressista /<br />Socialista</div>
-      <div className="absolute -top-4 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário</div>
-      <div className="absolute -bottom-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário /<br />Totalitário</div>
-      <div className="absolute -bottom-8 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal /<br />Conservador</div>
+      <div className="absolute -top-4 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário(a)</div>
+      <div className="absolute -bottom-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário(a) /<br />Totalitário(a)</div>
+      <div className="absolute -bottom-8 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal /<br />Conservador(a)</div>
     </div>
   );
 }
