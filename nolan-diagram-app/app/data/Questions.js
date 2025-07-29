@@ -111,7 +111,7 @@ const questions = [
     ],
   },
   {
-    text: '11 - Empresas devem ter a liberdade para contratar e demitir sem restrições (Contratar como PJ, etc.).',
+    text: '11 - Empresas devem ter a liberdade para contratar e demitir sem restrições (Contratar como PJ, escala 6x1 e 4x3, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
