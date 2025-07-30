@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quizpolitico.com.br/sitemap.xml

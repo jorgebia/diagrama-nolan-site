@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 "use client";
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import QuestionCard from './components/QuestionCard';
@@ -61,6 +63,12 @@ function getIdeologyLabel(economic, social) {
 
   return (
     <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
+      <Head>
+        <title>Teste de Espectro Político Brasileiro</title>
+        <meta name="description" content="Descubra sua posição no espectro político brasileiro com este quiz baseado no Diagrama de Nolan." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 items-center justify-center">
           Quiz de Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
