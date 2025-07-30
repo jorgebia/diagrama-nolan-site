@@ -67,12 +67,12 @@ function getIdeologyLabel(economic, social) {
         <meta name="description" content="Descubra sua posição no espectro político brasileiro com este quiz baseado no Diagrama de Nolan." />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/og-image.jpg" />
       </Head>
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 items-center justify-center">
-          Quiz de Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
+          Quiz do Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
         </h1>
-
           {totalRespostas !== null && (
         <p className="text-sm text-gray-600">
           Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
@@ -87,7 +87,7 @@ function getIdeologyLabel(economic, social) {
       </section>
 
       <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
-        <p className="mb-2">Responda o questionário para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
+        <p className="mb-2">Responda o quiz para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
       </section>
 
       <section className="mb-8">
