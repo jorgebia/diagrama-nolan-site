@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <head>
         <title>Quiz Político Brasil</title>
+        <link rel="icon" href="/favicon.png" type="image/png" />
       </head>
       <body>
         {children}
