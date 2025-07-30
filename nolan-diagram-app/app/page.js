@@ -1,10 +1,9 @@
-import Head from 'next/head';
-
 "use client";
 import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import QuestionCard from './components/QuestionCard';
 import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
+import Head from 'next/head';
 
 const initialAnswers = Array(questions.length).fill(0);
 
