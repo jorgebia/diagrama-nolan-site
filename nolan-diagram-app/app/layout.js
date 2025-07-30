@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  description: "Descubra sua posição política com este quiz.",
+  description: "Este quiz ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.",
   openGraph: {
-    description: "Descubra sua posição política com este quiz.",
+    description: "Este quiz ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.",
     url: "https://quizpolitico.com.br/",
     images: [
       {
