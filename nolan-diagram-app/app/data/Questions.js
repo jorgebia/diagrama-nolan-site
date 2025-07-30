@@ -1,14 +1,14 @@
 //data/questions.js
 const questions = [
   {
-    text: '01 - O Estado brasileiro deve ampliar a redução de preço dos medicamentos genéricos (Por lei, o medicamento genérico deve ser 35% mais barato que o de referência).',
+    text: '01 - As operadoras de planos de saúde devem ter a liberdade de fornecer planos personalizados sem a necessidade de seguir o estabelecido pela ANS (Agência Nacional de Saúde Suplementar).',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
