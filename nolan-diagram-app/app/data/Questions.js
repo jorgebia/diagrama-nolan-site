@@ -1,7 +1,7 @@
 //data/questions.js
 const questions = [
   {
-    text: '01 - O estado deve controlar totalmente o sistema de saúde no Brasil, incluindo o SUS, os planos de saúde e hospitais privados.',
+    text: '01 - O Estado brasileiro deve ampliar a redução de preço dos medicamentos genéricos (Por lei, o medicamento genérico deve ser 35% mais barato que o de referência).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -23,14 +23,14 @@ const questions = [
     ],
   },
   {
-    text: '03 - O estado deve flexibilizar as regras de imigração.',
+    text: '03 - O Estado brasileiro deve restringir as regras de imigração.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 },
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - O governo deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate ao desperdício orçamentário.',
+    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate ao desperdício orçamentário.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -100,7 +100,7 @@ const questions = [
     ],
   },
   {
-    text: '10 - O Estado deve ampliar sua regulação sobre a Internet e redes sociais, além do que já prevê o Marco Civil da Internet.',
+    text: '10 - O Estado brasileiro deve ampliar sua regulação sobre a Internet e redes sociais, além do que já prevê o Marco Civil da Internet.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -133,7 +133,7 @@ const questions = [
     ],
   },
   {
-    text: '13 - O Estado deve continuar financiando projetos culturais por meio de incentivos como a Lei Rouanet.',
+    text: '13 - O Estado brasileiro deve continuar financiando projetos culturais por meio da Lei Rouanet.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -177,7 +177,7 @@ const questions = [
     ],
   },
   {
-    text: '17 - O Brasil deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros (ex.: eletrônicos, roupas, etc.).',
+    text: '17 - O Estado brasileiro deve desburocratizar e reduzir impostos sobre a importação de produtos estrangeiros (ex.: eletrônicos, roupas, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -188,7 +188,7 @@ const questions = [
     ],
   },
   {
-    text: '18 - O estado deve impor cotas raciais em qualquer setor da sociedade brasileira.',
+    text: '18 - O Estado deve impor cotas raciais em qualquer setor da sociedade brasileira.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -210,7 +210,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter a liberdade de fornecer serviços essenciais, como saúde, educação, justiça, segurança, etc.',
+    text: '20 - A iniciativa privada deve ter a liberdade de fornecer serviços essenciais, como saúde, educação, segurança, saneamento básico, etc.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -232,7 +232,7 @@ const questions = [
     ],
   },
   {
-    text: '22 - Formas não convencionais de relacionamento, como poliamor ou relacionamentos abertos, devem ser respeitadas e legalmente reconhecidas.',
+    text: '22 - Formas não convencionais de relacionamento, como poliamor e relacionamento aberto, devem ser respeitadas e legalmente reconhecidas.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -243,7 +243,7 @@ const questions = [
     ],
   },
   {
-    text: '23 - O Brasil deve desburocratizar o investimento privado no setor de energia (ex.: solar, eólica, nuclear, etc.).',
+    text: '23 - O Estado deve desburocratizar o investimento privado no setor de energia (ex.: solar, eólica, nuclear, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -254,7 +254,7 @@ const questions = [
     ],
   },
   {
-    text: '24 - A infraestrutura de transporte (rodovias, ferrovias, portos, etc.) deve ser de responsabilidade exclusiva do Estado.',
+    text: '24 - O Estado deve ter a exclusividade em fornecer e gerir toda a infraestrutura de transporte (rodovias, ferrovias, portos, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -265,7 +265,7 @@ const questions = [
     ],
   },
   {
-    text: '25 - Estado brasileiro deve promover uma reforma agrária, redistribuindo terras (privadas) improdutivas para pequenos agricultores.',
+    text: '25 - O Estado brasileiro deve promover uma reforma agrária, redistribuindo terras (privadas) improdutivas para pequenos agricultores.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
