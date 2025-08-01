@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Descubra seu lugar no espectro político brasileiro | Quiz Político Brasil</title>
         <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <meta name="keywords" content="quiz político, diagrama de nolan, espectro político, espectro ideológico, libertário, libertarianismo, autoritário, esquerda, direita, centro político" />
         <meta property="og:title" content="Descubra seu lugar no espectro político brasileiro | Quiz Político Brasil" />
         <meta property="og:description" content="Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan)." />
