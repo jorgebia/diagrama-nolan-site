@@ -86,8 +86,8 @@ function getIdeologyLabel(economic, social) {
         <p className="mb-2">David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
       </section>
 
-      <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
-        <p className="mb-2">Responda o quiz para descobrir onde você se posiciona. Esta análise ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.</p>
+      <section className="font-bold mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
+        <p className="mb-2">Responda o quiz para descobrir onde você se posiciona em um espectro político mais amplo que o tradicional esquerda-direita (baseado no Diagrama de Nolan).</p>
       </section>
 
       <section className="mb-8">
