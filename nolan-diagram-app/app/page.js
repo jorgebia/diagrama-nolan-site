@@ -141,6 +141,24 @@ function getIdeologyLabel(economic, social) {
               <p>Sua posição política está equilibrada e moderada. Ela pode variar conforme o tema, buscando equilíbrio e moderação entre liberdade individual, controle estatal, progresso social e valores tradicionais.</p>
             </div>
           </div>
+
+          <section className="mt-12 max-w-3xl mx-auto bg-white/70 p-4 rounded-xl shadow-md">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4">📚 Links Complementares</h2>
+            <ul className="list-disc list-inside space-y-2 text-sm sm:text-base">
+              <li>
+                <a
+                  href="/vamos-trocar-ebook.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
+                  Ebook infantil: Vamos Trocar? (PDF)
+                </a>
+                <span className="ml-1 text-gray-600">(‘Vamos Trocar?’ introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas,seja qual for a situação, é a base para uma sociedade livre e pacífica!)</span>
+              </li>
+            </ul>
+          </section>
+
         </section>
       )}
     </main>
