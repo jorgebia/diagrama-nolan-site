@@ -1,9 +1,12 @@
 import "./globals.css";
 
 export const metadata = {
-  description: "Este quiz ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.",
+  title: "Quiz Político Brasil - Descubra seu lugar no espectro político brasileiro",
+  description: "Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan).",
+  keywords: "quiz político, diagrama de nolan, espectro político, espectro ideológico, política brasileira, libertário, autoritário, esquerda, direita",
   openGraph: {
-    description: "Este quiz ajuda a compreender melhor sua filosofia política em um espectro mais amplo que o tradicional.",
+    title: "Quiz Político Brasil - Descubra seu lugar no espectro político brasileiro",
+    description: "Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan).",
     url: "https://quizpolitico.com.br/",
     images: [
       {
@@ -24,8 +27,26 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
-        <title>Quiz Político Brasil</title>
+        <title>Quiz Político Brasil - Descubra seu lugar no espectro político brasileiro</title>
         <link rel="icon" href="/favicon.png" type="image/png" />
+
+        <meta name="keywords" content="quiz político, diagrama de nolan, espectro político, espectro ideológico, libertário, libertarianismo, autoritário, esquerda, direita, centro político" />
+        <meta property="og:title" content="Quiz Político Brasil - Descubra seu lugar no espectro político brasileiro" />
+        <meta property="og:description" content="Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan)." />
+        <meta property="og:image" content="https://quizpolitico.com.br/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Quiz Político Brasil - Descubra seu lugar no espectro político brasileiro" />
+        <meta name="twitter:description" content="Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan)." />
+        <meta name="twitter:image" content="https://quizpolitico.com.br/og-image.jpg" />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `{
+          "@context": "https://schema.org",
+          "@type": "Website",
+          "name": "Quiz Político Brasil",
+          "url": "https://quizpolitico.com.br",
+          "description": "Identifique sua posição ideológica em um espectro político mais amplo que o tradicional (baseado no Diagrama de Nolan).",
+          "keywords": ["quiz político", "diagrama de nolan", "espectro político", "ideologia política", "teste político", "libertarianismo", "libertario"]
+        }` }} />
       </head>
       <body>
         {children}
