@@ -154,7 +154,7 @@ function getIdeologyLabel(economic, social) {
                 >
                   Ebook infantil: Vamos Trocar?
                 </a>
-                <span className="ml-1 text-gray-600">(‘Vamos Trocar?’ introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!)</span>
+                <span className="ml-1 text-gray-600">("Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!)</span>
               </li>
             </ul>
           </section>
