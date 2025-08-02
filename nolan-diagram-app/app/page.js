@@ -149,7 +149,7 @@ function getIdeologyLabel(economic, social) {
             const info = ideologyDescriptions[key];
             return (
               <>
-                <p className="text-center text-base mb-6 text-gray-800">
+                <p className="text-center text-base mt-10 sm:mt-12 mb-6 text-gray-800">
                   Você está posicionado(a) como: <strong>{info.title}</strong>
                 </p>
                 <div className="mt-8 max-w-3xl mx-auto text-sm sm:text-base bg-white/70 p-4 rounded-xl shadow-md">
