@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import QuestionCard from './components/QuestionCard';
 import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
@@ -8,6 +8,7 @@ import Head from 'next/head';
 const initialAnswers = Array(questions.length).fill(0);
 
 export default function Home() {
+const resultRef = useRef(null);
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
   if (economic > 0 && social > 0) return '🟡 Libertário(a)';
@@ -20,6 +21,9 @@ function getIdeologyLabel(economic, social) {
     const handleSubmit = async () => {
     setSubmitted(true);
     await fetch("/api/contador", { method: "POST" });
+    setTimeout(() => {
+      resultRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
 };
 
   const [answers, setAnswers] = useState(initialAnswers);
@@ -111,9 +115,9 @@ function getIdeologyLabel(economic, social) {
       </section>
 
       {submitted && (
-        <section>
+        <section ref={resultRef}>
           <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
-          <ResultDiagram economic={economic} social={social} />
+          <ResultDiagram economic={economic} social={social} className="mt-6" />
           <div className="h-16" />
           <p className="text-center text-base mb-6 text-gray-800">
             Você está posicionado(a) como: <strong>{getIdeologyLabel(economic, social)}</strong>
