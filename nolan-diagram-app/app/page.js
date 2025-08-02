@@ -10,12 +10,35 @@ const initialAnswers = Array(questions.length).fill(0);
 export default function Home() {
 const resultRef = useRef(null);
 function getIdeologyLabel(economic, social) {
-  if (economic < 0 && social > 0) return '🟢 Progressista / Socialista';
-  if (economic > 0 && social > 0) return '🟡 Libertário(a)';
-  if (economic > 0 && social < 0) return '🔵 Liberal / Conservador(a)';
-  if (economic < 0 && social < 0) return '🔴 Autoritário(a) / Totalitário(a)';
-  return '⚪ Centro';
+  if (economic < 0 && social > 0) return 'progressista';
+  if (economic > 0 && social > 0) return 'libertario';
+  if (economic > 0 && social < 0) return 'liberal';
+  if (economic < 0 && social < 0) return 'autoritario';
+  return 'centro';
   }
+
+  const ideologyDescriptions = {
+    autoritario: {
+      title: '🔴 Autoritário(a) / Totalitário(a)',
+      text: 'Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.'
+    },
+    progressista: {
+      title: '🟢 Progressista / Socialista',
+      text: 'Busca igualdade social por meio de políticas públicas e maior controle estatal da economia. É aberto a mudanças culturais e sociais em prol da justiça e inclusão.'
+    },
+    liberal: {
+      title: '🔵 Liberal / Conservador(a)',
+      text: 'Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.'
+    },
+    libertario: {
+      title: '🟡 Libertário(a)',
+      text: 'Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.'
+    },
+    centro: {
+      title: '⚪ Centro',
+      text: 'Sua posição política está equilibrada e moderada. Ela pode variar conforme o tema, buscando equilíbrio e moderação entre liberdade individual, controle estatal, progresso social e valores tradicionais.'
+    }
+  };
   
 // Função para enviar o contador ao servidor
     const handleSubmit = async () => {
@@ -120,33 +143,22 @@ function getIdeologyLabel(economic, social) {
           <div className="mt-10 sm:mt-12">
             <ResultDiagram economic={economic} social={social} />
           </div>
-          <div className="h-16" />
-          <p className="text-center text-base mb-6 text-gray-800">
-            Você está posicionado(a) como: <strong>{getIdeologyLabel(economic, social)}</strong>
-          </p>
 
-          <div className="mt-8 max-w-3xl mx-auto space-y-4 text-sm sm:text-base bg-white/70 p-4 rounded-xl shadow-md">
-            <div>
-              <h3 className="font-semibold text-lg">🔴 Autoritário(a) / Totalitário(a)</h3>
-              <p>Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg">🟢 Progressista / Socialista</h3>
-              <p>Busca igualdade social por meio de políticas públicas e maior controle estatal da economia. É aberto a mudanças culturais e sociais em prol da justiça e inclusão.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg">🔵 Liberal / Conservador(a)</h3>
-              <p>Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg">🟡 Libertário(a)</h3>
-              <p>Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-lg">⚪ Centro</h3>
-              <p>Sua posição política está equilibrada e moderada. Ela pode variar conforme o tema, buscando equilíbrio e moderação entre liberdade individual, controle estatal, progresso social e valores tradicionais.</p>
-            </div>
-          </div>
+          {(() => {
+            const key = getIdeologyLabel(economic, social);
+            const info = ideologyDescriptions[key];
+            return (
+              <>
+                <p className="text-center text-base mb-6 text-gray-800">
+                  Você está posicionado(a) como: <strong>{info.title}</strong>
+                </p>
+                <div className="mt-8 max-w-3xl mx-auto text-sm sm:text-base bg-white/70 p-4 rounded-xl shadow-md">
+                  <h3 className="font-semibold text-lg">{info.title}</h3>
+                  <p>{info.text}</p>
+                </div>
+              </>
+            );
+          })()}
 
           <section className="mt-12 max-w-3xl mx-auto bg-white/70 p-4 rounded-xl shadow-md">
             <h2 className="text-xl sm:text-2xl font-bold mb-4">📚 Links Complementares</h2>
