@@ -117,7 +117,9 @@ function getIdeologyLabel(economic, social) {
       {submitted && (
         <section ref={resultRef}>
           <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
-          <ResultDiagram economic={economic} social={social} className="mt-6" />
+          <div className="mt-10 sm:mt-12">
+            <ResultDiagram economic={economic} social={social} />
+          </div>
           <div className="h-16" />
           <p className="text-center text-base mb-6 text-gray-800">
             Você está posicionado(a) como: <strong>{getIdeologyLabel(economic, social)}</strong>
