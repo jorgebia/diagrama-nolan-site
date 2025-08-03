@@ -20,23 +20,44 @@ function getIdeologyLabel(economic, social) {
   const ideologyDescriptions = {
     autoritario: {
       title: '🔴 Autoritário(a) / Totalitário(a)',
-      text: 'Defende forte intervenção do Estado tanto na economia quanto nos costumes sociais. Valoriza a ordem, autoridade e o controle estatal como pilares fundamentais da sociedade.'
+      text: [
+        'Seu posicionamento revela uma preferência por um Estado forte, centralizador e com alto grau de controle tanto sobre a economia quanto sobre os costumes sociais. Essa visão valoriza a autoridade, o nacionalismo e a ordem como fundamentos de uma sociedade funcional.',
+        'Os autoritários tendem a ver a liberdade individual como secundária diante da necessidade de estabilidade, segurança e unidade nacional. Políticas coercitivas, vigilância, censura e centralização do poder são frequentemente defendidas como ferramentas legítimas para proteger o Estado e seus valores fundamentais.',
+        'Essa posição costuma emergir em contextos de crise ou desordem, onde a confiança na autoridade é vista como o melhor caminho para restaurar o controle e evitar a fragmentação social.'
+      ]
     },
     progressista: {
       title: '🟢 Progressista / Socialista',
-      text: 'Busca igualdade social por meio de políticas públicas e maior controle estatal da economia. É aberto a mudanças culturais e sociais em prol da justiça e inclusão.'
+      text: [
+        'Sua visão está alinhada com ideias modernas de justiça social, equidade e responsabilidade coletiva. Progressistas e socialistas acreditam que o papel do Estado é essencial para corrigir desigualdades históricas, garantir direitos civis, promover inclusão e construir uma sociedade mais plural, sustentável e empática.',
+        'A vertente progressista / socialista busca combinar políticas públicas robustas com inovação social, avançando pautas como saúde pública universal, educação de qualidade, igualdade de gênero, diversidade cultural e justiça climática.',
+        'A presença do Estado na economia é vista como ferramenta para redistribuir riquezas diminuindo a desigualdade social. Este posicionamento reflete uma postura ativa diante das injustiças e um compromisso com um futuro mais solidário e igualitário.'
+      ]
     },
     liberal: {
       title: '🔵 Liberal / Conservador(a)',
-      text: 'Defende liberdade econômica com menor interferência do Estado, mas com valores sociais mais tradicionais e normas culturais preservadas.'
+      text: [
+        'Você tende a valorizar os pilares clássicos do pensamento liberal-conservador: liberdade econômica, responsabilidade individual, respeito à propriedade privada, e a preservação das tradições culturais e institucionais.',
+        'Essa visão acredita que o progresso verdadeiro deve ser acompanhado de estabilidade moral e ordem social. Os liberais conservadores geralmente defendem mercados livres com o mínimo de intervenção estatal, acreditando que a iniciativa privada é o motor mais eficiente do desenvolvimento.',
+        'Ao mesmo tempo, reconhecem o valor das instituições, da família, da religião e da autoridade como fundamentos para a coesão social. Este posicionamento representa uma confiança nas virtudes do indivíduo, na importância dos costumes e na necessidade de preservar estruturas que resistiram ao teste do tempo.'
+      ]
     },
     libertario: {
       title: '🟡 Libertário(a)',
-      text: 'Valoriza fortemente as liberdades individuais, tanto econômicas quanto pessoais. Promove um Estado mínimo e grande autonomia do cidadão em todas as esferas.'
+      text: [
+        'Você se identifica com uma visão que valoriza profundamente a autonomia individual e a liberdade em todas as esferas da vida. O pensamento libertário vai além de uma doutrina política — ele é também um movimento cultural que celebra a autodeterminação, a responsabilidade pessoal, a inovação descentralizada e o respeito à diversidade de escolhas.',
+        'Historicamente, o libertarianismo defende um Estado mínimo ou até inexistente, com alternativas privadas de governança e gestão de cidades e países. Culturalmente, essa corrente abraça o pluralismo, a paz voluntária entre os indivíduos e uma postura crítica a qualquer forma de coerção estatal ou social.',
+        'Ser identificado(a) como libertário(a) é fazer parte de um legado intelectual e ético que valoriza a liberdade acima de tudo — uma postura corajosa, inovadora e profundamente alinhada com o espírito de uma sociedade livre, pacífica, justa e voluntária.',
+        'Um dos desdobramentos mais radicais e coerentes dessa filosofia é o anarcocapitalismo — uma corrente que propõe a abolição completa do Estado em favor de instituições voluntárias, contratos privados e soluções de mercado para todos os aspectos da vida em sociedade, inclusive segurança e justiça. Para os anarcocapitalistas, a liberdade individual só é plena quando não existe nenhum monopólio estatal de poder, nem coerção institucional.'
+      ]
     },
     centro: {
       title: '⚪ Centro',
-      text: 'Sua posição política está equilibrada e moderada. Ela pode variar conforme o tema, buscando equilíbrio e moderação entre liberdade individual, controle estatal, progresso social e valores tradicionais.'
+      text: [
+        'Você demonstra uma visão política equilibrada, que evita posições extremas e busca soluções ponderadas para os desafios da sociedade. A vertente centrista valoriza a razão prática, o diálogo e a capacidade de adaptar ideias conforme o contexto, recusando abordagens dogmáticas ou polarizadas.',
+        'Centristas costumam defender a liberdade individual, mas reconhecem o papel necessário do Estado em determinadas situações. Podem apoiar políticas sociais em algumas áreas e, ao mesmo tempo, preferir soluções de mercado em outras.',
+        'Essa postura se baseia em avaliações caso a caso, guiadas por evidências, pragmatismo e senso de justiça. Estar no centro do espectro político não significa indecisão — significa responsabilidade, ponderação e abertura para construir pontes entre visões distintas em busca de soluções sustentáveis e inclusivas.'
+    ]
     }
   };
   
