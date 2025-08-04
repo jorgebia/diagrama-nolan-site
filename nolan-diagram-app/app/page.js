@@ -177,7 +177,7 @@ function getIdeologyLabel(economic, social) {
 
           <section className="mt-12 max-w-3xl mx-auto bg-white/70 p-4 rounded-xl shadow-md">
             <h2 className="text-xl sm:text-2xl font-bold mb-4">📚 Links Complementares</h2>
-            <ul className="list-disc space-y-2 text-sm sm:text-base">
+            <ul className="list-none space-y-2 text-sm sm:text-base">
               <li>
                 <a
                   href="https://www.youtube.com/watch?v=QlsT1k1x5lA&t=6s"
