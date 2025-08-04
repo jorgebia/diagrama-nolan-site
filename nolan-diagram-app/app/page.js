@@ -129,12 +129,6 @@ function getIdeologyLabel(economic, social) {
       </section>
 
       <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
-        <p className="mb-2">🧭 O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
-        <p className="mb-2">👤 David Nolan (1943-2010) foi um ativista político norte-americano. Ele é o criador do Gráfico de Nolan, uma representação política em dois eixos - liberdade econômica e liberdade pessoal - usada para classificar ideologias políticas de forma mais precisa do que o tradicional espectro esquerda-direita.</p>
-        <p className="mb-2">🧠 David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
-      </section>
-
-      <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
         <p className="mb-2">📝 Responda o quiz para descobrir onde você se posiciona em um espectro político mais amplo que o tradicional "esquerda-direita" (baseado no Diagrama de Nolan).</p>
       </section>
 
@@ -186,14 +180,39 @@ function getIdeologyLabel(economic, social) {
             <ul className="list-disc list-inside space-y-2 text-sm sm:text-base">
               <li>
                 <a
+                  href="https://www.youtube.com/watch?v=QlsT1k1x5lA&t=6s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
+                  📽️ Diagrama de Nolan
+                </a>
+                  <p className="mb-2">🧭 O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
+                  <p className="mb-2">🧠 David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
+              </li>
+              
+              <li>
+                <a
                   href="/vamos-trocar-ebook.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-700 underline hover:text-blue-900"
                 >
-                  Ebook infantil: Vamos Trocar?
+                  📖 Ebook infantil: Vamos Trocar?
                 </a>
-                <span className="ml-1 text-gray-600">("Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!)</span>
+                <p className="mb-2">"Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!</p>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.youtube.com/@TuttleTwins_br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
+                  🧩 Desenho Infantil Educativo: Tuttle Twins
+                </a>
+                <p className="mb-2"> Crianças, economia e liberdade. Tudo junto em uma única série! Junte-se à vovó Gabby enquanto ela leva seus netos em aventuras em uma máquina do tempo em cadeira de rodas para aprender sobre os princípios de liberdade, governo, economia e muito mais! Tuttle Twins ensina crianças, pré-adolescentes e adolescentes de uma maneira divertida e envolvente.</p>
               </li>
             </ul>
           </section>
