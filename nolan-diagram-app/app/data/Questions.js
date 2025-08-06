@@ -56,7 +56,7 @@ const questions = [
     ],
   },
   {
-    text: '06 - A aquisição e posse de armas de fogo deve ser menos burocrática para os cidadãos.',
+    text: '06 - A aquisição de armas de fogo deve ser menos burocrática para os cidadãos.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate ao desperdício orçamentário.',
+    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate de luxos e extravagâncias (viagens, jantares, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
