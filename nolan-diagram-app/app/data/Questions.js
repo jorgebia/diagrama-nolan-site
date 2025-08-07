@@ -78,7 +78,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - Bancos públicos, como a Caixa e o BNDES, devem ser usados para financiar programas sociais e infraestrutura.',
+    text: '08 - O Banco Central do Brasil deve imprimir mais dinheiro em caso de Calamidade Pública (pandemias, grandes catástrofes naturais, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
