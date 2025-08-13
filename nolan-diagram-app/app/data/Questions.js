@@ -78,7 +78,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - O Banco Central do Brasil deve imprimir mais dinheiro em caso de Calamidade Pública (pandemias, grandes catástrofes naturais, etc.).',
+    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de Calamidade Pública (pandemias, grandes catástrofes naturais, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
