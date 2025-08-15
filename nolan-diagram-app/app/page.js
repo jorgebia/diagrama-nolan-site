@@ -129,7 +129,7 @@ function getIdeologyLabel(economic, social) {
       </section>
 
       <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
-        <p className="mb-2">📝 Responda o quiz para descobrir onde você se posiciona em um espectro político mais amplo que o tradicional "esquerda-direita" (baseado no Diagrama de Nolan).</p>
+        <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
       </section>
 
       <section className="mb-8">
