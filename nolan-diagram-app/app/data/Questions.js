@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas, privatizações e combate de luxos e extravagâncias (viagens, jantares, etc.).',
+    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas e combate de luxos e extravagâncias (viagens, jantares, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
