@@ -1,7 +1,7 @@
 //data/questions.js
 const questions = [
   {
-    text: '01 - As operadoras de planos de saúde devem ter a liberdade de fornecer planos personalizados sem a necessidade de seguir o estabelecido pela ANS (Agência Nacional de Saúde Suplementar).',
+    text: '01 - As operadoras de planos de saúde devem ter a liberdade de fornecer planos personalizados sem a obrigatoriedade de seguir o estabelecido pela ANS (Agência Nacional de Saúde Suplementar).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -23,7 +23,7 @@ const questions = [
     ],
   },
   {
-    text: '03 - O Estado brasileiro deve restringir as regras de imigração.',
+    text: '03 - O Estado brasileiro deve tornar mais rigorosas as regras de imigração',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -45,7 +45,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - As escolas privadas devem ter a liberdade de criar sua própria grade curricular, sem a necessidade de seguir o currículo nacional definido pelo Ministério da Educação.',
+    text: '05 - As escolas privadas devem ter liberdade para definir sua própria grade curricular, sem obrigatoriedade de seguir o currículo nacional estabelecido pelo Ministério da Educação.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas e combate de luxos e extravagâncias (viagens, jantares, etc.).',
+    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas, combatendo luxos e extravagâncias (viagens, jantares, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -100,7 +100,7 @@ const questions = [
     ],
   },
   {
-    text: '10 - O Estado brasileiro deve ampliar sua regulação sobre a Internet e redes sociais, além do que já prevê o Marco Civil da Internet.',
+    text: '10 - O Estado brasileiro deve ampliar a regulação da Internet e das redes sociais, além do que já estabelece o Marco Civil da Internet.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -111,7 +111,7 @@ const questions = [
     ],
   },
   {
-    text: '11 - Empresas devem ter a liberdade para contratar e demitir sem restrições (Contratar como PJ, escala 6x1 e 4x3, etc.).',
+    text: '11 - Empresas devem ter a liberdade para contratar e demitir com maior flexibilidade (Contratar como PJ, escala 6x1 e 4x3, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -122,7 +122,7 @@ const questions = [
     ],
   },
   {
-    text: '12 - A liberdade de expressão deve ser absoluta, mesmo para opiniões impopulares, ofensivas, expressões artísticas e humor.',
+    text: '12 - A liberdade de expressão deve ser amplamente garantida, mesmo para opiniões impopulares, críticas ao governo, expressões artísticas e humor.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -144,7 +144,7 @@ const questions = [
     ],
   },
   {
-    text: '14 - O aborto deve ser proibido em qualquer circunstância (saúde da mãe, anencefalia, estupro, falta de planejamento, etc.).',
+    text: '14 - O aborto deve ser proibido em todas as circunstâncias, inclusive nos casos já previstos em lei (saúde da mãe, anencefalia e estupro).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -155,7 +155,7 @@ const questions = [
     ],
   },
   {
-    text: '15 - Qualquer religião deve ter liberdade para praticar seus rituais (cristianismo, candomblé, etc.).',
+    text: '15 - Toda religião deve ter liberdade para praticar seus rituais (cristianismo, candomblé, etc.).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -210,7 +210,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter a liberdade de fornecer serviços essenciais, como saúde, educação, segurança, saneamento básico, etc.',
+    text: '20 - A iniciativa privada deve ter a liberdade em fornecer serviços essenciais, como saúde, educação, segurança, saneamento básico, etc.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
