@@ -119,11 +119,11 @@ function getIdeologyLabel(economic, social) {
       </Head>
       <section className="mb-8 text-center">
         <h1 className="text-2xl sm:text-4xl font-bold mb-2 items-center justify-center">
-          Quiz do Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
+          🧭 Quiz do Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
         </h1>
           {totalRespostas !== null && (
         <p className="text-sm text-gray-600">
-          Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
+          ✅ Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
          </p>
           )}
       </section>
