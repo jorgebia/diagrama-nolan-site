@@ -110,9 +110,6 @@ export default function RootLayout({ children }) {
           <h1 className="text-2xl sm:text-4xl font-bold text-blue-700">
             🧭 Quiz Político Brasileiro
           </h1>
-          <p className="text-sm text-gray-600 mt-1">
-            Descubra seu lugar no espectro político — baseado no Diagrama de Nolan
-          </p>
         </header>
 
         <main className="min-h-screen">{children}</main>
@@ -122,16 +119,7 @@ export default function RootLayout({ children }) {
             © {new Date().getFullYear()} Quiz Político Brasil — Todos os direitos reservados.
           </p>
           <p>
-            Projeto pessoal desenvolvido com objetivo educacional.
-            <a
-              href="https://quizpolitico.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-700 hover:text-blue-900 underline"
-            >
-              Quiz Político Brasil
-            </a>
-            .
+            Projeto desenvolvido com objetivo educacional.
           </p>
         </footer>
 
