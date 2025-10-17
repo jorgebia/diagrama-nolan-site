@@ -105,8 +105,7 @@ export default function RootLayout({ children }) {
         {/* Rodapé discreto e neutro */}
         <footer className="text-center text-gray-600 py-6 text-sm opacity-80">
           <p>
-            © {new Date().getFullYear()} Quiz Político Brasil — Todos os
-            direitos reservados.
+            © {new Date().getFullYear()} Quiz Político Brasil - Todos os direitos reservados.
           </p>
         </footer>
 
