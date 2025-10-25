@@ -9,6 +9,8 @@ const initialAnswers = Array(questions.length).fill(0);
 
 export default function Home() {
 const resultRef = useRef(null);
+const [started, setStarted] = useState(false);
+const quizRef = useRef(null);
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return 'progressista';
   if (economic > 0 && social > 0) return 'libertario';
