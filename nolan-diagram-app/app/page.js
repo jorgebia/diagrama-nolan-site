@@ -125,54 +125,70 @@ function getIdeologyLabel(economic, social) {
         <p className="text-sm text-gray-600">
           ✅ Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
          </p>
-          )}
-            <button
-              onClick={() => {
-                const quizSection = document.querySelector("#quiz-section");
-                quizSection?.scrollIntoView({ behavior: "smooth" });
-          }}
-              className="mt-6 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl shadow-md text-lg transition-all"
-              >
-              Começar o Quiz
-        </button>
-      </section>
-
-      <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
-        <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
-      </section>
-
-      <section id="quiz-section" className="mb-8 max-w-3xl mx-auto">
-  {/* 🔵 Barra de progresso */}
-  <div className="w-full bg-gray-200 h-2 rounded-full mb-6">
-    <div
-      className="bg-blue-600 h-2 rounded-full transition-all"
-      style={{
-        width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
-      }}
-    ></div>
-  </div>
-
-  {/* Texto com porcentagem */}
-  <p className="text-right text-sm mb-4 text-gray-700">
-    Progresso: {Math.round((answers.filter(a => a !== 0).length / questions.length) * 100)}%
+{/* INTRODUÇÃO */}
+<section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto text-center">
+  <p className="mb-4 text-base sm:text-lg text-gray-800">
+    📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo
+    do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.
   </p>
 
-  {/* 🧭 Perguntas */}
-  {questions.map((q, idx) => (
-    <QuestionCard
-      key={idx}
-      question={q}
-      index={idx}
-      value={answers[idx]}
-      onChange={handleAnswerChange}
-    />
-  ))}
+  {/* 🔽 Botão movido para logo após a descrição */}
+  {!started && (
+    <button
+      onClick={() => {
+        setStarted(true);
+        setTimeout(
+          () => quizRef.current?.scrollIntoView({ behavior: "smooth" }),
+          100
+        );
+      }}
+      className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl shadow-md text-lg transition-all"
+    >
+      Começar o Quiz
+    </button>
+  )}
+</section>
 
-  {/* Botão de resultado */}
-  <div className="flex justify-center">
+      </section>
+
+    <section id="quiz-section" ref={quizRef} className="mb-8 max-w-3xl mx-auto relative">
+  {/* 🔵 Barra de progresso FIXA */}
+  <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm p-3 rounded-b-lg shadow-md">
+    <div className="w-full bg-gray-200 h-2 rounded-full mb-2">
+      <div
+        className="bg-blue-600 h-2 rounded-full transition-all"
+        style={{
+          width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
+        }}
+      ></div>
+    </div>
+    <p className="text-right text-sm text-gray-700 font-medium">
+      Progresso:{" "}
+      {Math.round(
+        (answers.filter(a => a !== 0).length / questions.length) * 100
+      )}
+      %
+    </p>
+  </div>
+
+  {/* 🧭 Perguntas */}
+  <div className="mt-6 space-y-6">
+    {questions.map((q, idx) => (
+      <QuestionCard
+        key={idx}
+        question={q}
+        index={idx}
+        value={answers[idx]}
+        onChange={handleAnswerChange}
+      />
+    ))}
+  </div>
+
+  {/* Botão "Ver resultado" */}
+  <div className="flex justify-center mt-8">
     <button
       onClick={handleSubmit}
-      className={`bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md mt-6 text-base sm:text-lg ${
+      className={`bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md text-base sm:text-lg transition-all ${
         answers.some(a => a !== 0)
           ? "hover:bg-blue-700"
           : "opacity-50 cursor-not-allowed"
