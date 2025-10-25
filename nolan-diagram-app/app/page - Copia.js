@@ -126,62 +126,31 @@ function getIdeologyLabel(economic, social) {
           ✅ Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
          </p>
           )}
-            <button
-              onClick={() => {
-                const quizSection = document.querySelector("#quiz-section");
-                quizSection?.scrollIntoView({ behavior: "smooth" });
-          }}
-              className="mt-6 bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl shadow-md text-lg transition-all"
-              >
-              Começar o Quiz
-        </button>
       </section>
 
       <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
         <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
       </section>
 
-      <section id="quiz-section" className="mb-8 max-w-3xl mx-auto">
-  {/* 🔵 Barra de progresso */}
-  <div className="w-full bg-gray-200 h-2 rounded-full mb-6">
-    <div
-      className="bg-blue-600 h-2 rounded-full transition-all"
-      style={{
-        width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
-      }}
-    ></div>
-  </div>
-
-  {/* Texto com porcentagem */}
-  <p className="text-right text-sm mb-4 text-gray-700">
-    Progresso: {Math.round((answers.filter(a => a !== 0).length / questions.length) * 100)}%
-  </p>
-
-  {/* 🧭 Perguntas */}
-  {questions.map((q, idx) => (
-    <QuestionCard
-      key={idx}
-      question={q}
-      index={idx}
-      value={answers[idx]}
-      onChange={handleAnswerChange}
-    />
-  ))}
-
-  {/* Botão de resultado */}
-  <div className="flex justify-center">
-    <button
-      onClick={handleSubmit}
-      className={`bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md mt-6 text-base sm:text-lg ${
-        answers.some(a => a !== 0)
-          ? "hover:bg-blue-700"
-          : "opacity-50 cursor-not-allowed"
-      }`}
-    >
-      Ver resultado
-    </button>
-  </div>
-</section>
+      <section className="mb-8">
+        {questions.map((q, idx) => (
+          <QuestionCard
+            key={idx}
+            question={q}
+            index={idx}
+            value={answers[idx]}
+            onChange={handleAnswerChange}
+          />
+        ))}
+        <div className="flex justify-center">
+          <button
+            onClick={handleSubmit}
+            className={`bg-blue-600 text-white px-6 py-3 rounded-xl shadow-md mt-4 text-base sm:text-lg ${answers.some(a => a !== 0) ? 'hover:bg-blue-700' : 'opacity-50 cursor-not-allowed'}`}
+          >
+            Ver resultado
+          </button>
+        </div>
+      </section>
 
       {submitted && (
         <section ref={resultRef}>
