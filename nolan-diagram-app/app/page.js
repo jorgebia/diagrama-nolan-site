@@ -132,17 +132,24 @@ function getIdeologyLabel(economic, social) {
         <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
       </section>
 
-{/* 🔵 Barra de progresso discreta */}
-<div className="sticky top-0 z-10 px-4 pt-2 pb-1 bg-white/60 backdrop-blur-sm">
-  <div className="relative w-full h-1.5 rounded-full bg-gray-300 overflow-hidden">
-    <div
-      className="absolute top-0 left-0 h-full bg-blue-500/80 transition-all duration-300 ease-out"
-      style={{
-        width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
-      }}
-    ></div>
+  {/* 🔵 Barra de progresso FIXA */}
+  <div className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm p-3 rounded-b-lg shadow-md">
+    <div className="w-full bg-gray-200 h-2 rounded-full mb-2">
+      <div
+        className="bg-blue-600 h-2 rounded-full transition-all"
+        style={{
+          width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
+        }}
+      ></div>
+    </div>
+    <p className="text-right text-sm text-gray-700 font-medium">
+      Progresso:{" "}
+      {Math.round(
+        (answers.filter(a => a !== 0).length / questions.length) * 100
+      )}
+      %
+    </p>
   </div>
-</div>
 
       <section className="mb-8">
         {questions.map((q, idx) => (
