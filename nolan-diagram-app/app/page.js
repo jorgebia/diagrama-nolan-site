@@ -125,6 +125,7 @@ function getIdeologyLabel(economic, social) {
         <p className="text-sm text-gray-600">
           ✅ Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
          </p>
+          )}
 {/* INTRODUÇÃO */}
 <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto text-center">
   <p className="mb-4 text-base sm:text-lg text-gray-800">
