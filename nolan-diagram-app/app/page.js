@@ -132,24 +132,14 @@ function getIdeologyLabel(economic, social) {
         <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
       </section>
 
-      {/* 🔵 Barra de progresso FIXA e estilizada */}
-<div className="sticky top-0 z-30 bg-white/90 backdrop-blur-md px-4 py-3 shadow-sm border-b border-gray-200">
-  <div className="flex items-center justify-between mb-1">
-    <span className="text-sm font-medium text-gray-800">Progresso</span>
-    <span className="text-sm font-semibold text-blue-600">
-      {Math.round((answers.filter(a => a !== 0).length / questions.length) * 100)}%
-    </span>
-  </div>
-  <div className="w-full bg-gray-300 h-3 rounded-full overflow-hidden">
+{/* 🔵 Barra de progresso discreta */}
+<div className="sticky top-0 z-10 px-4 pt-2 pb-1 bg-white/60 backdrop-blur-sm">
+  <div className="relative w-full h-1.5 rounded-full bg-gray-300 overflow-hidden">
     <div
-      className="bg-gradient-to-r from-blue-500 to-blue-700 h-full transition-all duration-500 ease-in-out"
+      className="absolute top-0 left-0 h-full bg-blue-500/80 transition-all duration-300 ease-out"
       style={{
         width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
       }}
-      aria-valuenow={(answers.filter(a => a !== 0).length / questions.length) * 100}
-      aria-valuemin="0"
-      aria-valuemax="100"
-      role="progressbar"
     ></div>
   </div>
 </div>
