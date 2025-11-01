@@ -198,14 +198,17 @@ function getIdeologyLabel(economic, social) {
             <h2 className="text-xl sm:text-2xl font-bold mb-4">📚 Links Complementares</h2>
             <ul className="list-none space-y-2 text-sm sm:text-base">
               <li>
-                <a
-                  href="https://www.youtube.com/watch?v=QlsT1k1x5lA&t=6s"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 underline hover:text-blue-900"
-                >
-                  🧭 Diagrama de Nolan
-                </a>
+             <h3 className="text-blue-700 font-semibold mb-2">🧭 Diagrama de Nolan</h3>
+             <div className="aspect-w-16 aspect-h-9 mb-3 rounded-lg overflow-hidden shadow-md">
+              <iframe
+                src="https://www.youtube.com/embed/QlsT1k1x5lA"
+                title="Diagrama de Nolan - Explicação"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
+             </div>
                   <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
                   <p className="mb-2">David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
               </li>
@@ -217,7 +220,7 @@ function getIdeologyLabel(economic, social) {
                   rel="noopener noreferrer"
                   className="text-blue-700 underline hover:text-blue-900"
                 >
-                  📖 Ebook infantil: Vamos Trocar?
+                  📖 Ebook infantil: Vamos Trocar? (PDF para download)
                 </a>
                 <p className="mb-2">"Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!</p>
               </li>
@@ -229,7 +232,7 @@ function getIdeologyLabel(economic, social) {
                   rel="noopener noreferrer"
                   className="text-blue-700 underline hover:text-blue-900"
                 >
-                  🧩 Desenho Infantil Educativo: Tuttle Twins
+                  🧩 Desenho Infantil Educativo: Tuttle Twins (Canal do Youtube)
                 </a>
                 <p className="mb-2"> Crianças, economia e liberdade. Tudo junto em uma única série! Junte-se à vovó Gabby enquanto ela leva seus netos em aventuras em uma máquina do tempo em cadeira de rodas para aprender sobre os princípios de liberdade, governo, economia e muito mais! Tuttle Twins ensina crianças, pré-adolescentes e adolescentes de uma maneira divertida e envolvente.</p>
               </li>
