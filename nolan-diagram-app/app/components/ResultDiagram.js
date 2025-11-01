@@ -17,15 +17,14 @@ export default function ResultDiagram({ economic, social }) {
     <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto mt-6 sm:mt-10">
       {/* Grid colorido */}
       <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 z-0 w-full h-full">
-        {[...Array(100)].map((_, i) => {
+            {[...Array(100)].map((_, i) => {
           const row = Math.floor(i / 10);
           const col = i % 10;
-          let bg = quadrantColors.topLeft;
-          if (row < 5 && col < 5) bg = quadrantColors.topLeft;       // verde
-          if (row < 5 && col >= 5) bg = quadrantColors.topRight;     // amarelo
-          if (row >= 5 && col < 5) bg = quadrantColors.bottomLeft;   // vermelho
-          if (row >= 5 && col >= 5) bg = quadrantColors.bottomRight; // azul
-          return <div key={i} className={`${bg} border border-gray-200 w-full h-full`} />;
+
+          if (row < 5 && col < 5) return <div key={i} className="bg-green-100 border border-gray-200 w-full h-full" />;
+          if (row < 5 && col >= 5) return <div key={i} className="bg-yellow-100 border border-gray-200 w-full h-full" />;
+          if (row >= 5 && col < 5) return <div key={i} className="bg-red-100 border border-gray-200 w-full h-full" />;
+          return <div key={i} className="bg-blue-100 border border-gray-200 w-full h-full" />;
         })}
       </div>
       {/* Eixos */}
