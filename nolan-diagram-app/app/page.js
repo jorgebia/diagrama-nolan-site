@@ -21,6 +21,7 @@ function getIdeologyLabel(economic, social) {
     autoritario: {
       title: '🔴 Autoritário(a) / Totalitário(a)',
       text: [
+        <p className="font-semibold italic mb-2 text-red-700">Para você, uma nação forte se constrói com lealdade, respeito às tradições e confiança no poder que mantém o país unido.</p>,
         <p className="mb-2">Seu posicionamento revela uma preferência por um Estado forte, centralizador e com alto grau de controle tanto sobre a economia quanto sobre os costumes sociais. Essa visão valoriza a autoridade, o nacionalismo e a ordem como fundamentos de uma sociedade funcional.</p>,
         <p className="mb-2">Os autoritários tendem a ver a liberdade individual como secundária diante da necessidade de estabilidade, segurança e unidade nacional. Políticas coercitivas, vigilância, censura e centralização do poder são frequentemente defendidas como ferramentas legítimas para proteger o Estado e seus valores fundamentais.</p>,
         <p className="mb-2">Essa posição costuma emergir em contextos de crise ou desordem, onde a confiança na autoridade é vista como o melhor caminho para restaurar o controle e evitar a fragmentação social.</p>
@@ -29,6 +30,7 @@ function getIdeologyLabel(economic, social) {
     progressista: {
       title: '🟢 Progressista / Socialista',
       text: [
+        <p className="font-semibold italic mb-2 text-green-700">Você vê a política como um instrumento de transformação — um caminho para diminuir desigualdades e ampliar oportunidades.</p>,
         <p className="mb-2">Sua visão está alinhada com ideias modernas de justiça social, equidade e responsabilidade coletiva. Progressistas e socialistas acreditam que o papel do Estado é essencial para corrigir desigualdades históricas, garantir direitos civis, promover inclusão e construir uma sociedade mais plural, sustentável e empática.</p>,
         <p className="mb-2">A vertente progressista / socialista busca combinar políticas públicas robustas com inovação social, avançando pautas como saúde pública universal, educação de qualidade, igualdade de gênero, diversidade cultural e justiça climática.</p>,
         <p className="mb-2">A presença do Estado na economia é vista como ferramenta para redistribuir riquezas diminuindo a desigualdade social. Este posicionamento reflete uma postura ativa diante das injustiças e um compromisso com um futuro mais solidário e igualitário.</p>
@@ -37,6 +39,7 @@ function getIdeologyLabel(economic, social) {
     liberal: {
       title: '🔵 Liberal / Conservador(a)',
       text: [
+        <p className="font-semibold italic mb-2 text-blue-700">Você acredita que o verdadeiro progresso nasce da liberdade com responsabilidade — e que valores sólidos são o alicerce de uma sociedade próspera.</p>,
         <p className="mb-2">Você tende a valorizar os pilares clássicos do pensamento liberal-conservador: liberdade econômica, responsabilidade individual, respeito à propriedade privada, e a preservação das tradições culturais e institucionais.</p>,
         <p className="mb-2">Essa visão acredita que o progresso verdadeiro deve ser acompanhado de estabilidade moral e ordem social. Os liberais conservadores geralmente defendem mercados livres com o mínimo de intervenção estatal, acreditando que a iniciativa privada é o motor mais eficiente do desenvolvimento.</p>,
         <p className="mb-2">Ao mesmo tempo, reconhecem o valor das instituições, da família, da religião e da autoridade como fundamentos para a coesão social. Este posicionamento representa uma confiança nas virtudes do indivíduo, na importância dos costumes e na necessidade de preservar estruturas que resistiram ao teste do tempo.</p>
@@ -45,6 +48,7 @@ function getIdeologyLabel(economic, social) {
     libertario: {
       title: '🟡 Libertário(a)',
       text: [
+        <p className="font-semibold italic mb-2 text-yellow-700">Você vê na liberdade o princípio mais elevado de uma sociedade justa — onde cada pessoa responde por si e coopera por escolha, não por imposição.</p>,
         <p className="mb-2">Você se identifica com uma visão que valoriza profundamente a autonomia individual e a liberdade em todas as esferas da vida. O pensamento libertário vai além de uma doutrina política — ele é também um movimento cultural que celebra a autodeterminação, a responsabilidade pessoal, a inovação descentralizada e o respeito à diversidade de escolhas.</p>,
         <p className="mb-2">Historicamente, o libertarianismo defende um Estado mínimo ou até inexistente, com alternativas privadas de governança e gestão de cidades e países. Culturalmente, essa corrente abraça o pluralismo, a paz voluntária entre os indivíduos e uma postura crítica a qualquer forma de coerção estatal ou social.</p>,
         <p className="mb-2">Ser identificado(a) como libertário(a) é fazer parte de um legado intelectual e ético que valoriza a liberdade acima de tudo — uma postura corajosa, inovadora e profundamente alinhada com o espírito de uma sociedade livre, pacífica, justa e voluntária.</p>,
@@ -54,6 +58,7 @@ function getIdeologyLabel(economic, social) {
     centro: {
       title: '⚪ Centro',
       text: [
+        <p className="font-semibold italic mb-2 text-gray-700">Você enxerga o valor de cada lado e prefere o caminho do diálogo — e acredita que boas ideias podem vir de qualquer lugar do espectro político.</p>,
         <p className="mb-2">Você demonstra uma visão política equilibrada, que evita posições extremas e busca soluções ponderadas para os desafios da sociedade. A vertente centrista valoriza a razão prática, o diálogo e a capacidade de adaptar ideias conforme o contexto, recusando abordagens dogmáticas ou polarizadas.</p>,
         <p className="mb-2">Centristas costumam defender a liberdade individual, mas reconhecem o papel necessário do Estado em determinadas situações. Podem apoiar políticas sociais em algumas áreas e, ao mesmo tempo, preferir soluções de mercado em outras.</p>,
         <p className="mb-2">Essa postura se baseia em avaliações caso a caso, guiadas por evidências, pragmatismo e senso de justiça. Estar no centro do espectro político não significa indecisão — significa responsabilidade, ponderação e abertura para construir pontes entre visões distintas em busca de soluções sustentáveis e inclusivas.</p>
