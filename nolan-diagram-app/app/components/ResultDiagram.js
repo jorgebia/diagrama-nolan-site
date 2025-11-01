@@ -1,50 +1,30 @@
 // components/ResultDiagram.js
-"use client"; // necessário se você estiver usando Next.js app router
+"use client"; // necessário se estiver usando Next.js app router
 
 import React from "react";
 import { motion } from "framer-motion";
 
 export default function ResultDiagram({ economic, social }) {
-  // Mapear economic/social de -1..1 para 0..1
-  const econ = (economic + 1) / 2;
-  const soc = (1 - (social + 1) / 2); // inverter Y porque CSS vai de cima para baixo
+  // Para 0..1, inverter eixo Y para CSS
+  const econ = economic;           // 0 = esquerda, 1 = direita
+  const soc = 1 - social;          // 0 = autoritário (bottom), 1 = libertário (top)
 
   return (
     <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto mt-6 sm:mt-10 rounded-xl overflow-hidden">
       {/* Grid colorido */}
-      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 z-0 w-full h-full">
+      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full z-0">
         {[...Array(100)].map((_, i) => {
           const row = Math.floor(i / 10);
           const col = i % 10;
 
-          // Usar classes estáticas para Tailwind
+          // Quadrantes estáticos para Tailwind JIT
           if (row < 5 && col < 5)
-            return (
-              <div
-                key={i}
-                className="bg-green-100 border border-gray-200 w-full h-full min-h-0"
-              />
-            );
+            return <div key={i} className="bg-green-100 border border-gray-200 w-full h-full min-h-0" />;
           if (row < 5 && col >= 5)
-            return (
-              <div
-                key={i}
-                className="bg-yellow-100 border border-gray-200 w-full h-full min-h-0"
-              />
-            );
+            return <div key={i} className="bg-yellow-100 border border-gray-200 w-full h-full min-h-0" />;
           if (row >= 5 && col < 5)
-            return (
-              <div
-                key={i}
-                className="bg-red-100 border border-gray-200 w-full h-full min-h-0"
-              />
-            );
-          return (
-            <div
-              key={i}
-              className="bg-blue-100 border border-gray-200 w-full h-full min-h-0"
-            />
-          );
+            return <div key={i} className="bg-red-100 border border-gray-200 w-full h-full min-h-0" />;
+          return <div key={i} className="bg-blue-100 border border-gray-200 w-full h-full min-h-0" />;
         })}
       </div>
 
