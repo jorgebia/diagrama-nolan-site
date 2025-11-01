@@ -3,12 +3,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
+    // Mapear economic/social de -1..1 para 0..1 para calcular posição do marcador
+  const econ = (economic + 1) / 2;
+  const soc = (1 - (social + 1) / 2); // invertido porque eixo Y CSS vai de cima para baixo
     // Definindo cores de forma estática para que o Tailwind inclua no build
   const quadrantColors = {
-    topLeft: 'bg-green-100',
-    topRight: 'bg-yellow-100',
-    bottomLeft: 'bg-red-100',
-    bottomRight: 'bg-blue-100',
+    "bg-green-100": "top-left",
+    "bg-yellow-100": "top-right",
+    "bg-red-100": "bottom-left",
+    "bg-blue-100": "bottom-right",
   };
   return (
     <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto mt-6 sm:mt-10">
