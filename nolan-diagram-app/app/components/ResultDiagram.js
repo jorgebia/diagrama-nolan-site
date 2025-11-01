@@ -1,5 +1,5 @@
 // components/ResultDiagram.js
-"use client"; // se estiver usando Next.js app router
+"use client"; // necessário se você estiver usando Next.js app router
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -17,31 +17,32 @@ export default function ResultDiagram({ economic, social }) {
           const row = Math.floor(i / 10);
           const col = i % 10;
 
+          // Usar classes estáticas para Tailwind
           if (row < 5 && col < 5)
             return (
               <div
                 key={i}
-                className="bg-green-100 border border-gray-200 w-full h-full"
+                className="bg-green-100 border border-gray-200 w-full h-full min-h-0"
               />
             );
           if (row < 5 && col >= 5)
             return (
               <div
                 key={i}
-                className="bg-yellow-100 border border-gray-200 w-full h-full"
+                className="bg-yellow-100 border border-gray-200 w-full h-full min-h-0"
               />
             );
           if (row >= 5 && col < 5)
             return (
               <div
                 key={i}
-                className="bg-red-100 border border-gray-200 w-full h-full"
+                className="bg-red-100 border border-gray-200 w-full h-full min-h-0"
               />
             );
           return (
             <div
               key={i}
-              className="bg-blue-100 border border-gray-200 w-full h-full"
+              className="bg-blue-100 border border-gray-200 w-full h-full min-h-0"
             />
           );
         })}
