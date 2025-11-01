@@ -14,24 +14,25 @@ export default function ResultDiagram({ economic, social }) {
   return (
     <div className="relative w-full max-w-[500px] aspect-square mx-auto mt-6 sm:mt-10 rounded-xl overflow-hidden border border-gray-400">
       {/* Grid colorida */}
-      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full z-0">
-        {[...Array(100)].map((_, i) => {
-          const row = Math.floor(i / 10);
-          const col = i % 10;
+ <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full z-0">
+  {[...Array(100)].map((_, i) => {
+    const row = Math.floor(i / 10);
+    const col = i % 10;
 
-          let bgClass = "bg-green-100"; // top-left
-          if (row < 5 && col >= 5) bgClass = "bg-yellow-100"; // top-right
-          if (row >= 5 && col < 5) bgClass = "bg-red-100"; // bottom-left
-          if (row >= 5 && col >= 5) bgClass = "bg-blue-100"; // bottom-right
+    if (row <= 5 && col >= 5) bgClass = "bg-green-100"; // top-left
+    if (row >= 5 && col >= 5) bgClass = "bg-yellow-100"; // top-right
+    if (row <= 5 && col <= 5) bgClass = "bg-red-100"; // bottom-left
+    if (row >= 5 && col <= 5) bgClass = "bg-blue-100"; // bottom-right
 
-          return (
-            <div
-              key={i}
-              className={`${bgClass} border border-gray-200 w-full h-full min-h-0`}
-            />
-          );
-        })}
-      </div>
+    return (
+      <div
+        key={i}
+        className={`${bgClass} border border-gray-200 w-full h-full`}
+        style={{ aspectRatio: "1 / 1" }}
+      />
+    );
+  })}
+</div>
 
       {/* Eixos */}
       <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
