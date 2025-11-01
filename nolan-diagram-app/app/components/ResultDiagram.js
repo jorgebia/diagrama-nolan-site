@@ -5,19 +5,20 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export default function ResultDiagram({ economic, social }) {
-  // Mapear valores 0..1
-  const left = economic * 100;     // 0 = esquerda, 1 = direita
-  const top = (1 - social) * 100;  // 0 = autoritário, 1 = libertário
+  // Mapear -14..14 para 0..100% na grid
+  const mapToPercent = (value) => ((value + 14) / 28) * 100;
+
+  const left = mapToPercent(economic); // horizontal: -14 (esquerda) → 0%, 14 → 100%
+  const top = 100 - mapToPercent(social); // vertical: -14 (autoritário) → 100%, 14 → 0% (libertário)
 
   return (
-    <div className="relative w-full max-w-[500px] aspect-square mx-auto mt-6 sm:mt-10">
-      {/* Grid de quadrantes */}
-      <div className="grid grid-cols-10 grid-rows-10 w-full h-full absolute inset-0">
+    <div className="relative w-full max-w-[500px] aspect-square mx-auto mt-6 sm:mt-10 rounded-xl overflow-hidden border border-gray-400">
+      {/* Grid colorida */}
+      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 w-full h-full z-0">
         {[...Array(100)].map((_, i) => {
           const row = Math.floor(i / 10);
           const col = i % 10;
 
-          // Quadrantes estáticos para Tailwind
           let bgClass = "bg-green-100"; // top-left
           if (row < 5 && col >= 5) bgClass = "bg-yellow-100"; // top-right
           if (row >= 5 && col < 5) bgClass = "bg-red-100"; // bottom-left
@@ -48,7 +49,7 @@ export default function ResultDiagram({ economic, social }) {
         }}
       />
 
-      {/* Legendas */}
+      {/* Legendas principais */}
       <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80 px-1">
         Libertário(a)
       </div>
