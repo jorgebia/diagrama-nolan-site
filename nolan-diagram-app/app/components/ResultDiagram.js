@@ -6,7 +6,7 @@ export default function ResultDiagram({ economic, social }) {
   return (
     <div className="relative w-full max-w-[500px] aspect-square border border-gray-400 mx-auto mt-6 sm:mt-10">
       {/* Grid colorido */}
-      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 z-0 w-full h-full">
+      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 z-0 w-full h-full [grid-auto-rows:1fr] [grid-auto-columns:1fr]">
         {[...Array(100)].map((_, i) => {
           const row = Math.floor(i / 10);
           const col = i % 10;
