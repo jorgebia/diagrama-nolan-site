@@ -7,7 +7,7 @@ export default function ResultDiagram({ economic, social }) {
 
   return (
     <div className="flex justify-center my-6 px-4">
-      <div className="relative w-[90vw] max-w-[500px]" style={{ paddingTop: '100%' }}>
+      <div className="relative w-[90vw] max-w-[500px] h-[90vw] max-h-[500px]" style={{ paddingTop: '100%' }}>
         {/* Grid colorida */}
         <div
           className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
