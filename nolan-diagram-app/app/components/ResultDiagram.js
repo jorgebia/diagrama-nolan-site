@@ -1,52 +1,83 @@
-//components/ResultDiagram.js
+// components/ResultDiagram.js
 import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
-  const mapToPercent = (value) => ((value + 2) / 4) * 100;
+  const size = 500; // tamanho fixo do quadrante em px
+  const gridSize = 10; // 10x10
+
+  // função para mapear valor -2..2 para posição em px dentro do quadrante
+  const mapValue = (value) => ((value + 2) / 4) * size;
 
   return (
-    <div className="relative w-full max-w-[500px] aspect-square mx-auto border border-gray-400 mt-6 sm:mt-10">
-      {/* Grid 10x10 colorida */}
-      <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
-        {[...Array(100)].map((_, i) => {
-          const row = Math.floor(i / 10);
-          const col = i % 10;
-          let bg = 'bg-white';
-          if (row < 5 && col < 5) bg = 'bg-green-100';
-          if (row < 5 && col >= 5) bg = 'bg-yellow-100';
-          if (row >= 5 && col < 5) bg = 'bg-red-100';
-          if (row >= 5 && col >= 5) bg = 'bg-blue-100';
-          return <div key={i} className={`border border-gray-200 w-full h-full ${bg}`} />;
+    <div className="mx-auto my-6" style={{ width: size, height: size, position: 'relative' }}>
+      {/* Grid colorida */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
+          gridTemplateRows: `repeat(${gridSize}, 1fr)`,
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+        }}
+      >
+        {[...Array(gridSize * gridSize)].map((_, i) => {
+          const row = Math.floor(i / gridSize);
+          const col = i % gridSize;
+          let bg = 'white';
+          if (row < gridSize / 2 && col < gridSize / 2) bg = '#d1fae5'; // verde claro
+          if (row < gridSize / 2 && col >= gridSize / 2) bg = '#fef9c3'; // amarelo claro
+          if (row >= gridSize / 2 && col < gridSize / 2) bg = '#fee2e2'; // vermelho claro
+          if (row >= gridSize / 2 && col >= gridSize / 2) bg = '#bfdbfe'; // azul claro
+          return <div key={i} style={{ border: '1px solid #e5e7eb', backgroundColor: bg }} />;
         })}
       </div>
 
       {/* Eixos */}
-      <div className="absolute inset-0 flex justify-center items-center pointer-events-none">
-        <div className="absolute w-full h-0.5 bg-black top-1/2" />
-        <div className="absolute h-full w-0.5 bg-black left-1/2" />
-      </div>
-
-      {/* Marcador do usuário */}
-      <motion.div
-        className="absolute w-4 h-4 bg-red-600 rounded-full z-10"
+      <div
         style={{
-          left: `${mapToPercent(economic)}%`,
-          top: `${100 - mapToPercent(social)}%`,
-          transform: 'translate(-50%, -50%)',
+          position: 'absolute',
+          top: '50%',
+          left: 0,
+          width: '100%',
+          height: 0,
+          borderTop: '2px solid black',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          left: '50%',
+          top: 0,
+          width: 0,
+          height: '100%',
+          borderLeft: '2px solid black',
         }}
       />
 
-      {/* Legendas e rótulos */}
-      <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Libertário(a)</div>
-      <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs sm:text-sm font-semibold bg-white/80">Autoritário(a)</div>
-      <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1 text-sm font-semibold bg-white/80 px-1 z-10">Esquerda</div>
-      <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1 text-sm font-semibold bg-white/80 px-1 z-10">Direita</div>
+      {/* Marcador do usuário */}
+      <motion.div
+        style={{
+          position: 'absolute',
+          width: 16,
+          height: 16,
+          borderRadius: '50%',
+          backgroundColor: 'red',
+          left: mapValue(economic),
+          top: size - mapValue(social),
+          transform: 'translate(-50%, -50%)',
+          zIndex: 10,
+        }}
+      />
 
-      <div className="absolute -top-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Progressista /<br />Socialista</div>
-      <div className="absolute -top-4 right-0 text-[10px] sm:text-xs text-right leading-tight">Libertário(a)</div>
-      <div className="absolute -bottom-8 left-0 text-[10px] sm:text-xs text-left leading-tight">Autoritário(a) /<br />Totalitário(a)</div>
-      <div className="absolute -bottom-8 right-0 text-[10px] sm:text-xs text-right leading-tight">Liberal /<br />Conservador(a)</div>
+      {/* Legendas */}
+      <div style={{ position: 'absolute', top: -24, left: '50%', transform: 'translateX(-50%)', fontSize: 12, fontWeight: 'bold' }}>Libertário(a)</div>
+      <div style={{ position: 'absolute', bottom: -24, left: '50%', transform: 'translateX(-50%)', fontSize: 12, fontWeight: 'bold' }}>Autoritário(a)</div>
+      <div style={{ position: 'absolute', top: '50%', left: -32, transform: 'translateY(-50%)', fontSize: 12, fontWeight: 'bold' }}>Esquerda</div>
+      <div style={{ position: 'absolute', top: '50%', right: -32, transform: 'translateY(-50%)', fontSize: 12, fontWeight: 'bold' }}>Direita</div>
     </div>
   );
 }
