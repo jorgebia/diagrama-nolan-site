@@ -1,96 +1,58 @@
-// components/ResultDiagram.js
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
-  const containerRef = useRef(null);
-  const [size, setSize] = useState(500);
-  const gridSize = 10;
-
-    useEffect(() => {
-    function updateSize() {
-      if (containerRef.current) {
-        setSize(containerRef.current.clientWidth);
-      }
-    }
-    updateSize();
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
-
-  // função para mapear valor -2..2 para posição em px dentro do quadrante
-  const mapValue = (value) => ((value + 2) / 4) * size;
+  // Mapeia valor -2..2 para percentual
+  const mapValue = (value) => ((value + 2) / 4) * 100;
 
   return (
     <div className="flex justify-center my-6 px-4">
-      <div className="relative w-full max-w-[500px] aspect-square">
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${gridSize}, 1fr)`,
-          gridTemplateRows: `repeat(${gridSize}, 1fr)`,
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-        }}
-      >
-        {[...Array(gridSize * gridSize)].map((_, i) => {
-          const row = Math.floor(i / gridSize);
-          const col = i % gridSize;
-          let bg = 'white';
-          if (row < gridSize / 2 && col < gridSize / 2) bg = '#d1fae5'; // verde claro
-          if (row < gridSize / 2 && col >= gridSize / 2) bg = '#fef9c3'; // amarelo claro
-          if (row >= gridSize / 2 && col < gridSize / 2) bg = '#fee2e2'; // vermelho claro
-          if (row >= gridSize / 2 && col >= gridSize / 2) bg = '#bfdbfe'; // azul claro
-          return <div key={i} style={{ border: '1px solid #e5e7eb', backgroundColor: bg }} />;
-        })}
+      <div className="relative w-[90vw] max-w-[500px]" style={{ paddingTop: '100%' }}>
+        {/* Grid colorida */}
+        <div
+          className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
+          style={{ border: '1px solid #ccc' }}
+        >
+          {[...Array(100)].map((_, i) => {
+            const row = Math.floor(i / 10);
+            const col = i % 10;
+            let bg = 'white';
+            if (row < 5 && col < 5) bg = '#d1fae5';
+            if (row < 5 && col >= 5) bg = '#fef9c3';
+            if (row >= 5 && col < 5) bg = '#fee2e2';
+            if (row >= 5 && col >= 5) bg = '#bfdbfe';
+            return <div key={i} className="border border-gray-200" style={{ backgroundColor: bg }} />;
+          })}
+        </div>
+
+        {/* Eixos */}
+        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-black" />
+        <div className="absolute left-1/2 top-0 w-0.5 h-full bg-black" />
+
+        {/* Marcador do usuário */}
+        <motion.div
+          className="absolute w-4 h-4 bg-red-600 rounded-full"
+          style={{
+            left: `${mapValue(economic)}%`,
+            top: `${100 - mapValue(social)}%`,
+            transform: 'translate(-50%, -50%)',
+          }}
+        />
+
+        {/* Legendas */}
+        <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold bg-white/80 px-1">
+          Libertário(a)
+        </div>
+        <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold bg-white/80 px-1">
+          Autoritário(a)
+        </div>
+        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-1 text-xs font-semibold bg-white/80 px-1 z-10">
+          Esquerda
+        </div>
+        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1 text-xs font-semibold bg-white/80 px-1 z-10">
+          Direita
+        </div>
       </div>
-    </div>
-
-      {/* Eixos */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: 0,
-          width: '100%',
-          height: 0,
-          borderTop: '2px solid black',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          left: '50%',
-          top: 0,
-          width: 0,
-          height: '100%',
-          borderLeft: '2px solid black',
-        }}
-      />
-
-      {/* Marcador do usuário */}
-      <motion.div
-        style={{
-          position: 'absolute',
-          width: 16,
-          height: 16,
-          borderRadius: '50%',
-          backgroundColor: 'red',
-          left: mapValue(economic),
-          top: size - mapValue(social),
-          transform: 'translate(-50%, -50%)',
-          zIndex: 10,
-        }}
-      />
-
-      {/* Legendas */}
-      <div style={{ position: 'absolute', top: -24, left: '50%', transform: 'translateX(-50%)', fontSize: 12, fontWeight: 'bold' }}>Libertário(a)</div>
-      <div style={{ position: 'absolute', bottom: -24, left: '50%', transform: 'translateX(-50%)', fontSize: 12, fontWeight: 'bold' }}>Autoritário(a)</div>
-      <div style={{ position: 'absolute', top: '50%', left: -32, transform: 'translateY(-50%)', fontSize: 12, fontWeight: 'bold' }}>Esquerda</div>
-      <div style={{ position: 'absolute', top: '50%', right: -32, transform: 'translateY(-50%)', fontSize: 12, fontWeight: 'bold' }}>Direita</div>
     </div>
   );
 }
