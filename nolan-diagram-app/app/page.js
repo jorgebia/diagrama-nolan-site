@@ -102,8 +102,8 @@ function getIdeologyLabel(economic, social) {
     });
 
     return {
-      economic: economicCount ? economic / (economicCount * 2) : 0,
-      social: socialCount ? social / (socialCount * 2) : 0,
+      economic: economicCount ? economic / economicCount : 0,
+      social: socialCount ? social / socialCount : 0,
     };
   }, [answers]);
 
