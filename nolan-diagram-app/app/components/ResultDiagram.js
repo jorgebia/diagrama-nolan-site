@@ -10,7 +10,7 @@ export default function ResultDiagram({ economic, social }) {
   const mapValue = (value) => ((value + 2) / 4) * size;
 
   return (
-    <div className="mx-auto my-6" style={{ width: size, height: size, position: 'relative' }}>
+    <div className="mx-auto my-6 w-[90vw] max-w-[500px] aspect-square relative">
       {/* Grid colorida */}
       <div
         style={{
