@@ -1,11 +1,22 @@
 // components/ResultDiagram.js
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
   const containerRef = useRef(null);
-  const size = containerRef.current?.clientWidth || 500;
+  const [size, setSize] = useState(500);
   const gridSize = 10;
+
+    useEffect(() => {
+    function updateSize() {
+      if (containerRef.current) {
+        setSize(containerRef.current.clientWidth);
+      }
+    }
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
 
   // função para mapear valor -2..2 para posição em px dentro do quadrante
   const mapValue = (value) => ((value + 2) / 4) * size;
