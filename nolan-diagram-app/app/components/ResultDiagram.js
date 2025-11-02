@@ -3,15 +3,16 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
-  const size = 500; // tamanho fixo do quadrante em px
-  const gridSize = 10; // 10x10
+  const containerRef = useRef(null);
+  const size = containerRef.current?.clientWidth || 500;
+  const gridSize = 10;
 
   // função para mapear valor -2..2 para posição em px dentro do quadrante
   const mapValue = (value) => ((value + 2) / 4) * size;
 
   return (
-    <div className="mx-auto my-6 w-[90vw] max-w-[500px] aspect-square relative">
-      {/* Grid colorida */}
+    <div className="flex justify-center my-6 px-4">
+      <div className="relative w-full max-w-[500px] aspect-square">
       <div
         style={{
           display: 'grid',
@@ -35,6 +36,7 @@ export default function ResultDiagram({ economic, social }) {
           return <div key={i} style={{ border: '1px solid #e5e7eb', backgroundColor: bg }} />;
         })}
       </div>
+    </div>
 
       {/* Eixos */}
       <div
