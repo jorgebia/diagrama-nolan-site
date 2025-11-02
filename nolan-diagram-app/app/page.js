@@ -174,7 +174,7 @@ function getIdeologyLabel(economic, social) {
       {submitted && (
         <section ref={resultRef}>
           <h2 className="text-2xl font-bold mb-4 text-center">Seu Resultado</h2>
-          <div className="mt-10 sm:mt-12 max-w-[500px] mx-auto">
+          <div className="mt-10 sm:mt-12">
             <ResultDiagram economic={economic} social={social}/>
           </div>
 
@@ -199,7 +199,7 @@ function getIdeologyLabel(economic, social) {
             <ul className="list-none space-y-2 text-sm sm:text-base">
               <li>
              <h3 className="text-blue-700 font-semibold mb-2">🧭 Diagrama de Nolan</h3>
-             <div className="aspect-w-16 aspect-h-9 mb-3 rounded-lg overflow-hidden shadow-md">
+             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
               <iframe
                 src="https://www.youtube.com/embed/QlsT1k1x5lA"
                 title="Diagrama de Nolan - Explicação"
@@ -207,7 +207,7 @@ function getIdeologyLabel(economic, social) {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 className="w-full h-full"
-              ></iframe>
+              />
              </div>
                   <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
                   <p className="mb-2">David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
@@ -238,7 +238,6 @@ function getIdeologyLabel(economic, social) {
               </li>
             </ul>
           </section>
-
         </section>
       )}
     </main>
