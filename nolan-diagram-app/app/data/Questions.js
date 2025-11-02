@@ -23,7 +23,7 @@ const questions = [
     ],
   },
   {
-    text: '03 - O Estado brasileiro deve tornar mais rigorosas as regras de imigração',
+    text: '03 - O Estado brasileiro deve tornar mais rigorosas as regras de imigração.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
