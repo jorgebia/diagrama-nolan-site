@@ -5,7 +5,7 @@ import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
 import Head from 'next/head';
 
-const initialAnswers = Array(questions.length).fill(0);
+const initialAnswers = Array(questions.length).fill(null);
 
 export default function Home() {
 const resultRef = useRef(null);
