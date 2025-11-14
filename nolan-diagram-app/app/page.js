@@ -147,7 +147,7 @@ function getIdeologyLabel(economic, social) {
     ></div>
   </div>
   <p className="text-right text-sm text-gray-700 font-medium">
-    Progresso: {Math.round((answers.filter(a => a !== 0).length / questions.length) * 100)}%
+    Progresso: {Math.round((answers.filter(a => a !== null).length / questions.length) * 100)}%
   </p>
 </div>
 
