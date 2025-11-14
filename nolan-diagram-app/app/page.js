@@ -142,7 +142,7 @@ function getIdeologyLabel(economic, social) {
     <div
       className="bg-blue-600 h-2 rounded-full transition-all"
       style={{
-        width: `${(answers.filter(a => a !== 0).length / questions.length) * 100}%`,
+        width: `${(answers.filter(a => a !== null).length / questions.length) * 100}%`,
       }}
     ></div>
   </div>
