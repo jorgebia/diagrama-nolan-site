@@ -188,7 +188,7 @@ const questions = [
     ],
   },
   {
-    text: '18 - O Estado deve impor cotas raciais em qualquer setor da sociedade brasileira.',
+    text: '18 - O Estado deve impor cotas raciais nas universidades privadas, iguais às das públicas.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
