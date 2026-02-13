@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import QuestionCard from './components/QuestionCard';
 import ResultDiagram from './components/ResultDiagram';
 import questions from './data/Questions';
+import Head from 'next/head';
 
 const initialAnswers = Array(questions.length).fill(null);
 
