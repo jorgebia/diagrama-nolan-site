@@ -9,6 +9,8 @@ const initialAnswers = Array(questions.length).fill(null);
 
 export default function Home() {
 const resultRef = useRef(null);
+const totalRespondidas = answers.filter(a => a !== null).length;
+const totalPerguntas = questions.length;
 function getIdeologyLabel(economic, social) {
   if (economic < 0 && social > 0) return 'progressista';
   if (economic > 0 && social > 0) return 'libertario';
@@ -138,17 +140,39 @@ function getIdeologyLabel(economic, social) {
       </section>
 
 <div className="sticky top-0 z-20 p-3 rounded-xl shadow-md bg-white/80 backdrop-blur-sm max-w-3xl mx-auto mb-4">
-  <div className="w-full bg-gray-200 h-2 rounded-full mb-2">
-    <div
-      className="bg-blue-600 h-2 rounded-full transition-all"
-      style={{
-        width: `${(answers.filter(a => a !== null).length / questions.length) * 100}%`,
-      }}
-    ></div>
-  </div>
-  <p className="text-right text-sm text-gray-700 font-medium">
-    Progresso: {Math.round((answers.filter(a => a !== null).length / questions.length) * 100)}%
-  </p>
+    {/* --- NOVO BLOCO DA BARRA DE PROGRESSO --- */}
+    <div className="sticky top-4 z-20 px-2 mb-8 max-w-2xl mx-auto">
+      <div className="bg-white/90 backdrop-blur-lg border border-white/50 shadow-xl rounded-2xl p-4">
+        <div className="flex justify-between items-center mb-3">
+          <div className="flex flex-col">
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-indigo-500 mb-1">
+              Progresso
+            </span>
+            <div className="flex items-baseline gap-2">
+              <span className="text-3xl font-black text-slate-800 tabular-nums">
+                {totalRespondidas}
+              </span>
+              <span className="text-slate-400 font-bold text-lg">
+                / {totalPerguntas}
+              </span>
+            </div>
+          </div>
+          <div className={`h-10 w-10 rounded-xl flex items-center justify-center transition-all ${totalRespondidas === totalPerguntas ? 'bg-green-500 text-white' : 'bg-slate-100 text-slate-400'}`}>
+            {totalRespondidas === totalPerguntas ? "✓" : "🚀"}
+          </div>
+        </div>
+
+        <div className="relative h-3 w-full bg-slate-200 rounded-full overflow-hidden">
+          <motion.div
+            initial={{ width: 0 }}
+            animate={{ width: `${(totalRespondidas / totalPerguntas) * 100}%` }}
+            className="h-full bg-gradient-to-r from-indigo-500 to-purple-600"
+          />
+        </div>
+      </div>
+    </div>
+    {/* --- FIM DO BLOCO --- */}
+
 </div>
 
       <section className="mb-8">
