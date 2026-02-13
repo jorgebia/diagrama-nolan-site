@@ -110,16 +110,28 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen p-4 pb-20">
-      <div className="max-w-3xl mx-auto text-center mb-8">
-        <h1 className="text-3xl font-black mb-4">Quiz Político Brasil - Beta</h1>
-        <p className="mb-4">
-          Este teste utiliza o <strong>Diagrama de Nolan</strong> para mapear suas visões políticas em dois eixos independentes: <strong>liberdade econômica</strong> e <strong>liberdade social</strong>.
-        </p>
-        <p className="mb-4 text-sm text-gray-600 italic">
-          O quiz já foi respondido {totalRespostas} vezes!
-        </p>
-      </div>
+    <main className="p-4 sm:p-8 font-sans bg-[url('/paper-texture.jpg')] bg-repeat text-gray-900">
+      <Head>
+        <title>Teste de Espectro Político Brasileiro</title>
+        <meta name="description" content="Descubra sua posição no espectro político brasileiro com este quiz baseado no Diagrama de Nolan." />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </Head>
+      <section className="mb-8 text-center">
+        <h1 className="text-2xl sm:text-4xl font-bold mb-2 items-center justify-center">
+          🧭 Quiz do Espectro Político Brasileiro<span className="italic text-sm ml-1">(beta)</span>
+        </h1>
+          {totalRespostas !== null && (
+        <p className="text-sm text-gray-600">
+          ✅ Este quiz já foi respondido <strong>{totalRespostas}</strong> vezes.
+         </p>
+          )}
+      </section>
+
+      <section className="mb-4 bg-white/70 p-4 rounded-xl shadow-md max-w-3xl mx-auto">
+        <p className="mb-2">📝 Responda ao quiz e descubra sua posição em um espectro político mais amplo do que o tradicional “esquerda-direita”, com base no Diagrama de Nolan.</p>
+      </section>
 
       {/* BARRA DE PROGRESSO ABSOLUTA */}
       <div className="sticky top-4 z-20 px-2 mb-10 max-w-2xl mx-auto">
