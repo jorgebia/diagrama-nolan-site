@@ -183,7 +183,7 @@ export default function Home() {
       </div>
 
       {showResult && (
-        <section ref={resultRef} className="mt-16 p-6 bg-white rounded-3xl shadow-2xl max-w-4xl mx-auto border border-gray-100">
+        <section ref={resultRef} className="mt-16 p-6 bg-white/70 rounded-3xl shadow-2xl max-w-4xl mx-auto border border-gray-100">
           <h2 className="text-3xl font-black text-center mb-8 text-gray-800 tracking-tight">Seu Resultado</h2>
           <ResultDiagram economic={economic} social={social} />
           
