@@ -1,7 +1,7 @@
 //data/questions.js
 const questions = [
   {
-    text: '01 - As operadoras de planos de saúde devem ter a liberdade de fornecer planos personalizados sem a obrigatoriedade de seguir o estabelecido pela ANS (Agência Nacional de Saúde Suplementar).',
+    text: '01 - Cidadãos e empresas de saúde devem ter liberdade para negociar planos de saúde personalizados, sem a interferência de órgãos reguladores do governo.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -23,14 +23,14 @@ const questions = [
     ],
   },
   {
-    text: '03 - O Estado brasileiro deve tornar mais rigorosas as regras de imigração.',
+    text: '03 - O Estado deve facilitar a entrada de estrangeiros que queiram trabalhar ou empreender no país.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
@@ -78,7 +78,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de Calamidade Pública (pandemias, grandes catástrofes naturais, etc.).',
+    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de crises (naturais, financeiras e etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -100,7 +100,7 @@ const questions = [
     ],
   },
   {
-    text: '10 - O Estado brasileiro deve ampliar a regulação da Internet e das redes sociais, além do que já estabelece o Marco Civil da Internet.',
+    text: '10 - O governo deve interferir na moderação de conteúdo das plataformas digitais.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -111,7 +111,7 @@ const questions = [
     ],
   },
   {
-    text: '11 - Empresas devem ter a liberdade para contratar e demitir com maior flexibilidade (Contratar como PJ, escala 6x1 e 4x3, etc.).',
+    text: '11 - Patrões e empregados devem ter liberdade para negociar contratos de trabalho diretamente (Contrato PJ, escala 6x1 e 4x3, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -144,14 +144,14 @@ const questions = [
     ],
   },
   {
-    text: '14 - O aborto deve ser proibido em todas as circunstâncias, inclusive nos casos já previstos em lei (saúde da mãe, anencefalia e estupro).',
+    text: '14 - A decisão sobre a interrupção da gravidez deve caber exclusivamente à mulher, sem interferência ou proibição por parte do Estado.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
@@ -232,14 +232,14 @@ const questions = [
     ],
   },
   {
-    text: '22 - Formas não convencionais de relacionamento, como poliamor e relacionamento aberto, devem ser respeitadas e legalmente reconhecidas.',
+    text: '22 - O Estado não deve reconhecer relacionamentos não convencionais, como o poliamor ou relacionamentos abertos.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
@@ -254,7 +254,7 @@ const questions = [
     ],
   },
   {
-    text: '24 - O Estado deve ter a exclusividade em fornecer e gerir toda a infraestrutura de transporte (rodovias, ferrovias, portos, etc.).',
+    text: '24 - O Estado deve deter o monopólio sobre a infraestrutura de transporte do país (rodovias, ferrovias, portos, etc.).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -276,14 +276,14 @@ const questions = [
     ],
   },
   {
-    text: '26 - Valores cristãos devem orientar decisões políticas e a elaboração de leis no Brasil.',
+    text: '26 - O Estado deve ser estritamente laico, garantindo que crenças religiosas não influenciem as leis e as políticas públicas.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
