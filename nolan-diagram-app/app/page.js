@@ -37,41 +37,47 @@ export default function Home() {
     autoritario: {
       title: '🔴 Autoritário(a) / Totalitário(a)',
       text: [
-        <p key="1" className="font-semibold italic mb-2 text-red-700">Para você, uma nação forte se constrói com lealdade, respeito às tradições e confiança no poder que mantém o país unido.</p>,
-        <p key="2" className="mb-2">Seu posicionamento revela uma preferência por um Estado forte, centralizador e com alto grau de controle tanto sobre a economia quanto sobre os costumes sociais. Essa visão valoriza a autoridade, o nacionalismo e a ordem como fundamentos de uma sociedade funcional.</p>,
-        <p key="3" className="mb-2">Os autoritários tendem a ver a liberdade individual como secundária diante da necessidade de estabilidade, segurança e unidade nacional. A crença central é que, sem uma liderança firme e regulamentações claras, a sociedade corre o risco de cair no caos ou na decadência moral e econômica.</p>
+        <p className="font-semibold italic mb-2 text-red-700">Para você, uma nação forte se constrói com lealdade, respeito às tradições e confiança no poder que mantém o país unido.</p>,
+        <p className="mb-2">Seu posicionamento revela uma preferência por um Estado forte, centralizador e com alto grau de controle tanto sobre a economia quanto sobre os costumes sociais. Essa visão valoriza a autoridade, o nacionalismo e a ordem como fundamentos de uma sociedade funcional.</p>,
+        <p className="mb-2">Os autoritários tendem a ver a liberdade individual como secundária diante da necessidade de estabilidade, segurança e unidade nacional. Políticas coercitivas, vigilância, censura e centralização do poder são frequentemente defendidas como ferramentas legítimas para proteger o Estado e seus valores fundamentais.</p>,
+        <p className="mb-2">Essa posição costuma emergir em contextos de crise ou desordem, onde a confiança na autoridade é vista como o melhor caminho para restaurar o controle e evitar a fragmentação social.</p>
       ]
     },
     libertario: {
       title: '🟡 Libertário(a) / Anarcocapitalista',
       text: [
-        <p key="1" className="font-semibold italic mb-2 text-yellow-700">A liberdade individual é o valor supremo. Você acredita que a cooperação voluntária e a propriedade privada são as únicas bases legítimas para a sociedade.</p>,
-        <p key="2" className="mb-2">Seu posicionamento defende a máxima liberdade individual e econômica. Você tende a ver o Estado como uma instituição cujas intervenções, por mais bem-intencionadas que pareçam, frequentemente violam direitos individuais e distorcem a economia.</p>,
-        <p key="3" className="mb-2">A visão libertária (que em seu grau máximo chega ao anarcocapitalismo) propõe que a sociedade deve ser organizada através de contratos voluntários, livre mercado e o respeito absoluto ao princípio de não-agressão. Para você, a verdadeira justiça surge quando os indivíduos são plenamente responsáveis por suas vidas e propriedades.</p>
+        <p className="font-semibold italic mb-2 text-yellow-700">Você vê na liberdade o princípio mais elevado de uma sociedade justa — onde cada pessoa responde por si e coopera por escolha, não por imposição.</p>,
+        <p className="mb-2">Você se identifica com uma visão que valoriza profundamente a autonomia individual e a liberdade em todas as esferas da vida. O pensamento libertário vai além de uma doutrina política — ele é também um movimento cultural que celebra a autodeterminação, a responsabilidade pessoal, a inovação descentralizada e o respeito à diversidade de escolhas.</p>,
+        <p className="mb-2">Historicamente, o libertarianismo defende um Estado mínimo ou até inexistente, com alternativas privadas de governança e gestão de cidades e países. Culturalmente, essa corrente abraça o pluralismo, a paz voluntária entre os indivíduos e uma postura crítica a qualquer forma de coerção estatal ou social.</p>,
+        <p className="mb-2">Ser identificado(a) como libertário(a) é fazer parte de um legado intelectual e ético que valoriza a liberdade acima de tudo — uma postura corajosa, inovadora e profundamente alinhada com o espírito de uma sociedade livre, pacífica, justa e voluntária.</p>,
+        <p className="mb-2">Um dos desdobramentos mais radicais e coerentes dessa filosofia é o anarcocapitalismo — uma corrente que propõe a abolição completa do Estado em favor de instituições voluntárias, contratos privados e soluções de mercado para todos os aspectos da vida em sociedade, inclusive segurança e justiça. Para os anarcocapitalistas, a liberdade individual só é plena quando não existe nenhum monopólio estatal de poder, nem coerção institucional.</p>
       ]
     },
     progressista: {
       title: '🟢 Progressista / Socialista',
       text: [
-        <p key="1" className="font-semibold italic mb-2 text-green-700">Você acredita em um mundo onde a liberdade individual caminha lado a lado com a justiça social e a igualdade de oportunidades.</p>,
-        <p key="2" className="mb-2">Seu perfil defende amplas liberdades civis e direitos individuais (como a liberdade de expressão e escolhas de estilo de vida), mas acredita que o Estado ou a comunidade devem intervir na economia para reduzir desigualdades e garantir serviços essenciais a todos.</p>,
-        <p key="3" className="mb-2">A visão progressista busca proteger as minorias e os vulneráveis, acreditando que a verdadeira liberdade só é possível quando as necessidades básicas são supridas e o poder econômico é regulado para servir ao bem comum.</p>
+        <p className="font-semibold italic mb-2 text-green-700">Você vê a política como um instrumento de transformação — um caminho para diminuir desigualdades e ampliar oportunidades.</p>,
+        <p className="mb-2">Sua visão está alinhada com ideias modernas de justiça social, equidade e responsabilidade coletiva. Progressistas e socialistas acreditam que o papel do Estado é essencial para corrigir desigualdades históricas, garantir direitos civis, promover inclusão e construir uma sociedade mais plural, sustentável e empática.</p>,
+        <p className="mb-2">A vertente progressista / socialista busca combinar políticas públicas robustas com inovação social, avançando pautas como saúde pública universal, educação de qualidade, igualdade de gênero, diversidade cultural e justiça climática.</p>,
+        <p className="mb-2">A presença do Estado na economia é vista como ferramenta para redistribuir riquezas diminuindo a desigualdade social. Este posicionamento reflete uma postura ativa diante das injustiças e um compromisso com um futuro mais solidário e igualitário.</p>
       ]
     },
     liberal: {
       title: '🔵 Liberal / Conservador(a)',
       text: [
-        <p key="1" className="font-semibold italic mb-2 text-blue-700">Você defende a liberdade econômica como o motor da prosperidade, mantendo o respeito às instituições e à ordem social.</p>,
-        <p key="2" className="mb-2">Este posicionamento favorece o livre mercado, a redução de impostos e a desestatização, acreditando que a eficiência econômica gera bem-estar para toda a sociedade. No campo social, você tende a ser mais conservador ou moderado, valorizando a segurança pública e as normas vigentes.</p>,
-        <p key="3" className="mb-2">Para o liberal clássico ou de direita, a função do Estado deve ser limitada a garantir o cumprimento de contratos, a segurança e a proteção da propriedade, permitindo que a iniciativa privada floresça.</p>
+        <p className="font-semibold italic mb-2 text-blue-700">Você acredita que o verdadeiro progresso nasce da liberdade com responsabilidade — e que valores sólidos são o alicerce de uma sociedade próspera.</p>,
+        <p className="mb-2">Você tende a valorizar os pilares clássicos do pensamento liberal-conservador: liberdade econômica, responsabilidade individual, respeito à propriedade privada, e a preservação das tradições culturais e institucionais.</p>,
+        <p className="mb-2">Essa visão acredita que o progresso verdadeiro deve ser acompanhado de estabilidade moral e ordem social. Os liberais conservadores geralmente defendem mercados livres com o mínimo de intervenção estatal, acreditando que a iniciativa privada é o motor mais eficiente do desenvolvimento.</p>,
+        <p className="mb-2">Ao mesmo tempo, reconhecem o valor das instituições, da família, da religião e da autoridade como fundamentos para a coesão social. Este posicionamento representa uma confiança nas virtudes do indivíduo, na importância dos costumes e na necessidade de preservar estruturas que resistiram ao teste do tempo.</p>
       ]
     },
     centro: {
       title: '⚪ Centro',
       text: [
-        <p key="1" className="font-semibold italic mb-2 text-gray-700">Você busca o equilíbrio e a moderação, evitando extremismos em ambas as áreas.</p>,
-        <p key="2" className="mb-2">Suas opiniões sobre economia e sociedade não se encaixam perfeitamente em nenhum quadrante radical. Você tende a avaliar cada questão de forma pragmática, possivelmente aceitando algumas intervenções estatais na economia e certas liberdades sociais, sem abrir mão de um senso de ordem e estabilidade.</p>,
-        <p key="3" className="mb-2">O centro é o ponto de convergência que busca soluções baseadas no consenso e na viabilidade prática.</p>
+        <p className="font-semibold italic mb-2 text-gray-700">Você enxerga o valor de cada lado e prefere o caminho do diálogo — e acredita que boas ideias podem vir de qualquer lugar do espectro político.</p>,
+        <p className="mb-2">Você demonstra uma visão política equilibrada, que evita posições extremas e busca soluções ponderadas para os desafios da sociedade. A vertente centrista valoriza a razão prática, o diálogo e a capacidade de adaptar ideias conforme o contexto, recusando abordagens dogmáticas ou polarizadas.</p>,
+        <p className="mb-2">Centristas costumam defender a liberdade individual, mas reconhecem o papel necessário do Estado em determinadas situações. Podem apoiar políticas sociais em algumas áreas e, ao mesmo tempo, preferir soluções de mercado em outras.</p>,
+        <p className="mb-2">Essa postura se baseia em avaliações caso a caso, guiadas por evidências, pragmatismo e senso de justiça. Estar no centro do espectro político não significa indecisão — significa responsabilidade, ponderação e abertura para construir pontes entre visões distintas em busca de soluções sustentáveis e inclusivas.</p>
       ]
     }
   };
@@ -136,7 +142,7 @@ export default function Home() {
 
       {/* BARRA DE PROGRESSO ABSOLUTA */}
       <div className="sticky top-4 z-20 px-2 mb-10 max-w-2xl mx-auto">
-        <div className="bg-white/95 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-4">
+        <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-4">
           <div className="flex justify-between items-end mb-2 px-1">
             <div className="flex flex-col">
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas</span>
@@ -190,19 +196,23 @@ export default function Home() {
             </div>
           </div>
 
-          <section className="mt-10 border-t pt-8">
-            <h3 className="text-xl font-bold mb-4 text-gray-800 uppercase tracking-wide font-semibold">Saiba mais sobre o movimento libertário e a defesa da liberdade:</h3>
-            <ul className="space-y-6">
+          <section className="mt-12 max-w-3xl mx-auto bg-white/70 p-4 rounded-xl shadow-md">
+            <h2 className="text-xl sm:text-2xl font-bold mb-4">📚 Links Complementares</h2>
+            <ul className="list-none space-y-2 text-sm sm:text-base">
               <li>
-                <a
-                  href="https://rothbardbrasil.com/o-que-e-libertarianismo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-700 underline hover:text-blue-900"
-                >
-                  📚 O que é Libertarianismo? (Artigo Rothbard Brasil)
-                </a>
-                <p className="mt-1 text-gray-600 italic">O libertarianismo é uma filosofia política que mantém a soberania do indivíduo e a liberdade de escolha como seus princípios centrais.</p>
+             <h3 className="text-blue-700 font-semibold mb-2">🧭 Diagrama de Nolan</h3>
+             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+              <iframe
+                src="https://www.youtube.com/embed/QlsT1k1x5lA"
+                title="Diagrama de Nolan - Explicação"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+             </div>
+                  <p className="mb-2">O Diagrama de Nolan é uma ferramenta que ajuda a classificar as ideologias políticas de um indivíduo em dois eixos: econômico (esquerda/direita) e social (libertário/autoritário).</p>
+                  <p className="mb-2">David Nolan propôs este modelo para demonstrar que as visões políticas vão além da tradicional divisão entre esquerda e direita, incluindo também o grau de liberdade pessoal que o indivíduo defende.</p>
               </li>
               
               <li>
