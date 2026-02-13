@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useCallback, useMemo, useRef } from 'react';
+import React, { useState, useCallback, useMemo, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import QuestionCard from './components/QuestionCard';
 import ResultDiagram from './components/ResultDiagram';
@@ -10,11 +10,19 @@ const initialAnswers = Array(questions.length).fill(null);
 export default function Home() {
   const [answers, setAnswers] = useState(initialAnswers);
   const [showResult, setShowResult] = useState(false);
+  const [totalRespostas, setTotalRespostas] = useState(0);
   const resultRef = useRef(null);
 
   // Lógica da barra de progresso absoluta
   const totalRespondidas = answers.filter(a => a !== null).length;
   const totalPerguntas = questions.length;
+
+  useEffect(() => {
+    fetch('/api/contador')
+      .then(res => res.json())
+      .then(data => setTotalRespostas(data.total || 0))
+      .catch(err => console.error("Erro ao buscar contador", err));
+  }, []);
 
   function getIdeologyLabel(economic, social) {
     if (economic < 0 && social > 0) return 'progressista';
@@ -103,14 +111,22 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-4 pb-20">
-      <h1 className="text-3xl font-black text-center mb-8">Quiz Político</h1>
+      <div className="max-w-3xl mx-auto text-center mb-8">
+        <h1 className="text-3xl font-black mb-4">Quiz Político Brasil - Beta</h1>
+        <p className="mb-4">
+          Este teste utiliza o <strong>Diagrama de Nolan</strong> para mapear suas visões políticas em dois eixos independentes: <strong>liberdade econômica</strong> e <strong>liberdade social</strong>.
+        </p>
+        <p className="mb-4 text-sm text-gray-600 italic">
+          O quiz já foi respondido {totalRespostas} vezes!
+        </p>
+      </div>
 
       {/* BARRA DE PROGRESSO ABSOLUTA */}
       <div className="sticky top-4 z-20 px-2 mb-10 max-w-2xl mx-auto">
         <div className="bg-white/95 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-4">
           <div className="flex justify-between items-end mb-2 px-1">
             <div className="flex flex-col">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Progresso</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas</span>
               <div className="flex items-baseline gap-1">
                 <span className="text-3xl font-black text-gray-800 tabular-nums">{totalRespondidas}</span>
                 <span className="text-gray-400 font-bold">/ {totalPerguntas}</span>
@@ -162,25 +178,42 @@ export default function Home() {
           </div>
 
           <section className="mt-10 border-t pt-8">
-            <h3 className="text-xl font-bold mb-4 text-gray-800 uppercase tracking-wide">Saiba mais sobre o movimento libertário e a defesa da liberdade:</h3>
+            <h3 className="text-xl font-bold mb-4 text-gray-800 uppercase tracking-wide font-semibold">Saiba mais sobre o movimento libertário e a defesa da liberdade:</h3>
             <ul className="space-y-6">
               <li>
-                <a href="https://rothbardbrasil.com/o-que-e-libertarianismo/" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline font-semibold hover:text-blue-900">
+                <a
+                  href="https://rothbardbrasil.com/o-que-e-libertarianismo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
                   📚 O que é Libertarianismo? (Artigo Rothbard Brasil)
                 </a>
                 <p className="mt-1 text-gray-600 italic">O libertarianismo é uma filosofia política que mantém a soberania do indivíduo e a liberdade de escolha como seus princípios centrais.</p>
               </li>
+              
               <li>
-                <a href="/vamos-trocar-ebook.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline font-semibold hover:text-blue-900">
+                <a
+                  href="/vamos-trocar-ebook.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
                   📖 Ebook infantil: Vamos Trocar? (PDF para download)
                 </a>
-                <p className="mt-1 text-gray-600">"Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!</p>
+                <p className="mb-2">"Vamos Trocar?" introduz e ensina o conceito básico de trocas e negociação, e mostra que a ausência de iniciativas agressivas, seja qual for a situação, é a base para uma sociedade livre e pacífica!</p>
               </li>
+
               <li>
-                <a href="https://www.youtube.com/@TuttleTwins_br" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline font-semibold hover:text-blue-900">
+                <a
+                  href="https://www.youtube.com/@TuttleTwins_br"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 underline hover:text-blue-900"
+                >
                   🧩 Desenho Infantil Educativo: Tuttle Twins (Canal do Youtube)
                 </a>
-                <p className="mt-1 text-gray-600"> Crianças, economia e liberdade. Tudo junto em uma única série! Junte-se à vovó Gabby enquanto ela leva seus netos em aventuras em uma máquina do tempo em cadeira de rodas para aprender sobre os princípios de liberdade, governo, economia e muito mais! Tuttle Twins ensina crianças, pré-adolescentes e adolescentes de uma maneira divertida e envolvente.</p>
+                <p className="mb-2"> Crianças, economia e liberdade. Tudo junto em uma única série! Junte-se à vovó Gabby enquanto ela leva seus netos em aventuras em uma máquina do tempo em cadeira de rodas para aprender sobre os princípios de liberdade, governo, economia e muito mais! Tuttle Twins ensina crianças, pré-adolescentes e adolescentes de uma maneira divertida e envolvente.</p>
               </li>
             </ul>
           </section>
