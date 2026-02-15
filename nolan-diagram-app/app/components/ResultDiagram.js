@@ -31,7 +31,7 @@ export default function ResultDiagram({ economic, social }) {
 
         {/* Marcador do usuário */}
         <motion.div
-          className="absolute w-4 h-4 bg-red-600 rounded-full"
+          className="absolute w-4 h-4 bg-red-600 rounded-xl"
           style={{
             left: `${mapValue(economic)}%`,
             top: `${100 - mapValue(social)}%`,

@@ -190,11 +190,11 @@ export default function Home() {
   <div className="grid md:grid-cols-2 gap-4">
     <div>
       <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600">Eixo Horizontal</p>
-      <p className="text-sm">Eixo Econômico (Horizontal): Quanto mais à direita, maior o seu apoio ao livre mercado e à propriedade privada.</p>
+      <p className="text-sm">Eixo Econômico (↔️): Quanto mais à direita, maior o seu apoio ao livre mercado e à propriedade privada.</p>
     </div>
     <div>
       <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600">Eixo Vertical</p>
-      <p className="text-sm">Eixo Social (Vertical): Quanto mais acima, maior o seu apoio nas liberdades sociais individuais.</p>
+      <p className="text-sm">Eixo Social (↕️): Quanto mais acima, maior o seu apoio nas liberdades sociais individuais.</p>
     </div>
   </div>
 </section>
