@@ -142,7 +142,7 @@ export default function Home() {
 
       {/* BARRA DE PROGRESSO ABSOLUTA */}
       <div className="sticky top-4 z-20 px-2 mb-10 max-w-2xl mx-auto">
-        <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-xl rounded-2xl p-4">
+        <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-xl p-4">
           <div className="flex justify-between items-end mb-2 px-1">
             <div className="flex flex-col">
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas</span>
@@ -152,11 +152,11 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="h-3 w-full bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-3 w-full bg-gray-200 rounded-xl overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${(totalRespondidas / totalPerguntas) * 100}%` }}
-              className="h-full bg-blue-600 rounded-full"
+              className="h-full bg-blue-600 rounded-xl"
             />
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function Home() {
           disabled={totalRespondidas < totalPerguntas}
           className={`px-10 py-4 rounded-xl font-bold text-lg transition-all ${
             totalRespondidas === totalPerguntas 
-            ? "bg-blue-600 text-white hover:bg-blue-700 shadow-lg" 
+            ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md" 
             : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
@@ -183,7 +183,7 @@ export default function Home() {
       </div>
 
       {showResult && (
-        <section ref={resultRef} className="mt-16 p-6 bg-white/70 rounded-3xl shadow-2xl max-w-4xl mx-auto border border-gray-100">
+        <section ref={resultRef} className="mt-16 p-6 bg-white/70 rounded-xl shadow-md max-w-4xl mx-auto border border-gray-100">
           <h2 className="text-3xl font-black text-center mb-8 text-gray-800 tracking-tight">Seu Resultado</h2>
 
 <section className="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 my-6">
@@ -200,7 +200,7 @@ export default function Home() {
 </section>
 
           <ResultDiagram economic={economic} social={social} />
-          <div className="mt-8 p-6 bg-gray-50 rounded-2xl">
+          <div className="mt-8 p-6 bg-gray-50 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">
               {ideologyDescriptions[getIdeologyLabel(economic, social)].title}
             </h3>
@@ -214,7 +214,7 @@ export default function Home() {
             <ul className="list-none space-y-2 text-sm sm:text-base">
               <li>
              <h3 className="text-blue-700 font-semibold mb-2">🧭 Diagrama de Nolan</h3>
-             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-md">
               <iframe
                 src="https://www.youtube.com/embed/QlsT1k1x5lA"
                 title="Diagrama de Nolan - Explicação"
