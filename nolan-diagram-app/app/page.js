@@ -185,8 +185,21 @@ export default function Home() {
       {showResult && (
         <section ref={resultRef} className="mt-16 p-6 bg-white/70 rounded-3xl shadow-2xl max-w-4xl mx-auto border border-gray-100">
           <h2 className="text-3xl font-black text-center mb-8 text-gray-800 tracking-tight">Seu Resultado</h2>
+
+<section className="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 my-6">
+  <div className="grid md:grid-cols-2 gap-4">
+    <div>
+      <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600">Eixo Horizontal</p>
+      <p className="text-sm">Eixo Econômico (Horizontal): Quanto mais à direita, maior o seu apoio ao livre mercado e à propriedade privada.</p>
+    </div>
+    <div>
+      <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600">Eixo Vertical</p>
+      <p className="text-sm">Eixo Social (Vertical): Quanto mais acima, maior o seu apoio nas liberdades sociais individuais.</p>
+    </div>
+  </div>
+</section>
+
           <ResultDiagram economic={economic} social={social} />
-          
           <div className="mt-8 p-6 bg-gray-50 rounded-2xl">
             <h3 className="text-2xl font-bold mb-4">
               {ideologyDescriptions[getIdeologyLabel(economic, social)].title}
