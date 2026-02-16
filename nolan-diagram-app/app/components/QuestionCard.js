@@ -15,7 +15,7 @@ export default function QuestionCard({ question, index, value, onChange }) {
         WebkitBackfaceVisibility: 'hidden',
         backfaceVisibility: 'hidden'
       }}
-      className="mb-8 bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 max-w-3xl mx-auto"
+      className="mb-8 bg-white/60 p-6 md:p-8 rounded-xl shadow-md border border-slate-100 max-w-3xl mx-auto"
     >
       <h3 className="font-bold text-lg md:text-xl text-slate-800 mb-6 leading-tight">
         {question.text}
