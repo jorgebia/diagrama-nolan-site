@@ -6,8 +6,8 @@ export default function ResultDiagram({ economic, social }) {
   const mapValue = (value) => ((value + 2) / 4) * 100;
 
   return (
-    <div className="flex justify-center my-6 px-4">
-      <div className="relative w-full max-w-[450px] aspect-square bg-white shadow-xl border border-gray-300">
+    <div className="flex justify-center w-full my-10">
+      <div className="relative w-full max-w-[400px] aspect-square bg-white shadow-2xl border-4 border-white rounded-lg overflow-visible">
         {/* Grid colorida */}
         <div
           className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
