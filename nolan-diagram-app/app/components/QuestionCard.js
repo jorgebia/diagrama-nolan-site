@@ -6,9 +6,13 @@ export default function QuestionCard({ question, index, value, onChange }) {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      // Mantivemos o fundo branco transparente (bg-white/70) e o blur
-      // Note o "px-4 md:px-8": ele dá respiro mas não espreme o texto em telas pequenas
+      viewport={{ once: true, margin: "-50px"}}
+      style={{ 
+        backfaceVisibility: 'hidden', 
+        WebkitBackfaceVisibility: 'hidden',
+        transform: 'translateZ(0)',
+        WebkitTransform: 'translateZ(0)'
+      }}
       className="mb-8 bg-white/70 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-sm border border-white/50 max-w-3xl mx-auto transition-all"
     >
       <h3 className="font-bold text-lg md:text-xl text-slate-800 mb-6 leading-tight">
