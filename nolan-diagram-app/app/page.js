@@ -92,7 +92,6 @@ export default function Home() {
 
 const { economic, social } = useMemo(() => {
   let ecoScore = 0, socScore = 0;
-  // Contamos quantas perguntas existem para cada eixo no total
   const ecoTotalQuestions = questions.filter(q => q.axis === 'economic').length;
   const socTotalQuestions = questions.filter(q => q.axis === 'social').length;
 
@@ -104,11 +103,12 @@ const { economic, social } = useMemo(() => {
   });
 
   return {
-    // Dividir pelo total de perguntas do eixo garante a proporção correta
-    economic: ecoScore / ecoTotalQuestions,
-    social: socScore / socTotalQuestions,
+    // Dividimos por (Total * 2) para normalizar entre -1 e 1, 
+    // depois multiplicamos por 2 para voltar à escala -2..2
+    economic: ecoTotalQuestions > 0 ? (ecoScore / (ecoTotalQuestions * 2)) * 2 : 0,
+    social: socTotalQuestions > 0 ? (socScore / (socTotalQuestions * 2)) * 2 : 0,
   };
-}, [answers, questions]);
+}, [answers]);
 
   const handleSubmit = async () => {
     setShowResult(true);
