@@ -29,21 +29,22 @@ export default function ResultDiagram({ economic, social }) {
         {/* Marcador (Ping) */}
         <motion.div
           key={`point-${economic}-${social}`}
-          initial={{ scale: 0, opacity: 0 }}
+          initial={{ scale: 0 }}
           animate={{ 
-            scale: 1, 
-            opacity: 1,
-            left: `${mapValue(economic)}%`,
-            top: `${100 - mapValue(social)}%` // Inverte para que positivo seja "cima"
+          scale: 1,
+          left: `${mapValue(economic)}%`,
+          top: `${100 - mapValue(social)}%` 
           }}
-          transition={{ type: "spring", stiffness: 100, damping: 10 }}
+          // Esta classe abaixo é o segredo da centralização absoluta
           className="absolute z-50 -translate-x-1/2 -translate-y-1/2"
-        >
+          >
           <div className="relative flex items-center justify-center">
-            <span className="absolute w-10 h-10 rounded-full bg-red-500/30 animate-ping"></span>
-            <div className="w-6 h-6 bg-red-600 rounded-full border-4 border-white shadow-2xl" />
+          {/* O ping (efeito de onda) */}
+          <span className="absolute w-8 h-8 rounded-full bg-red-500/40 animate-ping"></span>
+          {/* O ponto central */}
+          <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-lg" />
           </div>
-        </motion.div>
+          </motion.div>
 
         {/* Legendas de Eixo */}
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-black uppercase text-slate-600 tracking-tighter">
