@@ -37,7 +37,7 @@ export default function ResultDiagram({ economic, social }) {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.5 }}
-          className="absolute z-50"
+          className="absolute z-10"
           style={{
             left: `${mapValue(economic)}%`,
             top: `${100 - mapValue(social)}%`,
