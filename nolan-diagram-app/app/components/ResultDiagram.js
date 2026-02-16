@@ -1,34 +1,28 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-
 export default function ResultDiagram({ economic, social }) {
-  // Matemática pura: converte -2..2 para 0..100%
+  // Converte a média de -2..2 para 0..100%
+  // Se economic for 0, (0 + 2) / 4 = 0.5 (50% - centro exato)
   const mapValue = (value) => ((value + 2) / 4) * 100;
 
   return (
     <div className="flex justify-center w-full my-8">
-      {/* Container principal */}
-      <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-white shadow-xl border-4 border-white rounded-lg overflow-hidden">
+      {/* Adicionado mx-auto e ajuste de overflow */}
+      <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-white shadow-xl border-4 border-white rounded-lg mx-auto">
             
-            {/* 1. Grid Colorida - Agora os itens estão DENTRO da div grid */}
-            <div className="absolute inset-0 grid grid-cols-10 grid-rows-10">
-              {[...Array(100)].map((_, i) => {
-                const row = Math.floor(i / 10);
-                const col = i % 10;
-                let bg = 'white';
-                if (row < 5 && col < 5) bg = '#d1fae5'; // Verde (Progressista)
-                if (row < 5 && col >= 5) bg = '#fef9c3'; // Amarelo (Libertário)
-                if (row >= 5 && col < 5) bg = '#fee2e2'; // Vermelho (Autoritário)
-                if (row >= 5 && col >= 5) bg = '#bfdbfe'; // Azul (Liberal)
-                return <div key={i} className="border-[0.5px] border-gray-100" style={{ backgroundColor: bg }}/>;
-              })}
+            {/* Grid de Cores */}
+            <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
+                <div className="bg-[#d1fae5]" title="Progressista"></div> 
+                <div className="bg-[#fef9c3]" title="Libertário"></div>
+                <div className="bg-[#fee2e2]" title="Autoritário"></div>
+                <div className="bg-[#bfdbfe]" title="Liberal"></div>
             </div>
 
-            {/* 2. Eixos Centrais */}
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-black/40 z-10" />
-            <div className="absolute left-1/2 top-0 w-0.5 h-full bg-black/40 z-10" />
+            {/* Linhas de Eixo (Centralização Visual) */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-full h-[1px] bg-black/10"></div>
+                <div className="h-full w-[1px] bg-black/10 absolute"></div>
+            </div>
 
-            {/* 3. Marcador (O PING) */}
+            {/* O PING (Marcador) */}
             <motion.div
               key={`${economic}-${social}`}
               initial={{ scale: 0 }}
@@ -36,21 +30,19 @@ export default function ResultDiagram({ economic, social }) {
               className="absolute z-50"
               style={{
                 left: `${mapValue(economic)}%`,
-                top: `${100 - mapValue(social)}%`,
-                transform: 'translate(-50%, -50%)',
+                bottom: `${mapValue(social)}%`, // Usamos bottom para que positivo suba
+                transform: 'translate(-50%, 50%)', // Ajuste para centralizar o próprio ponto
               }}
             >
               <div className="relative flex items-center justify-center">
-                <span className="absolute w-8 h-8 rounded-full bg-red-500/30 animate-ping"></span>
-                <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-md" />
+                <span className="absolute w-8 h-8 rounded-full bg-red-500/40 animate-ping"></span>
+                <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-lg" />
               </div>
             </motion.div>
 
-        {/* 4. Legendas */}
-        <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-yellow-700 bg-white/80 px-1">Libertário(a)</div>
-        <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-red-700 bg-white/80 px-1">Autoritário(a)</div>
-        <div className="absolute top-1/2 -left-12 -translate-y-1/2 -rotate-90 text-[10px] font-bold uppercase tracking-wider text-green-700 bg-white/80 px-1">Esquerda</div>
-        <div className="absolute top-1/2 -right-12 -translate-y-1/2 rotate-90 text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-white/80 px-1">Direita</div>
+            {/* Legendas ajustadas para não sumirem */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase text-slate-500">Libertário</div>
+            <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase text-slate-500">Autoritário</div>
       </div>
     </div>
   );

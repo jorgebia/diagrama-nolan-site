@@ -90,24 +90,30 @@ export default function Home() {
     });
   }, []);
 
-const { economic, social } = useMemo(() => {
-  let ecoScore = 0, socScore = 0;
-  const ecoTotalQuestions = questions.filter(q => q.axis === 'economic').length;
-  const socTotalQuestions = questions.filter(q => q.axis === 'social').length;
+// Dentro da lógica de exibição dos resultados
+const economicScore = useMemo(() => {
+  const econQuestions = questions.filter(q => q.axis === 'economic');
+  const answered = econQuestions.filter((_, i) => answers[questions.indexOf(econQuestions[i])] !== null);
+  if (answered.length === 0) return 0;
+  
+  const sum = econQuestions.reduce((acc, q, i) => {
+    const val = answers[questions.indexOf(q)];
+    return acc + (val || 0);
+  }, 0);
+  // Retorna a média (entre -2 e 2)
+  return sum / econQuestions.length; 
+}, [answers]);
 
-  answers.forEach((val, i) => {
-    if (val !== null && questions[i]) {
-      if (questions[i].axis === 'economic') ecoScore += val;
-      else socScore += val;
-    }
-  });
+const socialScore = useMemo(() => {
+  const socQuestions = questions.filter(q => q.axis === 'social');
+  if (socQuestions.length === 0) return 0;
 
-  return {
-    // Dividimos por (Total * 2) para normalizar entre -1 e 1, 
-    // depois multiplicamos por 2 para voltar à escala -2..2
-    economic: ecoTotalQuestions > 0 ? (ecoScore / (ecoTotalQuestions * 2)) * 2 : 0,
-    social: socTotalQuestions > 0 ? (socScore / (socTotalQuestions * 2)) * 2 : 0,
-  };
+  const sum = socQuestions.reduce((acc, q, i) => {
+    const val = answers[questions.indexOf(q)];
+    return acc + (val || 0);
+  }, 0);
+  // Retorna a média (entre -2 e 2)
+  return sum / socQuestions.length;
 }, [answers]);
 
   const handleSubmit = async () => {
