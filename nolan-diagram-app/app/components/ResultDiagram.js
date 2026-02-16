@@ -45,20 +45,30 @@ export default function ResultDiagram({ economic, social }) {
             </motion.div>
           </div>
 
-        {/* Legendas de Eixo Vertical (Social) */}
-        <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap bg-white/80 px-2 rounded">
-          ↑ Libertário
+          {/* Descrições dos Eixos*/}
+        <div className="absolute -top-8 left-0 w-full text-center">
+          <span className="text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 px-2">
+            Libertário
+          </span>
         </div>
-        <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap bg-white/80 px-2 rounded">
-          ↓ Autoritário
+        
+        <div className="absolute -bottom-8 left-0 w-full text-center">
+          <span className="text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 px-2">
+            Autoritário
+          </span>
         </div>
 
-        {/* Legendas de Eixo Horizontal (Econômico) */}
-        <div className="absolute top-1/2 -right-4 translate-x-full -rotate-90 origin-left text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
-          Direita →
+        {/* Esquerda e Direita (Rotacionadas) */}
+        <div className="absolute top-0 -left-8 h-full flex items-center">
+          <span className="transform -rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
+            Esquerda
+          </span>
         </div>
-        <div className="absolute top-1/2 -left-4 -translate-x-full rotate-90 origin-right text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
-          ← Esquerda
+
+        <div className="absolute top-0 -right-8 h-full flex items-center">
+          <span className="transform rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
+            Direita
+          </span>
         </div>
       </div>
   );
