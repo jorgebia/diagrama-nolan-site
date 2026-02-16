@@ -1,9 +1,7 @@
 import { motion } from "framer-motion";
 
 export default function ResultDiagram({ economic, social }) {
-  // Converte o range -2 a +2 para 0% a 100%
   const mapValue = (value) => {
-    // A fórmula ((valor + offset) / amplitude) * 100
     const percentage = ((value + 2) / 4) * 100;
     return Math.min(100, Math.max(0, percentage));
   };
@@ -18,7 +16,7 @@ export default function ResultDiagram({ economic, social }) {
   };
 
   return (
-    <div className="flex justify-center w-full my-16">
+    <div className="flex justify-center w-full my-16 px-10">
       <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] bg-white shadow-md border-4 border-white rounded-sm overflow-visible">
 
         {/* Quadrantes (Background) */}
@@ -28,6 +26,8 @@ export default function ResultDiagram({ economic, social }) {
           <div className="bg-[#fee2e2]" title="Autoritário"></div>
           <div className="bg-[#bfdbfe]" title="Liberal"></div>
         </div>
+
+        <div className="absolute inset-0 pointer-events-none" style={gridStyle}></div>
 
         {/* Eixos centrais (Linhas guia) */}
         <div className="absolute inset-0 pointer-events-none">
@@ -48,7 +48,7 @@ export default function ResultDiagram({ economic, social }) {
               className="absolute z-50 transform -translate-x-1/2 -translate-y-1/2"
             >
               <div className="relative flex items-center justify-center">
-                <span className="absolute w-7 h-7 rounded-full bg-red-500/30 animate-ping"></span>
+                <span className="absolute w-5 h-5 rounded-full bg-red-500/40 animate-ping"></span>
                 <div className="w-4 h-4 bg-red-600 rounded-full border-2 border-white shadow-md" />
               </div>
             </motion.div>
