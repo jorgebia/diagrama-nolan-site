@@ -90,34 +90,25 @@ export default function Home() {
     });
   }, []);
 
-// CÁLCULO ECONÔMICO CORRIGIDO
-  const economicScore = useMemo(() => {
-    const econQuestions = questions.filter(q => q.axis === "economic");
-    if (econQuestions.length === 0) return 0;
+// Cálculo Econômico: Considera 0 para nulos e divide pelo total de questões do eixo
+const economicScore = useMemo(() => {
+  const econQuestions = questions.filter(q => q.axis === "economic");
+  const sum = questions.reduce((acc, q, i) => {
+    if (q.axis !== "economic") return acc;
+    return acc + (answers[i] ?? 0); // Se null, soma 0
+  }, 0);
+  return sum / econQuestions.length;
+}, [answers]);
 
-    // Soma considerando 0 para nulos
-    const sum = questions.reduce((acc, q, i) => {
-      if (q.axis !== "economic") return acc;
-      const val = answers[i] === null ? 0 : answers[i];
-      return acc + val;
-    }, 0);
-
-    return sum / econQuestions.length;
-  }, [answers]);
-
-  // CÁLCULO SOCIAL CORRIGIDO
-  const socialScore = useMemo(() => {
-    const socQuestions = questions.filter(q => q.axis === "social");
-    if (socQuestions.length === 0) return 0;
-
-    const sum = questions.reduce((acc, q, i) => {
-      if (q.axis !== "social") return acc;
-      const val = answers[i] === null ? 0 : answers[i];
-      return acc + val;
-    }, 0);
-
-    return sum / socQuestions.length;
-  }, [answers]);
+// Cálculo Social: Considera 0 para nulos e divide pelo total de questões do eixo
+const socialScore = useMemo(() => {
+  const socQuestions = questions.filter(q => q.axis === "social");
+  const sum = questions.reduce((acc, q, i) => {
+    if (q.axis !== "social") return acc;
+    return acc + (answers[i] ?? 0); // Se null, soma 0
+  }, 0);
+  return sum / socQuestions.length;
+}, [answers]);
 
 
   const handleSubmit = async () => {
