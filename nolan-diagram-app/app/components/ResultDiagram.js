@@ -68,13 +68,13 @@ export default function ResultDiagram({ economic, social }) {
         </div>
 
         {/* Esquerda e Direita (Rotacionadas) */}
-        <div className="absolute inset-y-0 -left-9 flex items-center">
+        <div className="absolute inset-y-0 -left-12 flex items-center">
           <span className="transform -rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 whitespace-nowrap">
             Esquerda
           </span>
         </div>
 
-        <div className="absolute inset-y-1 -right-8 flex items-center">
+        <div className="absolute inset-y-1 -right-12 flex items-center">
           <span className="transform rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 whitespace-nowrap">
             Direita
           </span>
