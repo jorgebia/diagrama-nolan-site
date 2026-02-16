@@ -3,11 +3,14 @@ import { motion } from 'framer-motion';
 
 export default function ResultDiagram({ economic, social }) {
   // Mapeia valor -2..2 para percentual
-  const mapValue = (value) => ((value + 2) / 4) * 100;
+  const mapValue = (value) => {
+    const val = parseFloat(value) || 0; // Evita NaN
+    return ((val + 2) / 4) * 100;
+  };
 
   return (
     <div className="flex justify-center w-full my-8 px-4"> 
-      <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] bg-white shadow-2xl border-4 border-white rounded-lg overflow-visible">
+      <div className="relative w-[320px] h-[320px] sm:w-[450px] sm:h-[450px] bg-white shadow-xl border-4 border-white rounded-lg overflow-visible">
         {/* Grid colorida */}
         <div
           className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
