@@ -39,23 +39,25 @@ export default function ResultDiagram({ economic, social }) {
               className="absolute z-50 transform -translate-x-1/2 -translate-y-1/2"
             >
               <div className="relative flex items-center justify-center">
-                <span className="absolute w-10 h-10 rounded-full bg-red-500/40 animate-ping"></span>
-                <div className="w-6 h-6 bg-red-600 rounded-full border-[3px] border-white shadow-lg" />
+                <span className="absolute w-7 h-7 rounded-full bg-red-500/40 animate-ping"></span>
+                <div className="w-4 h-4 bg-red-600 rounded-full border-[3px] border-white shadow-md" />
               </div>
             </motion.div>
           </div>
 
-        {/* Legendas de Eixo */}
-        <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-black uppercase text-slate-600 tracking-tighter">
+        {/* Legendas de Eixo Vertical (Social) */}
+        <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap bg-white/80 px-2 rounded">
           ↑ Libertário
         </div>
-        <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-black uppercase text-slate-600 tracking-tighter">
+        <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap bg-white/80 px-2 rounded">
           ↓ Autoritário
         </div>
-        <div className="absolute top-1/2 -right-16 -rotate-90 origin-center text-xs font-black uppercase text-slate-600 tracking-tighter">
+
+        {/* Legendas de Eixo Horizontal (Econômico) */}
+        <div className="absolute top-1/2 -right-4 translate-x-full -rotate-90 origin-left text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
           Direita →
         </div>
-        <div className="absolute top-1/2 -left-16 rotate-90 origin-center text-xs font-black uppercase text-slate-600 tracking-tighter">
+        <div className="absolute top-1/2 -left-4 -translate-x-full rotate-90 origin-right text-[10px] sm:text-[11px] font-black uppercase text-slate-600 whitespace-nowrap">
           ← Esquerda
         </div>
       </div>
