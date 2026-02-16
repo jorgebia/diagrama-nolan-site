@@ -93,7 +93,7 @@ export default function Home() {
   const { economic, social } = useMemo(() => {
     let ecoScore = 0, socScore = 0, ecoCount = 0, socCount = 0;
     answers.forEach((val, i) => {
-      if (val !== null) {
+      if (val !== null && questions[i]) {
         if (questions[i].axis === 'economic') { ecoScore += val; ecoCount++; }
         else { socScore += val; socCount++; }
       }
