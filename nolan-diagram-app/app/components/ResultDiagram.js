@@ -40,7 +40,7 @@ export default function ResultDiagram({ economic, social }) {
             >
               <div className="relative flex items-center justify-center">
                 <span className="absolute w-7 h-7 rounded-full bg-red-500/40 animate-ping"></span>
-                <div className="w-4 h-4 bg-red-600 rounded-full border-[3px] border-white shadow-md" />
+                <div className="w-4 h-4 bg-red-600 rounded-full border-[2px] border-white shadow-md" />
               </div>
             </motion.div>
     

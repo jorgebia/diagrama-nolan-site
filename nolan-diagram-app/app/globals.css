@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  /* Evita que o rebote do scroll (overscroll) quebre o fundo */
-  overscroll-behavior-y: none;
-  -webkit-font-smoothing: antialiased;
+  background-attachment: fixed; /* Isso mantém a imagem de papel parada enquanto o conteúdo desliza */
+  background-color: #f8fafc; /* Um fallback sólido ajuda na percepção de velocidade */
+  -webkit-overflow-scrolling: touch; /* Melhora o scroll no iOS antigo */
 }

@@ -4,20 +4,18 @@ import { motion } from 'framer-motion';
 export default function QuestionCard({ question, index, value, onChange }) {
   return (
     <motion.div 
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2}}
+      initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      viewport={{ once: true, amount: 0.1}}
       transition={{ 
-        duration: 0.6, 
-        ease: [0.22, 1, 0.36, 1], // Cubic-bezier para um efeito "premium"
-        delay: 0.1
+        duration: 0.6, ease: "easeOut",
       }}
       style={{ 
-        willChange: 'opacity, transform',
-        WebkitFontSmoothing: 'antialiased',
+        contain: 'content',
+        WebkitBackfaceVisibility: 'hidden',
         backfaceVisibility: 'hidden'
       }}
-      className="mb-8 bg-white/70 p-6 md:p-8 rounded-3xl shadow-sm border border-white/50 max-w-3xl mx-auto transition-all"
+      className="mb-8 bg-white p-6 md:p-8 rounded-xl shadow-md border border-slate-100 max-w-3xl mx-auto"
     >
       <h3 className="font-bold text-lg md:text-xl text-slate-800 mb-6 leading-tight">
         {question.text}
@@ -30,9 +28,7 @@ export default function QuestionCard({ question, index, value, onChange }) {
           return (
             <motion.label 
               key={oIdx}
-              whileHover={{ x: 3 }}
-              whileTap={{ scale: 0.99 }}
-              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              onClick={() => onChange(index, opt.value)}
               className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all border-2 ${
                 isSelected 
                   ? "bg-indigo-600 border-indigo-600 shadow-md shadow-indigo-200" 
