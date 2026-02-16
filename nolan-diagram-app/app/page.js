@@ -95,32 +95,27 @@ const economicScore = useMemo(() => {
     .map((q, i) => (q.axis === "economic" ? i : null))
     .filter(i => i !== null);
 
-  const answeredValues = econIndexes
-    .map(i => answers[i])
-    .filter(v => v !== null);
+  if (econIndexes.length === 0) return 0;
 
-  if (answeredValues.length === 0) return 0;
+  const sum = econIndexes.reduce((acc, i) => {
+    return acc + (answers[i] ?? 0);
+  }, 0);
 
-  const sum = answeredValues.reduce((acc, v) => acc + v, 0);
-
-  return sum / answeredValues.length; // média real
+  return sum / econIndexes.length;
 }, [answers]);
-
 
 const socialScore = useMemo(() => {
   const socIndexes = questions
     .map((q, i) => (q.axis === "social" ? i : null))
     .filter(i => i !== null);
 
-  const answeredValues = socIndexes
-    .map(i => answers[i])
-    .filter(v => v !== null);
+  if (socIndexes.length === 0) return 0;
 
-  if (answeredValues.length === 0) return 0;
+  const sum = socIndexes.reduce((acc, i) => {
+    return acc + (answers[i] ?? 0);
+  }, 0);
 
-  const sum = answeredValues.reduce((acc, v) => acc + v, 0);
-
-  return sum / answeredValues.length;
+  return sum / socIndexes.length;
 }, [answers]);
 
 
@@ -188,19 +183,16 @@ const socialScore = useMemo(() => {
         ))}
       </div>
 
-      <div className="flex justify-center mt-12">
-        <button
-          onClick={handleSubmit}
-          //disabled={totalRespondidas < totalPerguntas}
-          className={`px-10 py-4 rounded-xl font-bold text-lg transition-all ${
-            totalRespondidas === totalPerguntas 
-            ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md" 
-            : "bg-gray-300 text-gray-500 cursor-not-allowed"
-          }`}
-        >
-          {totalRespondidas === totalPerguntas ? "Ver Meu Resultado" : `Faltam ${totalPerguntas - totalRespondidas} perguntas`}
-        </button>
-      </div>
+<motion.button
+  onClick={handleSubmit}
+  whileTap={{ scale: 0.95 }}
+  whileHover={{ scale: 1.03 }}
+  transition={{ type: "spring", stiffness: 300, damping: 15 }}
+  className="px-10 py-4 rounded-xl font-bold text-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all"
+>
+  Ver Meu Resultado
+</motion.button>
+
 
       {showResult && (
         <section ref={resultRef} className="w-full max-w-4xl mx-auto py-10 px-4 md:px-0">
