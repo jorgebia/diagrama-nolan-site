@@ -13,7 +13,7 @@ export default function ResultDiagram({ economic, social }) {
       <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] bg-white shadow-xl border-4 border-white rounded-sm overflow-visible">
 
         {/* Quadrantes (Background) */}
-        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
+        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
           <div className="bg-[#d1fae5]" title="Progressista"></div>
           <div className="bg-[#fef9c3]" title="Libertário"></div>
           <div className="bg-[#fee2e2]" title="Autoritário"></div>
@@ -43,7 +43,7 @@ export default function ResultDiagram({ economic, social }) {
                 <div className="w-4 h-4 bg-red-600 rounded-full border-[3px] border-white shadow-md" />
               </div>
             </motion.div>
-          </div>
+    
 
           {/* Descrições dos Eixos*/}
         <div className="absolute -top-8 left-0 w-full text-center">
@@ -70,6 +70,7 @@ export default function ResultDiagram({ economic, social }) {
             Direita
           </span>
         </div>
+      </div>
       </div>
   );
 }
