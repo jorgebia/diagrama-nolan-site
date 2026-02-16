@@ -90,33 +90,34 @@ export default function Home() {
     });
   }, []);
 
-const economicScore = useMemo(() => {
-  const econIndexes = questions
-    .map((q, i) => (q.axis === "economic" ? i : null))
-    .filter(i => i !== null);
+// CÁLCULO ECONÔMICO CORRIGIDO
+  const economicScore = useMemo(() => {
+    const econQuestions = questions.filter(q => q.axis === "economic");
+    if (econQuestions.length === 0) return 0;
 
-  if (econIndexes.length === 0) return 0;
+    // Soma considerando 0 para nulos
+    const sum = questions.reduce((acc, q, i) => {
+      if (q.axis !== "economic") return acc;
+      const val = answers[i] === null ? 0 : answers[i];
+      return acc + val;
+    }, 0);
 
-  const sum = econIndexes.reduce((acc, i) => {
-    return acc + (answers[i] ?? 0);
-  }, 0);
+    return sum / econQuestions.length;
+  }, [answers]);
 
-  return sum / econIndexes.length;
-}, [answers]);
+  // CÁLCULO SOCIAL CORRIGIDO
+  const socialScore = useMemo(() => {
+    const socQuestions = questions.filter(q => q.axis === "social");
+    if (socQuestions.length === 0) return 0;
 
-const socialScore = useMemo(() => {
-  const socIndexes = questions
-    .map((q, i) => (q.axis === "social" ? i : null))
-    .filter(i => i !== null);
+    const sum = questions.reduce((acc, q, i) => {
+      if (q.axis !== "social") return acc;
+      const val = answers[i] === null ? 0 : answers[i];
+      return acc + val;
+    }, 0);
 
-  if (socIndexes.length === 0) return 0;
-
-  const sum = socIndexes.reduce((acc, i) => {
-    return acc + (answers[i] ?? 0);
-  }, 0);
-
-  return sum / socIndexes.length;
-}, [answers]);
+    return sum / socQuestions.length;
+  }, [answers]);
 
 
   const handleSubmit = async () => {
@@ -183,15 +184,17 @@ const socialScore = useMemo(() => {
         ))}
       </div>
 
-<motion.button
-  onClick={handleSubmit}
-  whileTap={{ scale: 0.95 }}
-  whileHover={{ scale: 1.03 }}
-  transition={{ type: "spring", stiffness: 300, damping: 15 }}
-  className="px-10 py-4 rounded-xl font-bold text-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all"
->
-  Ver Meu Resultado
-</motion.button>
+<div className="flex justify-center mt-12">
+  <motion.button
+    onClick={handleSubmit}
+    whileTap={{ scale: 0.95 }}
+    whileHover={{ scale: 1.03 }}
+    transition={{ type: "spring", stiffness: 300, damping: 15 }}
+    className="px-10 py-4 rounded-xl font-bold text-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all"
+  >
+    Ver Meu Resultado
+  </motion.button>
+</div>
 
 
       {showResult && (
