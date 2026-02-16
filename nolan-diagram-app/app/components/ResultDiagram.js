@@ -59,6 +59,5 @@ export default function ResultDiagram({ economic, social }) {
           ← Esquerda
         </div>
       </div>
-    </div>
   );
 }
