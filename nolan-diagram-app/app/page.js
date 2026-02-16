@@ -171,7 +171,7 @@ export default function Home() {
       <div className="flex justify-center mt-12">
         <button
           onClick={handleSubmit}
-          disabled={totalRespondidas < totalPerguntas}
+          //disabled={totalRespondidas < totalPerguntas}
           className={`px-10 py-4 rounded-xl font-bold text-lg transition-all ${
             totalRespondidas === totalPerguntas 
             ? "bg-blue-600 text-white hover:bg-blue-700 shadow-md" 
