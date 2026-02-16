@@ -34,19 +34,21 @@ export default function ResultDiagram({ economic, social }) {
 
         {/* Marcador do usuário com pulsação */}
         <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.5 }}
-          className="absolute z-10"
+          key={`${economic}-${social}`} // Força reanimação ao mudar
+          initial={{ scale: 0,}}
+          animate={{ scale: 1,}}
+          className="absolute z-50"
           style={{
             left: `${mapValue(economic)}%`,
             top: `${100 - mapValue(social)}%`,
             transform: 'translate(-50%, -50%)',
+            marginTop: '0px', // Garante que não haja herança de margem
+            marginLeft: '0px'
           }}
         >
-          <div className="relative">
-            <span className="absolute -inset-2 rounded-full bg-red-500/30 animate-ping"></span>
-            <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-lg" />
+          <div className="relative flex items-center justify-center">
+            <span className="absolute w-8 h-8 rounded-full bg-red-500/30 animate-ping"></span>
+            <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-md" />
           </div>
         </motion.div>
 

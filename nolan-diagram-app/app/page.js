@@ -90,19 +90,25 @@ export default function Home() {
     });
   }, []);
 
-  const { economic, social } = useMemo(() => {
-    let ecoScore = 0, socScore = 0, ecoCount = 0, socCount = 0;
-    answers.forEach((val, i) => {
-      if (val !== null && questions[i]) {
-        if (questions[i].axis === 'economic') { ecoScore += val; ecoCount++; }
-        else { socScore += val; socCount++; }
-      }
-    });
-    return {
-      economic: ecoCount > 0 ? ecoScore / ecoCount : 0,
-      social: socCount > 0 ? socScore / socCount : 0,
-    };
-  }, [answers]);
+const { economic, social } = useMemo(() => {
+  let ecoScore = 0, socScore = 0;
+  // Contamos quantas perguntas existem para cada eixo no total
+  const ecoTotalQuestions = questions.filter(q => q.axis === 'economic').length;
+  const socTotalQuestions = questions.filter(q => q.axis === 'social').length;
+
+  answers.forEach((val, i) => {
+    if (val !== null && questions[i]) {
+      if (questions[i].axis === 'economic') ecoScore += val;
+      else socScore += val;
+    }
+  });
+
+  return {
+    // Dividir pelo total de perguntas do eixo garante a proporção correta
+    economic: ecoScore / ecoTotalQuestions,
+    social: socScore / socTotalQuestions,
+  };
+}, [answers, questions]);
 
   const handleSubmit = async () => {
     setShowResult(true);
