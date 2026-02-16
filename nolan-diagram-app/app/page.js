@@ -147,7 +147,7 @@ export default function Home() {
             <div className="flex flex-col">
               <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas</span>
               <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-black text-gray-800 tabular-nums">{totalRespondidas}</span>
+                <span className="text-gray-400 font-bold">{totalRespondidas}</span>
                 <span className="text-gray-400 font-bold">/ {totalPerguntas}</span>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Home() {
       </div>
 
       {showResult && (
-        <section ref={resultRef} className="mt-16 p-6 bg-white/70 rounded-xl shadow-md max-w-4xl mx-auto border border-gray-100">
+        <section ref={resultRef} className="w-full max-w-4xl mx-auto py-10 px-4 md:px-0">
           <h2 className="text-3xl font-black text-center mb-8 text-gray-800 tracking-tight">Seu Resultado</h2>
 
 <section className="bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 my-6">

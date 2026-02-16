@@ -7,7 +7,7 @@ export default function ResultDiagram({ economic, social }) {
 
   return (
     <div className="flex justify-center my-6 px-4">
-      <div className="relative w-[90vw] max-w-[500px] h-[90vw] max-h-[500px]">
+      <div className="relative w-full max-w-[450px] aspect-square bg-white shadow-xl border border-gray-300">
         {/* Grid colorida */}
         <div
           className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
@@ -29,15 +29,23 @@ export default function ResultDiagram({ economic, social }) {
         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-black" />
         <div className="absolute left-1/2 top-0 w-0.5 h-full bg-black" />
 
-        {/* Marcador do usuário */}
+        {/* Marcador do usuário com pulsação */}
         <motion.div
-          className="absolute w-4 h-4 bg-red-600 rounded-xl"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.5 }}
+          className="absolute z-10"
           style={{
             left: `${mapValue(economic)}%`,
             top: `${100 - mapValue(social)}%`,
             transform: 'translate(-50%, -50%)',
           }}
-        />
+        >
+          <div className="relative">
+            <span className="absolute -inset-2 rounded-full bg-red-500/30 animate-ping"></span>
+            <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-lg" />
+          </div>
+        </motion.div>
 
         {/* Legendas */}
         <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-xs font-semibold bg-white/80 px-1">
