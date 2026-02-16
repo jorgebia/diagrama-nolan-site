@@ -7,7 +7,7 @@ export default function ResultDiagram({ economic, social }) {
 
   return (
     <div className="flex justify-center w-full my-10">
-      <div className="relative w-full max-w-[350px] sm:max-w-[450px] aspect-square bg-white shadow-md border-2 border-gray-100 rounded-lg p-2">
+      <div className="w-full max-w-4xl mx-auto py-10 px-4 md:px-0">
         {/* Grid colorida */}
         <div
           className="absolute top-0 left-0 w-full h-full grid grid-cols-10 grid-rows-10"
