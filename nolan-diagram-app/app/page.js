@@ -90,31 +90,39 @@ export default function Home() {
     });
   }, []);
 
-// Dentro da lógica de exibição dos resultados
 const economicScore = useMemo(() => {
-  const econQuestions = questions.filter(q => q.axis === 'economic');
-  const answered = econQuestions.filter((_, i) => answers[questions.indexOf(econQuestions[i])] !== null);
-  if (answered.length === 0) return 0;
-  
-  const sum = econQuestions.reduce((acc, q, i) => {
-    const val = answers[questions.indexOf(q)];
-    return acc + (val || 0);
-  }, 0);
-  // Retorna a média (entre -2 e 2)
-  return sum / econQuestions.length; 
+  const econIndexes = questions
+    .map((q, i) => (q.axis === "economic" ? i : null))
+    .filter(i => i !== null);
+
+  const answeredValues = econIndexes
+    .map(i => answers[i])
+    .filter(v => v !== null);
+
+  if (answeredValues.length === 0) return 0;
+
+  const sum = answeredValues.reduce((acc, v) => acc + v, 0);
+
+  return sum / answeredValues.length; // média real
 }, [answers]);
+
 
 const socialScore = useMemo(() => {
-  const socQuestions = questions.filter(q => q.axis === 'social');
-  if (socQuestions.length === 0) return 0;
+  const socIndexes = questions
+    .map((q, i) => (q.axis === "social" ? i : null))
+    .filter(i => i !== null);
 
-  const sum = socQuestions.reduce((acc, q, i) => {
-    const val = answers[questions.indexOf(q)];
-    return acc + (val || 0);
-  }, 0);
-  // Retorna a média (entre -2 e 2)
-  return sum / socQuestions.length;
+  const answeredValues = socIndexes
+    .map(i => answers[i])
+    .filter(v => v !== null);
+
+  if (answeredValues.length === 0) return 0;
+
+  const sum = answeredValues.reduce((acc, v) => acc + v, 0);
+
+  return sum / answeredValues.length;
 }, [answers]);
+
 
   const handleSubmit = async () => {
     setShowResult(true);
@@ -211,13 +219,13 @@ const socialScore = useMemo(() => {
   </div>
 </section>
 
-          <ResultDiagram economic={economic} social={social} />
+          <ResultDiagram economic={economicScore} social={socialScore} />
           <div className="mt-8 p-6 bg-gray-50 rounded-xl">
             <h3 className="text-2xl font-bold mb-4">
-              {ideologyDescriptions[getIdeologyLabel(economic, social)].title}
+              {ideologyDescriptions[getIdeologyLabel(economicScore, socialScore)].title}
             </h3>
             <div className="text-gray-700 leading-relaxed">
-              {ideologyDescriptions[getIdeologyLabel(economic, social)].text}
+              {ideologyDescriptions[getIdeologyLabel(economicScore, socialScore)].text}
             </div>
           </div>
 
