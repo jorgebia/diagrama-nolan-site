@@ -184,17 +184,21 @@ export default function Home() {
         ))}
       </div>
 
-<div className="flex justify-center mt-12">
-  <motion.button
-    onClick={handleSubmit}
-    whileTap={{ scale: 0.95 }}
-    whileHover={{ scale: 1.03 }}
-    transition={{ type: "spring", stiffness: 300, damping: 15 }}
-    className="px-10 py-4 rounded-xl font-bold text-lg bg-blue-600 text-white hover:bg-blue-700 shadow-md transition-all"
-  >
-    Ver Meu Resultado
-  </motion.button>
-</div>
+<div className="flex justify-center my-10">
+        <motion.button
+          onClick={handleSubmit}
+          disabled={totalRespondidas === 0} // Trava apenas se nada foi respondido
+          whileTap={totalRespondidas > 0 ? { scale: 0.95 } : {}}
+          whileHover={totalRespondidas > 0 ? { scale: 1.03 } : {}}
+          className={`px-10 py-4 rounded-xl font-bold text-lg shadow-md transition-all ${
+            totalRespondidas > 0 
+            ? "bg-blue-600 text-white hover:bg-blue-700" 
+            : "bg-gray-300 text-gray-500 cursor-not-allowed"
+          }`}
+        >
+          {totalRespondidas === 0 ? "Responda uma pergunta para ver" : "Ver Meu Resultado"}
+        </motion.button>
+      </div>
 
 
       {showResult && (

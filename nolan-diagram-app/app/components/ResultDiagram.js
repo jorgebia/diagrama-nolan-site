@@ -47,10 +47,10 @@ export default function ResultDiagram({ economic, social }) {
 
         {/* Legendas de Eixo */}
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs font-black uppercase text-slate-600 tracking-tighter">
-          ↑ Liberdade Social
+          ↑ Libertário
         </div>
         <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs font-black uppercase text-slate-600 tracking-tighter">
-          ↓ Autoridade Estatal
+          ↓ Autoritário
         </div>
         <div className="absolute top-1/2 -right-16 -rotate-90 origin-center text-xs font-black uppercase text-slate-600 tracking-tighter">
           Direita →
