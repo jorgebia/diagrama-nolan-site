@@ -17,7 +17,7 @@ export default function ResultDiagram({ economic, social }) {
 
   return (
     <div className="flex justify-center w-full my-16 px-10">
-      <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] bg-white shadow-md border-4 border-white rounded-sm overflow-visible">
+      <div className="relative w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] bg-white border-4 border-white rounded-sm overflow-visible">
 
         {/* Quadrantes (Background) */}
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 pointer-events-none">
@@ -68,13 +68,13 @@ export default function ResultDiagram({ economic, social }) {
         </div>
 
         {/* Esquerda e Direita (Rotacionadas) */}
-        <div className="absolute inset-y-0 -left-10 flex items-center">
+        <div className="absolute inset-y-0 left-8 flex items-center">
           <span className="transform -rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 whitespace-nowrap">
             Esquerda
           </span>
         </div>
 
-        <div className="absolute inset-y-0 -right-10 flex items-center">
+        <div className="absolute inset-y-0 -right-8 flex items-center">
           <span className="transform rotate-90 origin-center text-[10px] sm:text-[11px] font-black uppercase text-slate-600 bg-white/90 whitespace-nowrap">
             Direita
           </span>
