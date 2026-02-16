@@ -7,32 +7,38 @@ export default function ResultDiagram({ economic, social }) {
 
   return (
     <div className="flex justify-center w-full my-8">
-      {/* Container principal com tamanho fixo */}
+      {/* Container principal */}
       <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] bg-white shadow-md border-4 border-white rounded-lg">
         
-        {/* AREA DE PADDING: Garante que o marcador não vaze nas bordas */}
+        {/* AREA DE PADDING (p-2): Garante que o centro do ping 100% nunca saia da borda */}
         <div className="relative w-full h-full p-2">
           <div className="relative w-full h-full">
             
-            {/* 1. Grid Colorida (Ajustada para preencher a área interna) */}
-            <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 border border-gray-300">
+            {/* 1. Grid Colorida - Agora os itens estão DENTRO da div grid */}
+            <div className="absolute inset-0 grid grid-cols-10 grid-rows-10 border border-gray-200">
               {[...Array(100)].map((_, i) => {
                 const row = Math.floor(i / 10);
                 const col = i % 10;
                 let bg = 'white';
-                if (row < 5 && col < 5) bg = '#d1fae5'; // Verde
-                if (row < 5 && col >= 5) bg = '#fef9c3'; // Amarelo
-                if (row >= 5 && col < 5) bg = '#fee2e2'; // Vermelho
-                if (row >= 5 && col >= 5) bg = '#bfdbfe'; // Azul
-                return <div key={i} className="border-[0.5px] border-gray-200/50" style={{ backgroundColor: bg }} />;
+                if (row < 5 && col < 5) bg = '#d1fae5'; // Verde (Progressista)
+                if (row < 5 && col >= 5) bg = '#fef9c3'; // Amarelo (Libertário)
+                if (row >= 5 && col < 5) bg = '#fee2e2'; // Vermelho (Autoritário)
+                if (row >= 5 && col >= 5) bg = '#bfdbfe'; // Azul (Liberal)
+                return (
+                  <div 
+                    key={i} 
+                    className="border-[0.5px] border-gray-100" 
+                    style={{ backgroundColor: bg }} 
+                  />
+                );
               })}
             </div>
 
             {/* 2. Eixos Centrais */}
-            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-black/40" />
-            <div className="absolute left-1/2 top-0 w-0.5 h-full bg-black/40" />
+            <div className="absolute top-1/2 left-0 w-full h-0.5 bg-black/40 z-10" />
+            <div className="absolute left-1/2 top-0 w-0.5 h-full bg-black/40 z-10" />
 
-            {/* 3. Marcador do usuário (O PING) */}
+            {/* 3. Marcador (O PING) */}
             <motion.div
               key={`${economic}-${social}`}
               initial={{ scale: 0 }}
@@ -49,15 +55,14 @@ export default function ResultDiagram({ economic, social }) {
                 <div className="w-5 h-5 bg-red-600 rounded-full border-2 border-white shadow-md" />
               </div>
             </motion.div>
-
           </div>
         </div>
 
-        {/* 4. Legendas (Posicionadas fora do padding para não moverem) */}
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-yellow-700">Libertário(a)</div>
-        <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-red-700">Autoritário(a)</div>
-        <div className="absolute top-1/2 -left-12 -translate-y-1/2 -rotate-90 text-[10px] font-bold uppercase tracking-wider text-green-700">Esquerda</div>
-        <div className="absolute top-1/2 -right-12 -translate-y-1/2 rotate-90 text-[10px] font-bold uppercase tracking-wider text-blue-700">Direita</div>
+        {/* 4. Legendas */}
+        <div className="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-yellow-700 bg-white/80 px-1">Libertário(a)</div>
+        <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-wider text-red-700 bg-white/80 px-1">Autoritário(a)</div>
+        <div className="absolute top-1/2 -left-12 -translate-y-1/2 -rotate-90 text-[10px] font-bold uppercase tracking-wider text-green-700 bg-white/80 px-1">Esquerda</div>
+        <div className="absolute top-1/2 -right-12 -translate-y-1/2 rotate-90 text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-white/80 px-1">Direita</div>
       </div>
     </div>
   );
