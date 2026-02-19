@@ -152,18 +152,14 @@ const socialScore = useMemo(() => {
         <div className="bg-white/70 backdrop-blur-md border border-gray-200 shadow-md rounded-xl p-4">
           <div className="flex justify-between items-end mb-2 px-1">
             <div className="flex flex-col">
-              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas</span>
-              <div className="flex items-baseline gap-1">
-                <span className="text-gray-400 font-bold">{totalRespondidas}</span>
-                <span className="text-gray-400 font-bold">/ {totalPerguntas}</span>
-              </div>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-blue-600">Questões Respondidas: <span className="text-indigo-600">{totalRespondidas} de {totalPerguntas}</span></span>
             </div>
           </div>
           <div className="h-3 w-full bg-gray-200 rounded-xl overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${(totalRespondidas / totalPerguntas) * 100}%` }}
-              className="h-full bg-blue-600 rounded-xl"
+              className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl"
             />
           </div>
         </div>
@@ -187,7 +183,7 @@ const socialScore = useMemo(() => {
             : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
-          {totalRespondidas === 0 ? "Responda uma pergunta para ver" : "Ver Meu Resultado"}
+          {totalRespondidas === 0 ? "Responda uma pergunta" : "Ver Meu Resultado"}
         </motion.button>
       </div>
 
