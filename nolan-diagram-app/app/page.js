@@ -25,11 +25,22 @@ export default function Home() {
       .catch(err => console.error("Erro ao buscar contador", err));
   }, []);
 
-  function getIdeologyLabel(economic, social) {
-    if (economic < 0 && social > 0) return 'progressista';
-    if (economic > 0 && social > 0) return 'libertario';
-    if (economic > 0 && social < 0) return 'liberal';
-    if (economic < 0 && social < 0) return 'autoritario';
+function getIdeologyLabel(economic, social) {
+    // Definimos o limite da "Zona de Centro"
+    // Se o valor estiver entre -0.5 e 0.5, ele é considerado centro naquele eixo.
+    const threshold = 0.5; 
+
+    const isEconCenter = Math.abs(economic) <= threshold;
+    const isSocialCenter = Math.abs(social) <= threshold;
+
+    // Se estiver no centro de AMBOS os eixos, ou se a média geral for muito baixa
+    if (isEconCenter && isSocialCenter) return 'centro';
+
+    // Lógica para os quadrantes (usando o threshold para evitar saltos bruscos)
+    if (economic < -threshold && social > threshold) return 'progressista';
+    if (economic > threshold && social > threshold) return 'libertario';
+    if (economic > threshold && social < -threshold) return 'liberal';
+    if (economic < -threshold && social < -threshold) return 'autoritario';
     return 'centro';
   }
 
