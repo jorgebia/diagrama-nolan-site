@@ -27,8 +27,8 @@ export default function Home() {
 
 function getIdeologyLabel(economic, social) {
     // Definimos o limite da "Zona de Centro"
-    // Se o valor estiver entre -0.35 e 0.35, ele é considerado centro naquele eixo.
-    const threshold = 0.2; 
+    // Se o valor estiver entre -0.25 e 0.25, ele é considerado centro naquele eixo.
+    const threshold = 0.25; 
 
     const isEconCenter = Math.abs(economic) <= threshold;
     const isSocialCenter = Math.abs(social) <= threshold;
