@@ -211,7 +211,7 @@ const socialScore = useMemo(() => {
     </div>
     <div>
       <p className="text-xs uppercase tracking-wider font-semibold text-indigo-600">Eixo Vertical</p>
-      <p className="text-sm">Eixo Social (↕️): Quanto mais acima, maior o seu apoio nas liberdades sociais individuais.</p>
+      <p className="text-sm">Eixo Social (↕️): Quanto mais acima, maior o seu apoio às liberdades sociais individuais.</p>
     </div>
   </div>
 </section>
