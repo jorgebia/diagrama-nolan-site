@@ -1,7 +1,7 @@
 //data/questions.js
 const questions = [
   {
-    text: '01 - Cidadãos e empresas de saúde devem ter liberdade para negociar planos de saúde personalizados, sem a interferência de órgãos reguladores do governo.',
+    text: '01 - O Estado não deve cobrar impostos sobre medicamentos essenciais.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -45,7 +45,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - As escolas privadas devem ter liberdade para definir sua própria grade curricular, sem obrigatoriedade de seguir o currículo nacional estabelecido pelo Ministério da Educação.',
+    text: '05 - As famílias devem ter o direito de escolher o conteúdo moral e os valores éticos que seus filhos aprendem na escola, podendo optar por uma educação alinhada às suas próprias convicções.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -56,14 +56,14 @@ const questions = [
     ],
   },
   {
-    text: '06 - A aquisição de armas de fogo deve ser menos burocrática para os cidadãos.',
+    text: '06 - A segurança pública deve ser responsabilidade exclusiva do Estado, sendo proibido o acesso a armas de fogo para os cidadãos.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas e combater luxos e extravagâncias (viagens, jantares, etc.).',
+    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -111,7 +111,7 @@ const questions = [
     ],
   },
   {
-    text: '11 - Patrões e empregados devem ter liberdade para negociar contratos de trabalho diretamente (Contrato PJ, escala 6x1 e 4x3, etc.).',
+    text: '11 - Os trabalhadores e empregadores devem ter a liberdade de escolher o modelo de contratação (como CLT ou PJ).',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -133,14 +133,14 @@ const questions = [
     ],
   },
   {
-    text: '13 - O Estado brasileiro deve continuar financiando projetos culturais por meio da Lei Rouanet.',
-    axis: 'economic',
+    text: '13 - As iniciativas de projetos culturais devem ser compartilhadas entre o Estado, a sociedade civil e o setor privado.',
+    axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
@@ -188,14 +188,14 @@ const questions = [
     ],
   },
   {
-    text: '18 - O Estado deve impor cotas raciais nas universidades privadas, iguais às das públicas.',
+    text: '18 - Combater a desigualdade racial histórica não deve ser uma responsabilidade exclusiva do Estado, mas sim uma iniciativa compartilhada entre o governo, a sociedade civil e o setor privado.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 },
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 },
     ],
   },
   {
@@ -298,14 +298,14 @@ const questions = [
     ],
   },
   {
-    text: '28 - A educação domiciliar (homeschooling) deve ser permitida legalmente no Brasil.',
-    axis: 'social',
+    text: '28 - A Previdência Social deve ser responsabilidade exclusiva do Estado, sendo proibida a participação do setor privado.',
+    axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
 ];
