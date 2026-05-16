@@ -55,7 +55,7 @@ function getIdeologyLabel(economic, social) {
       ]
     },
     libertario: {
-      title: '🟡 Libertário(a) / Anarcocapitalista',
+      title: '🟡 Libertário(a)',
       text: [
         <p className="font-semibold italic mb-2 text-yellow-700">Você vê na liberdade o princípio mais elevado de uma sociedade justa — onde cada pessoa responde por si e coopera por escolha, não por imposição.</p>,
         <p className="mb-2">Você se identifica com uma visão que valoriza profundamente a autonomia individual e a liberdade em todas as esferas da vida. O pensamento libertário vai além de uma doutrina política — ele é também um movimento cultural que celebra a autodeterminação, a responsabilidade pessoal, a inovação descentralizada e o respeito à diversidade de escolhas.</p>,
