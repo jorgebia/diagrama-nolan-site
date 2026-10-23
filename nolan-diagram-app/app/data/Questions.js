@@ -45,7 +45,7 @@ const questions = [
     ],
   },
   {
-    text: '05 - As famílias devem ter o direito de escolher o conteúdo moral e os valores éticos que seus filhos aprendem na escola, podendo optar por uma educação alinhada às suas próprias convicções.',
+    text: '05 - O ensino domiciliar (home schooling) deve ser legalizado no Brasil.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -56,14 +56,14 @@ const questions = [
     ],
   },
   {
-    text: '06 - A segurança pública deve ser responsabilidade exclusiva do Estado, sendo proibido o acesso a armas de fogo para os cidadãos.',
+    text: '06 - Cidadãos sem antecedentes criminais devem poder comprar armas para defesa pessoal.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: -2 },
-      { text: 'Concordo parcialmente', value: -1 },
+      { text: 'Concordo totalmente', value: 2 },
+      { text: 'Concordo parcialmente', value: 1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: 1 },
-      { text: 'Discordo totalmente', value: 2 }
+      { text: 'Discordo parcialmente', value: -1 },
+      { text: 'Discordo totalmente', value: -2 }
     ],
   },
   {
@@ -78,7 +78,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de crises (naturais, financeiras e etc.).',
+    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de crises (naturais, financeiras e etc.), mesmo que isso possa levar à inflação.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -89,14 +89,14 @@ const questions = [
     ],
   },
   {
-    text: '09 - Qualquer governo brasileiro (federal, estadual e municipal) deve reduzir seus gastos por meio de reformas administrativas.',
+    text: '09 - Além do salário, parlamentares devem receber benefícios custeados com dinheiro público, como assistência médica e auxílio-moradia.',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
@@ -111,14 +111,14 @@ const questions = [
     ],
   },
   {
-    text: '11 - Os trabalhadores e empregadores devem ter a liberdade de escolher o modelo de contratação (como CLT ou PJ).',
+    text: '11 - A escala 6x1 deve ser proibida no Brasil, mesmo que a mudança aumente os custos para as empresas.',
     axis: 'economic',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 }
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 }
     ],
   },
   {
@@ -133,25 +133,25 @@ const questions = [
     ],
   },
   {
-    text: '13 - As iniciativas de projetos culturais devem ser compartilhadas entre o Estado, a sociedade civil e o setor privado.',
+    text: '13 - O Estado deve poder julgar adolescentes como adultos quando cometerem crimes violentos.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 },
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
-    text: '14 - A decisão sobre a interrupção da gravidez deve caber exclusivamente à mulher, sem interferência ou proibição por parte do Estado.',
+    text: '14 - O aborto deve ser proibido mesmo em casos de estupro, risco de vida para a mãe ou má formação do feto.',
     axis: 'social',
     options: [
-      { text: 'Concordo totalmente', value: 2 },
-      { text: 'Concordo parcialmente', value: 1 },
+      { text: 'Concordo totalmente', value: -2 },
+      { text: 'Concordo parcialmente', value: -1 },
       { text: 'Neutro', value: 0 },
-      { text: 'Discordo parcialmente', value: -1 },
-      { text: 'Discordo totalmente', value: -2 },
+      { text: 'Discordo parcialmente', value: 1 },
+      { text: 'Discordo totalmente', value: 2 },
     ],
   },
   {
@@ -188,7 +188,7 @@ const questions = [
     ],
   },
   {
-    text: '18 - Combater a desigualdade racial histórica não deve ser uma responsabilidade exclusiva do Estado, mas sim uma iniciativa compartilhada entre o governo, a sociedade civil e o setor privado.',
+    text: '18 - As universidades públicas devem reservar vagas para estudantes negros por meio de cotas raciais.',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -210,7 +210,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter a liberdade em fornecer serviços essenciais, como saúde, educação, segurança, saneamento básico, etc.',
+    text: '20 - A iniciativa privada deve ter a liberdade em fornecer serviços essenciais, como saúde, educação, segurança e saneamento básico',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
@@ -232,7 +232,7 @@ const questions = [
     ],
   },
   {
-    text: '22 - O Estado não deve reconhecer relacionamentos não convencionais, como o poliamor ou relacionamentos abertos.',
+    text: '22 - O governo deve proibir as apostas esportivas online (bets).',
     axis: 'social',
     options: [
       { text: 'Concordo totalmente', value: -2 },
