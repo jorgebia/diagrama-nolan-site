@@ -210,7 +210,7 @@ const questions = [
     ],
   },
   {
-    text: '20 - A iniciativa privada deve ter a liberdade em fornecer serviços essenciais, como saúde, educação, segurança e saneamento básico',
+    text: '20 - A iniciativa privada deve ter a liberdade em fornecer serviços essenciais, como saúde, educação, segurança e saneamento básico.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: 2 },
