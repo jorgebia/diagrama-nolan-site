@@ -26,22 +26,24 @@ export default function Home() {
   }, []);
 
 function getIdeologyLabel(economic, social) {
-    // Definimos o limite da "Zona de Centro"
-    // Se o valor estiver entre -0.3 e 0.3, ele é considerado centro naquele eixo.
-    const threshold = 0.3; 
+    // Um resultado só é Centro quando está perto do centro nos dois eixos.
+    const threshold = 0.3;
 
     const isEconCenter = Math.abs(economic) <= threshold;
     const isSocialCenter = Math.abs(social) <= threshold;
 
-    // Se estiver no centro de AMBOS os eixos, ou se a média geral for muito baixa
     if (isEconCenter && isSocialCenter) return 'centro';
 
-    // Lógica para os quadrantes (usando o threshold para evitar saltos bruscos)
-    if (economic < -threshold && social > threshold) return 'progressista';
-    if (economic > threshold && social > threshold) return 'libertario';
-    if (economic > threshold && social < -threshold) return 'liberal';
-    if (economic < -threshold && social < -threshold) return 'autoritario';
-    return 'centro';
+    // Quando um eixo está perto do centro, seu sinal ainda ajuda a localizar
+    // o ponto no quadrante correspondente. Assim, estar perto da linha social
+    // não transforma alguém de direita em centrista.
+    const economicSide = economic >= 0 ? 'right' : 'left';
+    const socialSide = social >= 0 ? 'libertarian' : 'authoritarian';
+
+    if (economicSide === 'right' && socialSide === 'libertarian') return 'libertario';
+    if (economicSide === 'right' && socialSide === 'authoritarian') return 'liberal';
+    if (economicSide === 'left' && socialSide === 'libertarian') return 'progressista';
+    return 'autoritario';
   }
 
   const ideologyDescriptions = {
