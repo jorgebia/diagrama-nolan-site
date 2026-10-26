@@ -78,7 +78,7 @@ const questions = [
     ],
   },
   {
-    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de crises (naturais, financeiras e etc.), mesmo que isso possa levar à inflação.',
+    text: '08 - O Banco Central do Brasil deve imprimir dinheiro em caso de crises (naturais, financeiras e etc.), mesmo que isso possa aumentar a inflação.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
@@ -89,7 +89,7 @@ const questions = [
     ],
   },
   {
-    text: '09 - Além do salário, parlamentares devem receber benefícios custeados com dinheiro público, como assistência médica e auxílio-moradia.',
+    text: '09 - Além do salário, parlamentares devem receber benefícios custeados com dinheiro público, como plano de saúde e auxílio-moradia.',
     axis: 'economic',
     options: [
       { text: 'Concordo totalmente', value: -2 },
